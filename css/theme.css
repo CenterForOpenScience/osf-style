@@ -3,6 +3,10 @@ body {
     padding-bottom: 30px;
 }
 
+.navbar {
+    background: #F8F8F8;
+    border-bottom: 1px solid #eee;
+}
 .theme-dropdown .dropdown-menu {
     position: static;
     display: block;
