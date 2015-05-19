@@ -35,27 +35,151 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li  class="active"><a href="index.html">Home</a></li>
-                <li><a href="layout.html">Layout</a></li>
-                <li><a href="typography.html">Typography</a></li>
-                <li><a href="colors.html">Colors</a></li>
-                <li><a href="components.html">Components</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#layout">Layout</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#components">Components</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
-<div class="container theme-showcase" role="main">
+<div id="home" class="container theme-showcase" role="main">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-        <h1>OSF StyleGuidelines</h1>
+        <h1>OSF Style Guidelines</h1>
         <p>This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests. </p>
         <a href="https://github.com/caneruguz/osf-style" class="btn btn-info">Contribute</a>
     </div>
 
 </div> <!-- /container -->
 
+
+<div id="layout" class="container" role="main">
+
+    <div class="page-header">
+        <h1>Layout</h1>
+    </div>
+
+    <h2>Container</h2>
+    <div class="row">
+        <div class="col-sm-8">
+            <p> OSF uses a fixed container layout as opposed to fluid. This makes sure that the width does not continue to adjust past 1200px width. Your documents should be wrapper inside a div with class "container".  </p>
+        <pre>
+        &lt;div class="container"&gt;
+            ...
+        &lt;/div&gt;</pre>
+        </div>
+        <div class="col-sm-4">
+            <a href="http://getbootstrap.com/css/#overview" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+        </div>
+    </div>
+
+
+    <h2>Grid</h2>
+    <div class="row">
+        <div class="col-sm-8">
+            <p> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. do not use margins, padding, float or tables for layout arrangements.</p>
+        <pre>
+            <code class="language-html">
+                &lt;div class="row"&gt;
+                &lt;div class="col-md-12">...&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                &lt;div class="col-md-4">...&lt;/div&gt;
+                &lt;div class="col-md-3">...&lt;/div&gt;
+                &lt;div class="col-md-5">...&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                &lt;div class="col-md-6">...&lt;/div&gt;
+                &lt;div class="col-md-6">...&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+            <p>Some tips for using grid</p>
+            <ul>
+                <li>Grid columns need to add up to 12.</li>
+                <li>Each total of 12 should be inside its own "row" div.</li>
+                <li>Plan out the layout of your component on paper before you start coding and then write the html code of the row structure first. This will alleviate the problem of columns not matching up or some div tags not closing.</li>
+                <li>Bootstrap grid is designed to fit columns together, if there is an unnecessary amount of space in between components, first check that your grid is properly built.</li>
+                <li>Bootstrap grids do not align heights of columns. If you need column heights to be equal you will need to manually set them or use other libraries.</li>
+                <li>Do not use grids to center align a component horizontally unless there is no other semantically meaningful way to do so.</li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <a href="http://getbootstrap.com/css/#grid" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+        </div>
+    </div>
+
+</div> <!-- /container -->
+
+
+<div id="typography" class="container theme-showcase" role="main">
+
+    <div class="page-header">
+        <h1>Typography</h1>
+    </div>
+
+</div> <!-- /container -->
+
+
+
+<div id="colors" class="container theme-showcase" role="main">
+
+    <div class="page-header">
+        <h1>Colors</h1>
+    </div>
+
+</div> <!-- /container -->
+
+<div id="components" class="container theme-showcase" role="main">
+
+    <div class="page-header">
+        <h1>Components</h1>
+    </div>
+
+    <div class="page-header">
+        <h3>Buttons</h3>
+    </div>
+    <p>
+        <button type="button" class="btn btn-lg btn-default">Default</button>
+        <button type="button" class="btn btn-lg btn-primary">Primary</button>
+        <button type="button" class="btn btn-lg btn-success">Success</button>
+        <button type="button" class="btn btn-lg btn-info">Info</button>
+        <button type="button" class="btn btn-lg btn-warning">Warning</button>
+        <button type="button" class="btn btn-lg btn-danger">Danger</button>
+        <button type="button" class="btn btn-lg btn-link">Link</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-sm btn-default">Default</button>
+        <button type="button" class="btn btn-sm btn-primary">Primary</button>
+        <button type="button" class="btn btn-sm btn-success">Success</button>
+        <button type="button" class="btn btn-sm btn-info">Info</button>
+        <button type="button" class="btn btn-sm btn-warning">Warning</button>
+        <button type="button" class="btn btn-sm btn-danger">Danger</button>
+        <button type="button" class="btn btn-sm btn-link">Link</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-xs btn-default">Default</button>
+        <button type="button" class="btn btn-xs btn-primary">Primary</button>
+        <button type="button" class="btn btn-xs btn-success">Success</button>
+        <button type="button" class="btn btn-xs btn-info">Info</button>
+        <button type="button" class="btn btn-xs btn-warning">Warning</button>
+        <button type="button" class="btn btn-xs btn-danger">Danger</button>
+        <button type="button" class="btn btn-xs btn-link">Link</button>
+    </p>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
