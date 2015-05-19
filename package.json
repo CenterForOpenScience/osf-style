@@ -1,0 +1,30 @@
+{
+  "name": "osf-style",
+  "version": "1.0.0",
+  "description": "OSF Style Guide",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caneruguz/osf-style.git"
+  },
+  "keywords": [
+    "OSF",
+    "style",
+    "guide",
+    "CSS",
+    "HTML"
+  ],
+  "author": "Caner Uguz",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/caneruguz/osf-style/issues"
+  },
+  "homepage": "https://github.com/caneruguz/osf-style"
+}
