@@ -6,3 +6,4 @@ node_modules
 
 # Bower components - comment out for gh-pages
 #bower_components
+.sass-cache
