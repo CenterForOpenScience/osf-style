@@ -2,37 +2,48 @@ var gulp = require('gulp'),
     concat = require("gulp-concat"),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    sass = require('gulp-ruby-sass'),
+    livereload = require('gulp-livereload'),
+    webserver = require('gulp-webserver');
 
 
-//var paths = {
-//    cssfiles : [
-//        //"./bower_components/bootstrap/dist/css/*.min.css",
-//        "./css/*.css"
-//    ],
-//    jsfiles : [
-//        "./bower_components/jquery/dist/*.min.js",
-//        "./bower_components/jquery-ui/*.min.js",
-//        "./bower_components/jquery-mockjax/*.js",
-//        "./bower_components/bootstrap/dist/js/*.min.js",
-//        "./js/style.js"
-//    ],
-//    json : "./sample.json",
-//    less : "./less/*.less"
-//};
-//
-//
-//gulp.task('js', function(){
-//    return gulp.src(paths.jsfiles)
-//        .pipe(concat('bundle.js'))
-//        .pipe(gulp.dest('./demo/'));
-//});
-//
-//gulp.task('watch', function () {
-//    gulp.watch(paths.less, ['css', 'css-dist-min']);
-//    gulp.watch(paths.jsfiles, ['js', 'js-dist-min', 'js-dist-full']);
-//});
+var paths = {
+    cssfiles : [
+        "./css/*.css"
+    ],
+    jsfiles : [
+        "./bower_components/jquery/dist/*.min.js",
+        "./bower_components/jquery-ui/*.min.js",
+        "./bower_components/jquery-mockjax/*.js",
+        "./bower_components/bootstrap/dist/js/*.min.js",
+        "./js/script.js"
+    ],
+    sass : "sass/*.scss"
+};
+
+gulp.task('webserver', function() {
+    gulp.src('./')
+        .pipe(webserver({
+            livereload: true,
+            directoryListing: true,
+            open: true
+        }));
+});
+
+gulp.task('sass', function () {
+    return sass('sass')
+        .on('error', function (err) {
+            console.error('Error!', err.message);
+        })
+        .pipe(gulp.dest('css'))
+        .pipe(livereload());
+});
+
+gulp.task('default', ['webserver', 'sass', 'watch']);
 
 
-
-gulp.task("default", ["watch"]);
+gulp.task('watch', function () {
+    livereload.listen();
+    gulp.watch(paths.sass, ['sass']);
+});
