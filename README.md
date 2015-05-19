@@ -7,6 +7,7 @@ Stylesheet and guidelines for OSF
 ## TO DO:
 #### Stage 1:
 - Load OSF CSS Files into here
+- Use prism for code syntax highlighting
 - Display Following Items
   - Navigation Bar
   - Buttons
