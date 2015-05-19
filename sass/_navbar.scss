@@ -2,6 +2,9 @@ $bg-light : #f8f8f8;
 $border-light : 1px solid #eee;
 
 .navbar {
-  background: $bg-light;
-  border-bottom: $border-light;
+  background: $color-blue;
+  border-bottom: $border-light;}
+
+.navbar a {
+  color: $color-hover;
 }

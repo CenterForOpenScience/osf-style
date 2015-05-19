@@ -1,6 +1,9 @@
 .navbar {
-  background: #f8f8f8;
+  background: #204762;
   border-bottom: 1px solid #eee; }
+
+.navbar a {
+  color: #E0EBF3; }
 
 body {
   padding-top: 70px;
