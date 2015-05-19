@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
     concat = require("gulp-concat"),
     minifyCSS = require('gulp-minify-css'),
-    less = require('gulp-less'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify');
 
