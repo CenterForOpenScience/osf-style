@@ -4,3 +4,24 @@ $color-light: #EEEEEE;
 $color-green: #B8ECBF;
 $color-select: #337AB7;
 $color-grey: #333333;
+
+.bg-color-blue {
+  background-color: $color-blue;
+}
+.bg-color-hover {
+  background-color: $color-hover;
+}
+.bg-color-light {
+  background-color: $color-light;
+}
+.bg-color-green {
+  background-color: $color-green;
+}
+.bg-color-select {
+   background-color: $color-select;
+}
+.bg-color-grey {
+    background-color: $color-grey;
+}
+
+

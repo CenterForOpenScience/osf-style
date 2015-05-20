@@ -1,3 +1,21 @@
+.bg-color-blue {
+  background-color: #204762; }
+
+.bg-color-hover {
+  background-color: #E0EBF3; }
+
+.bg-color-light {
+  background-color: #EEEEEE; }
+
+.bg-color-green {
+  background-color: #B8ECBF; }
+
+.bg-color-select {
+  background-color: #337AB7; }
+
+.bg-color-grey {
+  background-color: #333333; }
+
 .navbar {
   background: #204762;
   border-bottom: 1px solid #eee; }
