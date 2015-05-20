@@ -3,8 +3,14 @@ osf-style
 
 Stylesheet and guidelines for OSF 
 
+### Libraries Used Here
+- **Gulp**
+- **SASS** and **gulp-ruby-sass**
+- **Livereload**
+...
 
-## TO DO:
+
+### TO DO:
 #### Stage 1:
 - Load OSF CSS Files into here
 - Use prism for code syntax highlighting
