@@ -95,6 +95,13 @@
 .m-xl {
   margin: 50px; }
 
+h1, h2, h3, h4 {
+  font-weight: 300; }
+
+/* Bootstrap overrides */
+.btn-default {
+  background-color: #F8F8F8; }
+
 .navbar {
   background: #204762;
   border-bottom: 1px solid #eee; }
