@@ -3,3 +3,15 @@
     height: 60px;
     padding: 5%;
 }
+.container-full .jumbotron {
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+}
+.container-full {
+    background: #204762;
+}
+
+#side-menu .affix {
+    width: 200px;
+    top: 10px;
+}
