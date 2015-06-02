@@ -15,3 +15,16 @@
     width: 200px;
     top: 10px;
 }
+li, p {
+    font-size: 15px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #337AB7;
+    background-color: inherit;
+    font-weight: bold;
+}
+
+.nav>li>a {
+    padding: 4px 15px;
+}
