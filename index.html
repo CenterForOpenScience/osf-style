@@ -27,175 +27,390 @@
     <![endif]-->
 </head>
 
-<body role="document">
+<body role="document" data-spy="scroll" data-target="#side-menu">
 
-<!-- Fixed navbar -->
-<nav class="navbar navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
 
-            <a class="navbar-brand" href="#">OSF Style Guidelines</a>
+<div class="container-full">
+    <div id="top" class="container theme-showcase" >
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>OSF Style Guidelines</h1>
+            <p>This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests. </p>
+            <a href="https://github.com/caneruguz/osf-style" class="btn btn-info">Contribute</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#layout">Layout</a></li>
-                <li><a href="#typography">Typography</a></li>
-                <li><a href="#colors">Colors</a></li>
-                <li><a href="#components">Components</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
+
     </div>
-</nav>
-
-<div id="home" class="container theme-showcase" role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>OSF Style Guidelines</h1>
-        <p>This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests. </p>
-        <a href="https://github.com/caneruguz/osf-style" class="btn btn-info">Contribute</a>
-    </div>
-
-</div> <!-- /container -->
+</div>
 
 
-<div id="layout" class="container" role="main">
-
-    <div class="page-header">
-        <h1>Layout</h1>
-    </div>
-
-    <h2>Container</h2>
+<div class="nav-rows container">
     <div class="row">
-        <div class="col-sm-8">
-            <p> OSF uses a fixed container layout as opposed to fluid. This makes sure that the width does not continue to adjust past 1200px width. Your documents should be wrapper inside a div with class "container".  </p>
-        <pre>
-            <code class="language-markup">
+        <div class="col-xs-9">
+
+            <!--GENERAL PRINCIPLES PAGE-->
+            <div id="principles" >
+
+                <div class="page-header">
+                    <h1>General Principles</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div>
+                            <p>These are general guidelines that developers need to keep in mind when developing user interactions. They identify our priorities and UI development needs to take into consideration these principles.</p>
+                            <h4><a id="_5"></a></h4>
+                            <h4><a id="Use_professional_language_in_our_interface_7"></a>Use professional language in our interface</h4>
+                            <p>Where long form text is used it is best to use descriptive language.</p>
+                            <p>Good examples:</p>
+<pre><code><span class="hljs-string">"Please follow the link to view this file"</span>.
+    <span class="hljs-string">"The project you selected is not available at this time."</span>
+    <span class="hljs-string">"You have entered an incorrect name, please try again."</span>
+</code></pre>
+                            <p>Bad Examples:</p>
+<pre><code><span class="hljs-string">"That's not right. Try again!"</span> <span class="hljs-comment">//Too collequal: </span>
+    <span class="hljs-string">"Go here."</span> <span class="hljs-comment">// Too curt</span>
+    <span class="hljs-string">"Error: undefined"</span> <span class="hljs-comment">// Not human enough</span>
+    <span class="hljs-string">"Yay, your form is submitted, awesome!"</span> <span class="hljs-comment">// Unnecessarily emotional</span>
+</code></pre>
+                            <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
+                            <p>Good examples:</p>
+<pre><code><span class="hljs-string">"Open"</span>.
+    <span class="hljs-string">"Delete Multiple"</span>
+    <span class="hljs-string">"Keep Both"</span>
+</code></pre>
+                            <p>Bad Examples:</p>
+<pre><code><span class="hljs-string">"Open this file"</span> <span class="hljs-comment">// No need to define what element the action is on </span>
+    <span class="hljs-string">"Delete Everything"</span> <span class="hljs-comment">// Too general</span>
+    <span class="hljs-string">"Name:"</span> <span class="hljs-comment">// Not descriptive enough, full name, first name? </span>
+    <span class="hljs-string">"Cancel, Dismiss, Close"</span> <span class="hljs-comment">// Should use uniform name for same action</span>
+</code></pre>
+                            <hr>
+                            <h4><a id="Let_the_user_know_about_state_where_applicable_47"></a>Let the user know about state where applicable</h4>
+                            <p>When a state change in the UI is happening the user should be notified of some of these processes where it helps the user understand what's going on and differentiate the situation from a potential unresponsive or erroneous scenario.</p>
+                            <p>Some examples:</p>
+                            <ul>
+                                <li>Items that are actionable need to be visually distinct (i.e. links, buttons, draggable items)</li>
+                                <li>Pending processes should be identified if taking long</li>
+                                <li>When page loads if there are still asynchronous components loading, a loading indicator needs to make that clear</li>
+                                <li>Normally actionable items that are non-actionable should be muted (greyed out)</li>
+                                <li>Tooltips should be used to explain states that do not otherwise make sense</li>
+                                <li>Actionable items should be protected against multiple hits (i.e. Delete buttons turning to muted Deleting...)</li>
+                                <li>If using active states, the active component needs to be visually distinc, for instance in buttons, panels, tabs.</li>
+                                <li>Toggle buttons should change to reflect the current state. For instance a collapsed item should have an icon that suggests opening and that icon should change when the state needs to suggest closing.</li>
+                                <li>Utilize the <strong>cursor</strong> attribute of CSS to change cursors on hover but only when this change makes sense (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>)
+                                    <ul>
+                                        <li><strong>default</strong> is for general purpose</li>
+                                        <li><strong>pointer</strong> is for links and items that are clickable</li>
+                                        <li><strong>move</strong> is for items that can be moved with drag already</li>
+                                        <li><strong>row/col-resize</strong> To drag and resize horizontal or vertical items, content.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <hr>
+                            <h4><a id="Let_the_user_know_about_errors_and_offer_alternatives_where_possible_68"></a>Let the user know about errors and offer alternatives where possible</h4>
+                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
+                            <p>Example with space limitation :</p>
+<pre><code>Can't connect to dropbox at the moment.  [Learn more]
+</code></pre>
+                            <p>Example:</p>
+<pre><code>We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
+</code></pre>
+                            <hr>
+                            <h4><a id="Be_consistent_about_UI_components_81"></a>Be consistent about UI components</h4>
+                            <p>To the extent possible all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
+                            <ul>
+                                <li>Buttons should look exactly the same in style, with color differences denoting similar meaning</li>
+                                <li>Color palette should be used in similar ways; (e.g. we should have a single highlight background color for all hover effects)</li>
+                                <li>Element use for common tasks should be the same. I.e. different sections within pages should not use tabs in one place and accordion menus in others if the target elements are exactly the same.</li>
+                                <li>Different icons should not be used to mean the same thing and one icon should not be used for multiple meanings. Icon association should make sense to the task</li>
+                                <li>Responsive components should become responsive in similar ways. For instance if icons lose their labels in small views, that should be the case with all icons.</li>
+                            </ul>
+                            <hr>
+                            <h4><a id="Utilize_empty_space_with_actionable_suggestions_91"></a>Utilize empty space with actionable suggestions</h4>
+                            <p>There are many areas where users don't have content available. In these cases their pages or elements will be empty. We can use these isntances to offer actionable tasks with appropriate links.</p>
+                            <p>Example:</p>
+<pre><code>You don't have any registrations at the moment.
+    [Learn more about Registrations] [Create a Registration]
+</code></pre>
+                            <hr>
+                            <h4><a id="Take_steps_to_make_website_functional_in_mobile_devices_101"></a>Take steps to make website functional in mobile devices</h4>
+                            <ul>
+                                <li>Check responsiveness in every page</li>
+                                <li>Make Header texts proportionally smaller in smaller devices, no need for an H1 in a phone.</li>
+                                <li>Make text that does not fit constrained widths end with ...</li>
+                                <li>Make different versions for mobile buttons that have less text. - Make sure all images are responsive</li>
+                                <li>Check show/hide relationships in mobile devices, often it's unnecessary.</li>
+                                <li>Check empty vertical space in rows.</li>
+                                <li>Check that horizontally listed items stack properly in narrow view</li>
+                                <li>Check that tables respond properly to narrow views, scrolling if necessary</li>
+                                <li>Make sure touch and event based actions either work well or have fallbacks in mobile devices.</li>
+                            </ul>
+                            <hr>
+                            <h4><a id="Take_steps_to_make_sure_the_website_is_functional_in_very_large_devices_114"></a>Take steps to make sure the website is functional in very large devices</h4>
+                            <p>Where possible, let the user utilize the large workspace that they have by providing meaningful expansion of the space:</p>
+                            <ul>
+                                <li>Expand tables, grids, and stacked components that have uniform items (i.e. galleries)</li>
+                                <li>Do not expand Text! Instead fit several columns.</li>
+                                <li>Remove show/hide options to show everything as space allows, that reduces an extra step</li>
+                                <li>Stack similar content horizontally as columns</li>
+                                <li>Center content if not utilizing the entire width</li>
+                            </ul>
+                            <hr>
+                            <h4><a id="Improve_the_form_input_and_toggle_process_where_possible_124"></a>Improve the form input and toggle process where possible</h4>
+                            <p>Follow these guidelines when making forms or add elements such as drop downs.</p>
+                            <ul>
+                                <li>If your dropdown has few elements, consider another input or toggle method, like a button group.</li>
+                                <li>Alphabetically organize your dropdowns</li>
+                                <li>Make input elements large and text visible</li>
+                                <li>Uniformity in input elements is important, stick to themes or frameworks; if you are adding custom css to established framework css for inputs you are most likely doing it wrong.</li>
+                                <li>Do not remove the visual separation of focus on input elements, but make it fit to your general theme.</li>
+                                <li>Most of the time select and checkbox items are too small, consider increasing their size or generally make sure they fill your font's line height</li>
+                                <li>Make sure tab goes to the next item if there is a form with multiple items</li>
+                                <li>If usign JS for form inputs, bind Enter key.</li>
+                                <li>Don't have a "Clear Form" button.</li>
+                                <li>Avoid using too many borders in form structures. Alignment is a way to denote edges as well and inputs already have borders.</li>
+                                <li>Use a good combination of placeholder and label for inputs, often one is enough, both are unnecessary. Don't repeat the label in the placeholder. Label is better for cross browser use.</li>
+                                <li>Tie your labels to your form elements with "for" so that when users click on the label the input gets selection.</li>
+                            </ul>
+                            <hr>
+                            <h4><a id="Respect_history_and_SEO_140"></a>Respect history and SEO</h4>
+                            <p>If you are using a single page approach where page loads are not required for significant events remember that two things happen:</p>
+                            <ul>
+                                <li>Because most of the interaction does not require page loads, search engines may not be able to get a sense of your content and therefore fail to index</li>
+                                <li>Users consider significant layout changes to denote page changes and will want to press back to go back to the previous state.</li>
+                            </ul>
+                            <p>Make sure that your implementation takes care of these two issues.</p>
+                            <hr>
+                            <h4><a id="Ignore_these_rules_when_necessary_148"></a>Ignore these rules when necessary</h4>
+                            <p>There are times where these general practices may not make sense for rare isntances. In those cases it is better UI practice to abandon convention and use custom solutions. These cases should be few and should require discussion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--LAYOUT PAGE-->
+            <div id="layout" >
+                <div class="page-header">
+                    <h1>Layout</h1>
+                </div>
+
+                <h2>Container</h2>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <p> OSF uses a fixed container layout as opposed to fluid. This makes sure that the width does not continue to adjust past 1200px width. Your documents should be wrapper inside a div with class "container".  </p>
+<pre>
+<code class="language-markup">
     &lt;div class="container"&gt;
-        ...
+    ...
     &lt;/div&gt;
-        </code>
-        </pre>
-        </div>
-        <div class="col-sm-4">
-            <a href="http://getbootstrap.com/css/#overview" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
-        </div>
-    </div>
+</code>
+</pre>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="http://getbootstrap.com/css/#overview" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
 
 
-    <h2>Grid</h2>
-    <div class="row">
-        <div class="col-sm-8">
-            <p class="lead"> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. do not use margins, padding, float or tables for layout arrangements.</p>
-        <pre>
-            <code class="language-markup">
+                <h2>Grid</h2>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <p class="lead"> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. do not use margins, padding, float or tables for layout arrangements.</p>
+<pre>
+<code class="language-markup">
     &lt;div class="row"&gt;
-        &lt;div class="col-md-12">...&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-md-4">...&lt;/div&gt;
-        &lt;div class="col-md-3">...&lt;/div&gt;
-        &lt;div class="col-md-5">...&lt;/div&gt;
+    &lt;div class="col-md-12">...&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="row"&gt;
-        &lt;div class="col-md-6">...&lt;/div&gt;
-        &lt;div class="col-md-6">...&lt;/div&gt;
+    &lt;div class="col-md-4">...&lt;/div&gt;
+    &lt;div class="col-md-3">...&lt;/div&gt;
+    &lt;div class="col-md-5">...&lt;/div&gt;
     &lt;/div&gt;
-            </code>
-        </pre>
-            <h3>Some tips for using grid</h3>
-            <ul>
-                <li>Grid columns need to add up to 12.</li>
-                <li>Each total of 12 should be inside its own "row" div.</li>
-                <li>Plan out the layout of your component on paper before you start coding and then write the html code of the row structure first. This will alleviate the problem of columns not matching up or some div tags not closing.</li>
-                <li>Bootstrap grid is designed to fit columns together, if there is an unnecessary amount of space in between components, first check that your grid is properly built.</li>
-                <li>Bootstrap grids do not align heights of columns. If you need column heights to be equal you will need to manually set them or use other libraries.</li>
-                <li>Do not use grids to center align a component horizontally unless there is no other semantically meaningful way to do so.</li>
-            </ul>
-        </div>
-        <div class="col-sm-4">
-            <a href="http://getbootstrap.com/css/#grid" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
-        </div>
-    </div>
-
-</div> <!-- /container -->
-
-
-<div id="typography" class="container theme-showcase" role="main">
-
-    <div class="page-header">
-        <h1>Typography</h1>
-    </div>
-
-</div> <!-- /container -->
-
-
-
-<div id="colors" class="container theme-showcase" role="main">
-
-    <div class="page-header">
-        <h1>Colors</h1>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="palette-box bg-color-blue">
+    &lt;div class="row"&gt;
+    &lt;div class="col-md-6">...&lt;/div&gt;
+    &lt;div class="col-md-6">...&lt;/div&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+                        <h3>Some tips for using grid</h3>
+                        <ul>
+                            <li>Grid columns need to add up to 12.</li>
+                            <li>Each total of 12 should be inside its own "row" div.</li>
+                            <li>Plan out the layout of your component on paper before you start coding and then write the html code of the row structure first. This will alleviate the problem of columns not matching up or some div tags not closing.</li>
+                            <li>Bootstrap grid is designed to fit columns together, if there is an unnecessary amount of space in between components, first check that your grid is properly built.</li>
+                            <li>Bootstrap grids do not align heights of columns. If you need column heights to be equal you will need to manually set them or use other libraries.</li>
+                            <li>Do not use grids to center align a component horizontally unless there is no other semantically meaningful way to do so.</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="http://getbootstrap.com/css/#grid" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
 
             </div>
+
+            <!--TYPOGRAPHY PAGE-->
+            <div id="typography" class=" theme-showcase" >
+
+                <div class="page-header">
+                    <h1>Typography</h1>
+                </div>
+            </div>
+
+            <!--COLORS PAGE-->
+            <div id="colors" class=" theme-showcase">
+                <div class="page-header">
+                    <h1>Colors</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="palette-box bg-color-blue">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>OSF Blue</h4>
+                        <p>#204762</p>
+                        <p>.bg-color-blue</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> This tone of blue is the predominant dark color for backgrounds or dominant components. It should be used sparingly, very few backgrounds will qualify to be in this color. Mostly use white or light backgrounds using some light colors below.</p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="palette-box bg-color-hover">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Hover</h4>
+                        <p>#E0EBF3</p>
+                        <p>.bg-color-hover</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> A lighter shade of select color, this color helps with hovers or state changes in conjunction with the  "Select" and can also be used as non-intrusive primary color. </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="palette-box bg-color-light">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Light</h4>
+                        <p>#EEEEEE</p>
+                        <p>.bg-color-light</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> A lighter shade of the blue above, this color helps with hovers or state changes in conjunction with the OSF blue and can also be used as non-intrusive primary color. </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="palette-box bg-color-alt">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Alternative</h4>
+                        <p>#B8ECBF</p>
+                        <p>.bg-color-alt</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> A lighter shade of the blue above, this color helps with hovers or state changes in conjunction with the OSF blue and can also be used as non-intrusive primary color. </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="palette-box bg-color-select">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Select</h4>
+                        <p>#337AB7</p>
+                        <p>.bg-color-select</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> A lighter shade of the blue above, this color helps with hovers or state changes in conjunction with the OSF blue and can also be used as non-intrusive primary color. </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="palette-box bg-color-grey">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Grey</h4>
+                        <p>#333333</p>
+                        <p>.bg-color-grey</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> A lighter shade of the blue above, this color helps with hovers or state changes in conjunction with the OSF blue and can also be used as non-intrusive primary color. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--COMPONENTS PAGE-->
+            <div id="components" class=" theme-showcase" >
+                <div class="page-header">
+                    <h1>Components</h1>
+                </div>
+                <div class="page-header">
+                    <h3>Buttons</h3>
+                </div>
+                <p>
+                    <button type="button" class="btn btn-lg btn-default">Default</button>
+                    <button type="button" class="btn btn-lg btn-primary">Primary</button>
+                    <button type="button" class="btn btn-lg btn-success">Success</button>
+                    <button type="button" class="btn btn-lg btn-info">Info</button>
+                    <button type="button" class="btn btn-lg btn-warning">Warning</button>
+                    <button type="button" class="btn btn-lg btn-danger">Danger</button>
+                    <button type="button" class="btn btn-lg btn-link">Link</button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-default">Default</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-sm btn-default">Default</button>
+                    <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                    <button type="button" class="btn btn-sm btn-success">Success</button>
+                    <button type="button" class="btn btn-sm btn-info">Info</button>
+                    <button type="button" class="btn btn-sm btn-warning">Warning</button>
+                    <button type="button" class="btn btn-sm btn-danger">Danger</button>
+                    <button type="button" class="btn btn-sm btn-link">Link</button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-xs btn-default">Default</button>
+                    <button type="button" class="btn btn-xs btn-primary">Primary</button>
+                    <button type="button" class="btn btn-xs btn-success">Success</button>
+                    <button type="button" class="btn btn-xs btn-info">Info</button>
+                    <button type="button" class="btn btn-xs btn-warning">Warning</button>
+                    <button type="button" class="btn btn-xs btn-danger">Danger</button>
+                    <button type="button" class="btn btn-xs btn-link">Link</button>
+                </p>
+            </div>
+
         </div>
-        <div class="col-sm-9">
-            <p class="lead">OSF Blue</p>
-            <p>#204762</p>
+        <div id="side-menu" class="col-xs-3">
+            <ul class="nav nav-pills nav-stacked m-t-xl" data-spy="affix" data-offset-top="350" data-offset-bottom="200">
+                <li role="presentation" class="active"><a href="#top">Top</a></li>
+                <li role="presentation"><a href="#principles">General Principles</a></li>
+                <li role="presentation"><a href="#layout">Layout</a></li>
+                <li role="presentation"><a href="#typography">Typography</a></li>
+                <li role="presentation"><a href="#colors">Colors</a></li>
+                <li role="presentation"><a href="#components">Components</a></li>
+
+            </ul>
         </div>
     </div>
-
-</div> <!-- /container -->
-
-<div id="components" class="container theme-showcase" role="main">
-
-    <div class="page-header">
-        <h1>Components</h1>
-    </div>
-
-    <div class="page-header">
-        <h3>Buttons</h3>
-    </div>
-    <p>
-        <button type="button" class="btn btn-lg btn-default">Default</button>
-        <button type="button" class="btn btn-lg btn-primary">Primary</button>
-        <button type="button" class="btn btn-lg btn-success">Success</button>
-        <button type="button" class="btn btn-lg btn-info">Info</button>
-        <button type="button" class="btn btn-lg btn-warning">Warning</button>
-        <button type="button" class="btn btn-lg btn-danger">Danger</button>
-        <button type="button" class="btn btn-lg btn-link">Link</button>
-    </p>
-    <p>
-        <button type="button" class="btn btn-default">Default</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-link">Link</button>
-    </p>
-    <p>
-        <button type="button" class="btn btn-sm btn-default">Default</button>
-        <button type="button" class="btn btn-sm btn-primary">Primary</button>
-        <button type="button" class="btn btn-sm btn-success">Success</button>
-        <button type="button" class="btn btn-sm btn-info">Info</button>
-        <button type="button" class="btn btn-sm btn-warning">Warning</button>
-        <button type="button" class="btn btn-sm btn-danger">Danger</button>
-        <button type="button" class="btn btn-sm btn-link">Link</button>
-    </p>
-    <p>
-        <button type="button" class="btn btn-xs btn-default">Default</button>
-        <button type="button" class="btn btn-xs btn-primary">Primary</button>
-        <button type="button" class="btn btn-xs btn-success">Success</button>
-        <button type="button" class="btn btn-xs btn-info">Info</button>
-        <button type="button" class="btn btn-xs btn-warning">Warning</button>
-        <button type="button" class="btn btn-xs btn-danger">Danger</button>
-        <button type="button" class="btn btn-xs btn-link">Link</button>
-    </p>
 </div>
 
 <!-- Bootstrap core JavaScript
