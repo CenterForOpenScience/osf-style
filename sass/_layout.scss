@@ -1,0 +1,25 @@
+/* Sizes */
+$sizes : ('xs', 'sm', 'md', 'lg', 'xl');
+$margins : (5, 10, 15, 25, 50);
+
+.container-full {
+  width: 100%;
+}
+
+@for $i from 1 to 6 {
+  .m-t-#{nth($sizes, $i)} {
+    margin-top: unquote(nth($margins, $i) + 'px');
+  }
+  .m-b-#{nth($sizes, $i)} {
+    margin-bottom: unquote(nth($margins, $i) + 'px');
+  }
+  .m-l-#{nth($sizes, $i)} {
+    margin-left: unquote(nth($margins, $i) + 'px');
+  }
+  .m-r-#{nth($sizes, $i)} {
+    margin-right: unquote(nth($margins, $i) + 'px');
+  }
+  .m-#{nth($sizes, $i)} {
+    margin: unquote(nth($margins, $i) + 'px');
+  }
+}
