@@ -25,7 +25,7 @@
     <![endif]-->
 </head>
 
-<body role="document" data-spy="scroll" data-target="#side-menu">
+<body role="document">
 
 
 <div class="container-full">
@@ -55,34 +55,35 @@
                     <div class="col-xs-12">
                         <div>
                             <p>These are general guidelines that developers need to keep in mind when developing user interactions. They identify our priorities and UI development needs to take into consideration these principles.</p>
-                            <h4><a id="_5"></a></h4>
-                            <h4><a id="Use_professional_language_in_our_interface_7"></a>Use professional language in our interface</h4>
-                            <p>Where long form text is used it is best to use descriptive language.</p>
-                            <p>Good examples:</p>
+                            <div id="language">
+                                <h4><a></a>Use professional language in our interface</h4>
+                                <p>Where long form text is used it is best to use descriptive language.</p>
+                                <p>Good examples:</p>
 <pre><code><span class="hljs-string">"Please follow the link to view this file"</span>.
     <span class="hljs-string">"The project you selected is not available at this time."</span>
     <span class="hljs-string">"You have entered an incorrect name, please try again."</span>
 </code></pre>
-                            <p>Bad Examples:</p>
+                                <p>Bad Examples:</p>
 <pre><code><span class="hljs-string">"That's not right. Try again!"</span> <span class="hljs-comment">//Too collequal: </span>
     <span class="hljs-string">"Go here."</span> <span class="hljs-comment">// Too curt</span>
     <span class="hljs-string">"Error: undefined"</span> <span class="hljs-comment">// Not human enough</span>
     <span class="hljs-string">"Yay, your form is submitted, awesome!"</span> <span class="hljs-comment">// Unnecessarily emotional</span>
 </code></pre>
-                            <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
-                            <p>Good examples:</p>
+                                <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
+                                <p>Good examples:</p>
 <pre><code><span class="hljs-string">"Open"</span>.
     <span class="hljs-string">"Delete Multiple"</span>
     <span class="hljs-string">"Keep Both"</span>
 </code></pre>
-                            <p>Bad Examples:</p>
+                                <p>Bad Examples:</p>
 <pre><code><span class="hljs-string">"Open this file"</span> <span class="hljs-comment">// No need to define what element the action is on </span>
     <span class="hljs-string">"Delete Everything"</span> <span class="hljs-comment">// Too general</span>
     <span class="hljs-string">"Name:"</span> <span class="hljs-comment">// Not descriptive enough, full name, first name? </span>
     <span class="hljs-string">"Cancel, Dismiss, Close"</span> <span class="hljs-comment">// Should use uniform name for same action</span>
 </code></pre>
+                            </div>
                             <hr>
-                            <h4><a id="Let_the_user_know_about_state_where_applicable_47"></a>Let the user know about state where applicable</h4>
+                            <h4 id="app_state"><a></a>Let the user know about state where applicable</h4>
                             <p>When a state change in the UI is happening the user should be notified of some of these processes where it helps the user understand what's going on and differentiate the situation from a potential unresponsive or erroneous scenario.</p>
                             <p>Some examples:</p>
                             <ul>
@@ -104,7 +105,7 @@
                                 </li>
                             </ul>
                             <hr>
-                            <h4><a id="Let_the_user_know_about_errors_and_offer_alternatives_where_possible_68"></a>Let the user know about errors and offer alternatives where possible</h4>
+                            <h4 id="errors"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
                             <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
                             <p>Example with space limitation :</p>
 <pre><code>Can't connect to dropbox at the moment.  [Learn more]
@@ -113,7 +114,7 @@
 <pre><code>We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
 </code></pre>
                             <hr>
-                            <h4><a id="Be_consistent_about_UI_components_81"></a>Be consistent about UI components</h4>
+                            <h4 id="consistency"><a ></a>Be consistent about UI components</h4>
                             <p>To the extent possible all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
                             <ul>
                                 <li>Buttons should look exactly the same in style, with color differences denoting similar meaning</li>
@@ -123,14 +124,14 @@
                                 <li>Responsive components should become responsive in similar ways. For instance if icons lose their labels in small views, that should be the case with all icons.</li>
                             </ul>
                             <hr>
-                            <h4><a id="Utilize_empty_space_with_actionable_suggestions_91"></a>Utilize empty space with actionable suggestions</h4>
+                            <h4 id="empty_space"><a ></a>Utilize empty space with actionable suggestions</h4>
                             <p>There are many areas where users don't have content available. In these cases their pages or elements will be empty. We can use these isntances to offer actionable tasks with appropriate links.</p>
                             <p>Example:</p>
 <pre><code>You don't have any registrations at the moment.
     [Learn more about Registrations] [Create a Registration]
 </code></pre>
                             <hr>
-                            <h4><a id="Take_steps_to_make_website_functional_in_mobile_devices_101"></a>Take steps to make website functional in mobile devices</h4>
+                            <h4 id="mobile"><a ></a>Take steps to make website functional in mobile devices</h4>
                             <ul>
                                 <li>Check responsiveness in every page</li>
                                 <li>Make Header texts proportionally smaller in smaller devices, no need for an H1 in a phone.</li>
@@ -143,7 +144,7 @@
                                 <li>Make sure touch and event based actions either work well or have fallbacks in mobile devices.</li>
                             </ul>
                             <hr>
-                            <h4><a id="Take_steps_to_make_sure_the_website_is_functional_in_very_large_devices_114"></a>Take steps to make sure the website is functional in very large devices</h4>
+                            <h4 id="large"><a ></a>Take steps to make sure the website is functional in very large devices</h4>
                             <p>Where possible, let the user utilize the large workspace that they have by providing meaningful expansion of the space:</p>
                             <ul>
                                 <li>Expand tables, grids, and stacked components that have uniform items (i.e. galleries)</li>
@@ -153,7 +154,7 @@
                                 <li>Center content if not utilizing the entire width</li>
                             </ul>
                             <hr>
-                            <h4><a id="Improve_the_form_input_and_toggle_process_where_possible_124"></a>Improve the form input and toggle process where possible</h4>
+                            <h4 id="form_inputs"><a ></a>Improve the form input and toggle process where possible</h4>
                             <p>Follow these guidelines when making forms or add elements such as drop downs.</p>
                             <ul>
                                 <li>If your dropdown has few elements, consider another input or toggle method, like a button group.</li>
@@ -170,7 +171,7 @@
                                 <li>Tie your labels to your form elements with "for" so that when users click on the label the input gets selection.</li>
                             </ul>
                             <hr>
-                            <h4><a id="Respect_history_and_SEO_140"></a>Respect history and SEO</h4>
+                            <h4 id="history"><a ></a>Respect history and SEO</h4>
                             <p>If you are using a single page approach where page loads are not required for significant events remember that two things happen:</p>
                             <ul>
                                 <li>Because most of the interaction does not require page loads, search engines may not be able to get a sense of your content and therefore fail to index</li>
@@ -453,12 +454,24 @@
         </div>
         <div id="side-menu" class="col-xs-3">
             <ul class="nav nav-pills nav-stacked m-t-xl" data-spy="affix" data-offset-top="350" data-offset-bottom="200">
-                <li role="presentation" class="active"><a href="#top">Top</a></li>
-                <li role="presentation"><a href="#principles">General Principles</a></li>
-                <li role="presentation"><a href="#layout">Layout</a></li>
-                <li role="presentation"><a href="#typography">Typography</a></li>
-                <li role="presentation"><a href="#colors">Colors</a></li>
-                <li role="presentation"><a href="#components">Components</a></li>
+                <li  class="active"><a href="#top">Top</a></li>
+                <li >
+                    <a href="#principles">General Principles</a>
+                    <ul class="nav subnav" >
+                        <li><a href="#language">Language</a></li>
+                        <li><a href="#app_state">Application State</a></li>
+                        <li><a href="#errors">Errors</a></li>
+                        <li><a href="#empty_space">Empty Space</a></li>
+                        <li><a href="#mobile">Mobile</a></li>
+                        <li><a href="#large">Large screens</a></li>
+                        <li><a href="#form_inputs">Form Inputs</a></li>
+                        <li><a href="#history">History and SEO</a></li>
+                    </ul>
+                </li>
+                <li ><a href="#layout">Layout</a></li>
+                <li ><a href="#typography">Typography</a></li>
+                <li ><a href="#colors">Colors</a></li>
+                <li ><a href="#components">Components</a></li>
 
             </ul>
         </div>
@@ -471,6 +484,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vendor/prism/prism.js"></script>
+<script type="text/javascript">
+    $('body').scrollspy({ target: '#side-menu' })
+</script>
 
 </body>
 </html>
