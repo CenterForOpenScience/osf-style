@@ -28,8 +28,15 @@ li, p {
 }
 .nav-pills>li .nav>li>a {
     font-size: 12px;
+    padding-left: 25px;
 }
 
 .nav>li>a {
     padding: 4px 15px;
+}
+
+.box {
+    border: 1px solid #eee;
+    width: 300px;
+    background: #f8f8f8;
 }
