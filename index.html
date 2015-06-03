@@ -56,7 +56,7 @@
                         <div>
                             <p>These are general guidelines that developers need to keep in mind when developing user interactions. They identify our priorities and UI development needs to take into consideration these principles.</p>
                             <div id="language">
-                                <h4><a></a>Use professional language in our interface</h4>
+                                <h4 class="f-w-md"><a></a>Use professional language in our interface</h4>
                                 <p>Where long form text is used it is best to use descriptive language.</p>
                                 <p>Good examples:</p>
 <pre><code><span class="hljs-string">"Please follow the link to view this file"</span>.
@@ -83,7 +83,7 @@
 </code></pre>
                             </div>
                             <hr>
-                            <h4 id="app_state"><a></a>Let the user know about state where applicable</h4>
+                            <h4 id="app_state" class="f-w-md"><a></a>Let the user know about state where applicable</h4>
                             <p>When a state change in the UI is happening the user should be notified of some of these processes where it helps the user understand what's going on and differentiate the situation from a potential unresponsive or erroneous scenario.</p>
                             <p>Some examples:</p>
                             <ul>
@@ -105,7 +105,7 @@
                                 </li>
                             </ul>
                             <hr>
-                            <h4 id="errors"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
+                            <h4 id="errors" class="f-w-md"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
                             <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
                             <p>Example with space limitation :</p>
 <pre><code>Can't connect to dropbox at the moment.  [Learn more]
@@ -114,7 +114,7 @@
 <pre><code>We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
 </code></pre>
                             <hr>
-                            <h4 id="consistency"><a ></a>Be consistent about UI components</h4>
+                            <h4 id="consistency" class="f-w-md"><a ></a>Be consistent about UI components</h4>
                             <p>To the extent possible all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
                             <ul>
                                 <li>Buttons should look exactly the same in style, with color differences denoting similar meaning</li>
@@ -124,14 +124,14 @@
                                 <li>Responsive components should become responsive in similar ways. For instance if icons lose their labels in small views, that should be the case with all icons.</li>
                             </ul>
                             <hr>
-                            <h4 id="empty_space"><a ></a>Utilize empty space with actionable suggestions</h4>
+                            <h4 id="empty_space" class="f-w-md"><a ></a>Utilize empty space with actionable suggestions</h4>
                             <p>There are many areas where users don't have content available. In these cases their pages or elements will be empty. We can use these isntances to offer actionable tasks with appropriate links.</p>
                             <p>Example:</p>
 <pre><code>You don't have any registrations at the moment.
     [Learn more about Registrations] [Create a Registration]
 </code></pre>
                             <hr>
-                            <h4 id="mobile"><a ></a>Take steps to make website functional in mobile devices</h4>
+                            <h4 id="mobile" class="f-w-md"><a ></a>Take steps to make website functional in mobile devices</h4>
                             <ul>
                                 <li>Check responsiveness in every page</li>
                                 <li>Make Header texts proportionally smaller in smaller devices, no need for an H1 in a phone.</li>
@@ -144,7 +144,7 @@
                                 <li>Make sure touch and event based actions either work well or have fallbacks in mobile devices.</li>
                             </ul>
                             <hr>
-                            <h4 id="large"><a ></a>Take steps to make sure the website is functional in very large devices</h4>
+                            <h4 id="large" class="f-w-md"><a ></a>Take steps to make sure the website is functional in very large devices</h4>
                             <p>Where possible, let the user utilize the large workspace that they have by providing meaningful expansion of the space:</p>
                             <ul>
                                 <li>Expand tables, grids, and stacked components that have uniform items (i.e. galleries)</li>
@@ -154,7 +154,7 @@
                                 <li>Center content if not utilizing the entire width</li>
                             </ul>
                             <hr>
-                            <h4 id="form_inputs"><a ></a>Improve the form input and toggle process where possible</h4>
+                            <h4 id="form_inputs" class="f-w-md"><a ></a>Improve the form input and toggle process where possible</h4>
                             <p>Follow these guidelines when making forms or add elements such as drop downs.</p>
                             <ul>
                                 <li>If your dropdown has few elements, consider another input or toggle method, like a button group.</li>
@@ -171,7 +171,7 @@
                                 <li>Tie your labels to your form elements with "for" so that when users click on the label the input gets selection.</li>
                             </ul>
                             <hr>
-                            <h4 id="history"><a ></a>Respect history and SEO</h4>
+                            <h4 id="history" class="f-w-md"><a ></a>Respect history and SEO</h4>
                             <p>If you are using a single page approach where page loads are not required for significant events remember that two things happen:</p>
                             <ul>
                                 <li>Because most of the interaction does not require page loads, search engines may not be able to get a sense of your content and therefore fail to index</li>
@@ -179,7 +179,7 @@
                             </ul>
                             <p>Make sure that your implementation takes care of these two issues.</p>
                             <hr>
-                            <h4><a id="Ignore_these_rules_when_necessary_148"></a>Ignore these rules when necessary</h4>
+                            <h4 class="f-w-md"><a id="Ignore_these_rules_when_necessary_148"></a>Ignore these rules when necessary</h4>
                             <p>There are times where these general practices may not make sense for rare isntances. In those cases it is better UI practice to abandon convention and use custom solutions. These cases should be few and should require discussion.</p>
                         </div>
                     </div>
@@ -253,8 +253,23 @@
                             <li><b> Type </b>: "m" : margin or "p" : padding </li>
                             <li><b> Direction </b>: "t" : top,  "b" : bottom, "l"  : left, "r" : right; or omit this and apply to all sides; i.e. .m-xs; </li>
                             <li><b> Size </b>: "xs": 5px, "sm": 10px, "md": 15px, "lg" : 25px, "xl" : 50px</li>
-
                         </ul>
+                        <h5 class="f-w-lg"> Examples: </h5>
+                        <div class="m-b-md box p-xs">XS Padding: 5px</div>
+                        <div class="m-b-md box p-sm">SM Padding: 10px</div>
+                        <div class="m-b-md box p-md">MD Padding: 15px</div>
+                        <div class="m-b-md box p-lg">LG Padding: 25px</div>
+                        <div class="m-b-md box p-xl">XL Padding: 50px;</div>
+<pre>
+<code class="language-markup">
+    &lt;div class="m-b-md box p-xs">XS Padding: 5px  &lt;/div&gt;
+    &lt;div class="m-b-md box p-sm">SM Padding: 10px &lt;/div&gt;
+    &lt;div class="m-b-md box p-md">MD Padding: 15px &lt;/div&gt;
+    &lt;div class="m-b-md box p-lg">LG Padding: 25px &lt;/div&gt;
+    &lt;div class="m-b-md box p-xl">XL Padding: 50px;&lt;/div&gt;
+    </code>
+</pre>
+
                     </div>
                 </div>
 
@@ -286,7 +301,34 @@
                 </div>
                 <h3> Typography Helper Classes</h3>
                 <div class="row">
-                    <div class="col-xs-12"></div>
+                    <div class="col-xs-12">
+                        <h4> Font Weight Helpers</h4>
+                        <p> Font weight is how thick a font is. These weight differences are not available for all fonts, especially web fonts will have few of them but the default Bootstrap font for typography includes them.</p>
+                        <p class="f-w-xs">XS Thickness</p>
+                        <p class="f-w-sm">SM Thickness</p>
+                        <p class="f-w-md">MD Thickness</p>
+                        <p class="f-w-lg">LG Thickness</p>
+                        <p class="f-w-xl">XL Thickness</p>
+<pre>
+<code class="language-markup">
+    &lt;p class="f-w-xs">XS Thickness&lt;/p&gt;
+    &lt;p class="f-w-sm">SM Thickness&lt;/p&gt;
+    &lt;p class="f-w-md">MD Thickness&lt;/p&gt;
+    &lt;p class="f-w-lg">LG Thickness&lt;/p&gt;
+    &lt;p class="f-w-xl">XL Thickness&lt;/p&gt;
+    </code>
+</pre>
+                        <h4>Other text options</h4>
+                        <div class="row">
+                            <div class="col-xs-9">Bootstrap documentation provides many other alternatives. Please do NOT change font sizing of your elements. Check to see if you can use an existing convention instead at the Bootstrap website.</div>
+                            <div class="col-xs-3">
+
+                                <a href="http://getbootstrap.com/css/#type" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -410,7 +452,7 @@
                 <div class="page-header">
                     <h1>Components</h1>
                 </div>
-                <h3>Buttons</h3>
+                <h3 id="buttons">Buttons</h3>
                 <div class="row">
                     <div class="col-xs-9">
                         <p> We use the default Bootstrap buttons EXCEPT: default button has light grey background rather than white. You don't need to add any classes, just use the standard bootstrap class for default. </p>
@@ -442,13 +484,46 @@
                 </div>
 
 
+                <hr />
+                <h3 id="panels"> Panels/Widgets </h3>
+                <p> Panels are boxes that have special styling for header, body and footer. They are often used as widgets. </p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="pn-wrapper" name="wiki">
+                            <div class="pn-header clearfix">
+                                <h4>Wiki</h4>
+                                <div class="pull-right">
+                                    <a href="/abrs9/wiki/" class="btn">  <i class="fa fa-external-link"></i> </a>
+                                </div>
+                            </div>
+                            <div class="pn-body">
+                                <div class="break-word"><p>Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. Donec massa neque, vehicula id lectus et, ullamcorper iaculis nibh. Donec fermentum, lacus nec hendrerit ultrices, quam nulla sodales sem, quis tempor mauris urna et magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas blandit nunc enim, eget cursus tortor aliquet ac.</p>
+                                    <p>
+                                        Praesent pulvinar leo a iaculis cursus. Nulla vitae bibendum purus, non venenatis eros. Etiam suscipit laoreet purus. Proin in varius elit. Morbi felis magna, posuere in ultrices vitae, commodo sit amet est. Nullam eget metus at ligula viverra suscipit. Nulla imperdiet molestie sapien, tincidunt scelerisque nunc rutrum quis.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pn-footer">
+                                Footer contents here.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <pre>
+                            <code>
+                                //..
+                            </code>
+                        </pre>
+                    </div>
+                </div>
 
                 <hr />
-                <h3> Modals </h3>
+                <h3 id="modals"> Modals </h3>
 
 
                 <hr />
-                <h3> Tabs </h3>
+                <h3 id="tabs"> Tabs </h3>
             </div>
 
         </div>
@@ -471,7 +546,15 @@
                 <li ><a href="#layout">Layout</a></li>
                 <li ><a href="#typography">Typography</a></li>
                 <li ><a href="#colors">Colors</a></li>
-                <li ><a href="#components">Components</a></li>
+                <li >
+                    <a href="#components">Components</a>
+                    <ul class="nav subnav" >
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#panels">Panels</a></li>
+                        <li><a href="#modals">Modals</a></li>
+                        <li><a href="#tabs">Tabs</a></li>
+                    </ul>
+                </li>
 
             </ul>
         </div>
