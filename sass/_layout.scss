@@ -22,3 +22,23 @@
     margin: unquote(nth($margins, $i) + 'px');
   }
 }
+
+/* Build paddings */
+@for $i from 1 to 6 {
+  .p-t-#{nth($sizes, $i)} {
+    padding-top: unquote(nth($margins, $i) + 'px');
+  }
+  .p-b-#{nth($sizes, $i)} {
+    padding-bottom: unquote(nth($margins, $i) + 'px');
+  }
+  .p-l-#{nth($sizes, $i)} {
+    padding-left: unquote(nth($margins, $i) + 'px');
+  }
+  .p-r-#{nth($sizes, $i)} {
+    padding-right: unquote(nth($margins, $i) + 'px');
+  }
+  .p-#{nth($sizes, $i)} {
+    padding: unquote(nth($margins, $i) + 'px');
+  }
+}
+
