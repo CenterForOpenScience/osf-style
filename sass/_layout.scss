@@ -1,11 +1,10 @@
-/* Sizes */
-$sizes : ('xs', 'sm', 'md', 'lg', 'xl');
-$margins : (5, 10, 15, 25, 50);
+
 
 .container-full {
   width: 100%;
 }
 
+/* Build Margins */
 @for $i from 1 to 6 {
   .m-t-#{nth($sizes, $i)} {
     margin-top: unquote(nth($margins, $i) + 'px');
