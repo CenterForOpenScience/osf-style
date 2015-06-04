@@ -1,8 +1,55 @@
 
+/* Navbar */
+.osf-navbar {
+  background-color: #214762;
+  box-shadow: 0 0 3px #AEADAD;
+  min-height: 40px;
+}
+//.osf-navbar a {
+//  color: #FFF;
+//}
+.brand-version {
+  font-size: 8px;
+}
+
 .navbar {
   background: $color-blue;
   border-bottom: $border-light;}
 
-.navbar a {
+.navbar a:hover {
   color: $color-hover;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
+  color: #FFF;
+}
+
+.osf-navbar .navbar-nav>li>a {
+  padding-top: 8px;
+  padding-bottom: 7px;
+  line-height: 27px;
+}
+.osf-navbar .nav .open>a, .osf-navbar .nav .open>a:hover, .osf-navbar .nav .open>a:focus, .osf-navbar a:hover, .osf-navbar li>a:hover, .osf-navbar li.active, .osf-navbar li.a:focus, .osf-navbar .navbar-nav>li>a:focus {
+  background: rgba(187, 187, 187, 0.2);
+}
+.osf-navbar .navbar-nav>li>a, .osf-project-navbar li>a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar-brand {
+  margin-left: 0!important;
+  height: 42px!important;
+  line-height: 27px;
+  padding: 8px 15px 7px;
+}
+.osf-navbar-logo {
+  float: left;
+  margin-right: 8px;
+}
+.osf-navbar .navbar-form {
+  margin: 5px 0 2px;
+}
+.osf-gravatar > img {
+  border: 1px solid #CDCDCD;
+  border-radius: 13px;
+  margin-right: 5px;
 }

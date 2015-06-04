@@ -17,7 +17,7 @@
     <link href="css/base.css" rel="stylesheet">
     <!-- Guidelines style -->
     <link href="page.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -44,10 +44,17 @@
 <div class="nav-rows container">
     <div class="row">
         <div class="col-xs-9">
+            <div class="row m-t-lg">
+                <div class="col-xs-12">
+                    <div class="alert alert-info text-center">
+                        <h4> Is what you are looking for not here? </h4>
+                        <a href="http://getbootstrap.com/" class="btn btn-primary">Check Bootstrap Documentation</a>
+                    </div>
+                </div>
+            </div>
 
             <!--GENERAL PRINCIPLES PAGE-->
             <div id="principles" >
-
                 <div class="page-header">
                     <h1>General Principles</h1>
                 </div>
@@ -213,7 +220,7 @@
                 <h2>Grid</h2>
                 <div class="row">
                     <div class="col-sm-9">
-                        <p class="lead"> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. do not use margins, padding, float or tables for layout arrangements.</p>
+                        <p> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. do not use margins, padding, float or tables for layout arrangements.</p>
 <pre>
 <code class="language-markup">
     &lt;div class="row"&gt;
@@ -284,6 +291,8 @@
                 <p> OSF Website uses light width font for general purpose headings. For bolder fonts you can use the font helper classes:</p>
                 <div class="row">
                     <div class="col-xs-12">
+                        <h1>Example page header <small>Subtext for header</small></h1>
+                        <hr />
                         <h1><span class="m-r-lg">h1.</span> Project management with collaborators</h1>
                         <hr />
                         <h2><span class="m-r-lg">h2.</span> Project management with collaborators</h2>
@@ -655,6 +664,103 @@
                         </pre>
                     </div>
                 </div>
+
+                <hr />
+                <h3 id="navbar"> Navbar </h3>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p> The navigation bar is one of the most edited styles borrowed from Bootstrap. If you need to add components to the OSF navigation bar follow the style shown in the example bar below.  </p>
+
+                        <div>
+                            <nav class="navbar osf-navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand " href="/"><img src="https://staging.osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"> OSF <span class="brand-version"> BETA</span></a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav">
+                                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">One more separated link</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <form class="navbar-form navbar-left" role="search">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Search">
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Submit</button>
+                                        </form>
+
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <!-- ko ifnot: onSearchPage -->
+                                            <li class="hidden-xs" data-bind="click : toggleSearch, css: searchCSS">
+                                                <a class="">
+                                                    <span rel="tooltip" data-placement="bottom" title="Search OSF" class="fa fa-search fa-lg"></span>
+                                                </a>
+                                            </li>
+                                            <!-- /ko -->
+                                            <li>
+
+                                                <a class="visible-lg visible-xs" href="/profile/">
+                                                    <span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"><span class="osf-gravatar"> <img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"> </span></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/settings/">
+                                                    <span rel="tooltip" data-placement="bottom" title="Settings" class="fa fa-cog hidden-xs fa-lg"></span>
+                                                    <span class="visible-xs">Settings</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/logout/">
+                                                    <span rel="tooltip" data-placement="bottom" title="Log&nbsp;out" class="fa fa-sign-out hidden-xs fa-lg"></span>
+                                                    <span class="visible-xs">Log out</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <pre>
+    <code class="language-markup">
+
+    </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+
+
+
+
             </div>
 
         </div>
@@ -684,6 +790,8 @@
                         <li><a href="#panels">Panels</a></li>
                         <li><a href="#modals">Modals</a></li>
                         <li><a href="#alerts">Alerts</a></li>
+                        <li><a href="#navbar">Navbar</a></li>
+
                     </ul>
                 </li>
 
@@ -699,7 +807,7 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vendor/prism/prism.js"></script>
 <script type="text/javascript">
-    $('body').scrollspy({ target: '#side-menu' })
+    $('body').scrollspy({ target: '#side-menu' , offset : 100})
 </script>
 
 </body>
