@@ -32,3 +32,13 @@
 .modal-footer {
   border-top: none;
 }
+
+/* FLAT ALERTS */
+.alert {
+  border-radius: 2px;
+  padding: 10px 15px;
+}
+
+.alert-dismissable, .alert-dismissible {
+  padding-right: 35px;
+}
