@@ -2,3 +2,21 @@
 .btn-default {
   background-color: #F8F8F8;
 }
+
+/* FLAT PANELS */
+
+.panel {
+  border-radius: 0;
+}
+.panel-heading {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.panel-footer {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.panel-title {
+  display: inline-block;
+  float: left;
+}

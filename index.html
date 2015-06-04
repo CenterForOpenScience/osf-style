@@ -486,24 +486,32 @@
 
                 <hr />
                 <h3 id="panels"> Panels/Widgets </h3>
-                <p> Panels are boxes that have special styling for header, body and footer. They are often used as widgets. </p>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p> Panels are boxes that have special styling for header, body and footer. They are often used as widgets. We use bootstrap style with minor overrides to flatten borders.  </p>
+                        <p> <b> Tip:</b> You can use the bootstrap colors for the panels by adding panel type such as "panel-info" as class. Footer is not going to change color. </p>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="http://getbootstrap.com/components/#panels" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="pn-wrapper" name="wiki">
-                            <div class="pn-header clearfix">
-                                <h4>Wiki</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-heading clearfix">
+                                <div class="panel-title">Panel Title</div>
                                 <div class="pull-right">
-                                    <a href="/abrs9/wiki/" class="btn">  <i class="fa fa-external-link"></i> </a>
+                                    <a href="/abrs9/wiki/" class="btn btn-sm btn-default"> Button </a>
                                 </div>
                             </div>
-                            <div class="pn-body">
+                            <div class="panel-body">
                                 <div class="break-word"><p>Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. Donec massa neque, vehicula id lectus et, ullamcorper iaculis nibh. Donec fermentum, lacus nec hendrerit ultrices, quam nulla sodales sem, quis tempor mauris urna et magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas blandit nunc enim, eget cursus tortor aliquet ac.</p>
-                                    <p>
-                                        Praesent pulvinar leo a iaculis cursus. Nulla vitae bibendum purus, non venenatis eros. Etiam suscipit laoreet purus. Proin in varius elit. Morbi felis magna, posuere in ultrices vitae, commodo sit amet est. Nullam eget metus at ligula viverra suscipit. Nulla imperdiet molestie sapien, tincidunt scelerisque nunc rutrum quis.
+                                    <p>Praesent pulvinar leo a iaculis cursus. Nulla vitae bibendum purus, non venenatis eros. Etiam suscipit laoreet purus. Proin in varius elit. Morbi felis magna, posuere in ultrices vitae, commodo sit amet est. Nullam eget metus at ligula viverra suscipit. Nulla imperdiet molestie sapien, tincidunt scelerisque nunc rutrum quis.
                                     </p>
                                 </div>
                             </div>
-                            <div class="pn-footer">
+                            <div class="panel-footer">
                                 Footer contents here.
                             </div>
                         </div>
@@ -511,8 +519,24 @@
                     </div>
                     <div class="col-sm-6">
                         <pre>
-                            <code>
-                                //..
+    <code class="language-markup">
+&lt;div class="panel panel-default"&gt;
+    &lt;div class="pn-header"&gt;
+    &lt;h4&gt;Wiki&lt;/h4&gt;
+        &lt;div class="pull-right"&gt;
+            &lt;a href="/abrs9/wiki/" class="btn"&gt;  &lt;i class="fa fa-external-link"&gt;&lt;/i&gt; &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="pn-body"&gt;
+        &lt;div class="break-word"&gt;
+            &lt;p&gt;
+                ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;div class="pn-footer"&gt;
+        Footer contents here.
+    &lt;/div&gt;
+&lt;/div&gt;
                             </code>
                         </pre>
                     </div>
