@@ -40,3 +40,8 @@ li, p {
     width: 300px;
     background: #f8f8f8;
 }
+
+p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
