@@ -546,7 +546,62 @@
 
                 <hr />
                 <h3 id="modals"> Modals </h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p> OSF Uses modals that are based on the bootstrap versions but modified to be more flat and similar to the Google Material design modals. Use the code as shown below.   </p>
+                    <p><button class="btn btn-info" data-toggle="modal" data-target="#myModal">Click to Open Modal </button></p>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p> Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="http://getbootstrap.com/javascript/#modals" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-sm-12">
+                        <pre>
+    <code class="language-markup">
+&lt;p&gt;&lt;button class="btn btn-info" data-toggle="modal" data-target="#myModal"&gt;Click to Open Modal &lt;/button&gt;&lt;/p&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+        &lt;div class="modal-dialog"&gt;
+            &lt;div class="modal-content"&gt;
+                &lt;div class="modal-header"&gt;
+                    &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+                    &lt;h4 class="modal-title" id="myModalLabel"&gt;Modal title&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class="modal-body"&gt;
+                    &lt;p&gt; Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;div class="modal-footer"&gt;
+                    &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                    &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+                        </pre>
+                    </div>
+                </div>
 
                 <hr />
                 <h3 id="tabs"> Tabs </h3>

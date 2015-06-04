@@ -2,6 +2,9 @@
 .btn-default {
   background-color: #F8F8F8;
 }
+.btn {
+  border-radius: 2px;
+}
 
 /* FLAT PANELS */
 
@@ -19,4 +22,13 @@
 .panel-title {
   display: inline-block;
   float: left;
+}
+
+/* FLAT MODALS */
+
+.modal-content {
+  border-radius: 0;
+}
+.modal-footer {
+  border-top: none;
 }

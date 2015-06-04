@@ -195,6 +195,9 @@ h1, h2, h3, h4 {
 .btn-default {
   background-color: #F8F8F8; }
 
+.btn {
+  border-radius: 2px; }
+
 /* FLAT PANELS */
 .panel {
   border-radius: 0; }
@@ -210,6 +213,13 @@ h1, h2, h3, h4 {
 .panel-title {
   display: inline-block;
   float: left; }
+
+/* FLAT MODALS */
+.modal-content {
+  border-radius: 0; }
+
+.modal-footer {
+  border-top: none; }
 
 .navbar {
   background: #204762;
