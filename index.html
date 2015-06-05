@@ -48,6 +48,7 @@
                 <div class="col-xs-12">
                     <div class="alert alert-info text-center">
                         <h4> Is what you are looking for not here? </h4>
+                        <p> If the style or component you are looking for is not featured here then you should follow the exact syntax of Bootstrap. </p>
                         <a href="http://getbootstrap.com/" class="btn btn-primary">Check Bootstrap Documentation</a>
                     </div>
                 </div>
@@ -327,9 +328,32 @@
     &lt;p class="f-w-xl">XL Thickness&lt;/p&gt;
     </code>
 </pre>
+                        <hr />
                         <h4>Other text options</h4>
                         <div class="row">
-                            <div class="col-xs-9">Bootstrap documentation provides many other alternatives. Please do NOT change font sizing of your elements. Check to see if you can use an existing convention instead at the Bootstrap website.</div>
+                            <div class="col-xs-9">
+                                <p> Bootstrap documentation provides many other alternatives. Please do NOT change font sizing of your elements. Check to see if you can use an existing convention instead at the Bootstrap website.</p>
+                                <p> You can for instance use different colored text with existing css classes.</p>
+                                <div class="bs-example">
+                                    <p class="text-muted">text-muted:  Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                                    <p class="text-primary">text-primary: Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    <p class="text-success">text-success: Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                    <p class="text-info">text-info: Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                                    <p class="text-warning"> text-warning: Etiam porta sem malesuada magna mollis euismod.</p>
+                                    <p class="text-danger">text-danger: Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                </div>
+<pre>
+<code class="language-markup">
+    &lt;p class="text-muted"&gt;...&lt;/p&gt;
+    &lt;p class="text-primary"&gt;...&lt;/p&gt;
+    &lt;p class="text-success"&gt;...&lt;/p&gt;
+    &lt;p class="text-info"&gt;...&lt;/p&gt;
+    &lt;p class="text-warning"&gt;...&lt;/p&gt;
+    &lt;p class="text-danger"&gt;...&lt;/p&gt;
+</code>
+</pre>
+
+                            </div>
                             <div class="col-xs-3">
 
                                 <a href="http://getbootstrap.com/css/#type" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
@@ -453,6 +477,98 @@
                              <li>General Text Color</li>
                          </ul>
                     </div>
+                </div>
+            </div>
+
+
+            <div id="fonts">
+                <div class="page-header">
+                    <h1>Fonts</h1>
+
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <p> OSF Uses Font Awesome 4 without any overrides. Use as shown below and check documentation for details.</p>
+                            <div class="alert alert-info"><b><i class="fa fa-info"></i> Tip: </b> There is a lot more you can do with font awesome, such as spin, use different sizes, stack two on top of each other etc. Make sure you check out the documentation. </div>
+                            <a class="btn btn-danger" href="#">
+                                <i class="fa fa-trash-o fa-lg"></i> Delete</a>
+                            <a class="btn btn-default btn-sm" href="#">
+                                <i class="fa fa-cog"></i> Settings</a>
+
+                            <div class="btn-group">
+                                <a class="btn btn-default" href="#"><i class="fa fa-align-left"></i></a>
+                                <a class="btn btn-default" href="#"><i class="fa fa-align-center"></i></a>
+                                <a class="btn btn-default" href="#"><i class="fa fa-align-right"></i></a>
+                                <a class="btn btn-default" href="#"><i class="fa fa-align-justify"></i></a>
+                            </div>
+
+                            <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                <input class="form-control" type="text" placeholder="Email address">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <input class="form-control" type="password" placeholder="Password">
+                            </div>
+
+                            <div class="btn-group open">
+                                <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> User</a>
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+                                    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+                                    <li><a href="#"><i class="fa fa-ban fa-fw"></i> Ban</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="i"></i> Make admin</a></li>
+                                </ul>
+                            </div>
+<pre>
+    <code class="language-markup">
+&lt;a class="btn btn-danger" href="#"&gt;
+  &lt;i class="fa fa-trash-o fa-lg"&gt;&lt;/i&gt; Delete&lt;/a&gt;
+&lt;a class="btn btn-default btn-sm" href="#"&gt;
+  &lt;i class="fa fa-cog"&gt;&lt;/i&gt; Settings&lt;/a&gt;
+
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group margin-bottom-sm"&gt;
+  &lt;span class="input-group-addon"&gt;&lt;i class="fa fa-envelope-o fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;input class="form-control" type="text" placeholder="Email address"&gt;
+&lt;/div&gt;
+&lt;div class="input-group"&gt;
+  &lt;span class="input-group-addon"&gt;&lt;i class="fa fa-key fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;input class="form-control" type="password" placeholder="Password"&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group open"&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="fa fa-user fa-fw"&gt;&lt;/i&gt; User&lt;/a&gt;
+  &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    &lt;span class="fa fa-caret-down"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-pencil fa-fw"&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-trash-o fa-fw"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-ban fa-fw"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+    </code>
+</pre>
+
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="" class="btn btn-sm btn-default"> Font Awesome Documentation</a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -883,7 +999,32 @@
                     </div>
                 </div>
 
+                <hr />
+                <h3 id="loader"> OSF Loader </h3>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <p> OSF Uses COS logo as a loader gif as shown below in different sizes.   </p>
+                        <div class="logo-spin logo-xs m-r-lg"><img src="img/logo_spin.png" alt="loader"></div>
+                        <div class="logo-spin logo-sm m-r-lg"><img src="img/logo_spin.png" alt="loader"></div>
+                        <div class="logo-spin logo-md m-r-lg"><img src="img/logo_spin.png" alt="loader"></div>
+                        <div class="logo-spin logo-lg m-r-lg"><img src="img/logo_spin.png" alt="loader"></div>
+                        <div class="logo-spin logo-xl m-r-lg"><img src="img/logo_spin.png" alt="loader"></div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-sm-12">
+                        <pre>
+    <code class="language-markup">
+&lt;div class="logo-spin logo-xs"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+&lt;div class="logo-spin logo-sm"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+&lt;div class="logo-spin logo-md"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+&lt;div class="logo-spin logo-lg"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+&lt;div class="logo-spin logo-xl"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+    </code>
+                        </pre>
+                    </div>
+                </div>
 
 
 
@@ -909,6 +1050,7 @@
                 <li ><a href="#layout">Layout</a></li>
                 <li ><a href="#typography">Typography</a></li>
                 <li ><a href="#colors">Colors</a></li>
+                <li ><a href="#fonts">Fonts</a></li>
                 <li >
                     <a href="#components">Components</a>
                     <ul class="nav subnav" >
@@ -918,6 +1060,7 @@
                         <li><a href="#alerts">Alerts</a></li>
                         <li><a href="#navbar">Navbar</a></li>
                         <li><a href="#tabs">Tabs</a></li>
+                        <li><a href="#loader">OSF Loader</a></li>
 
                     </ul>
                 </li>

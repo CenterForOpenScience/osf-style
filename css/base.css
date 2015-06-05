@@ -247,6 +247,63 @@ h1, h2, h3, h4, h1 small {
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: #f8f8f8; }
 
+/* Loader */
+.logo-spin {
+  -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
+  animation: spin 3s infinite linear, opacity 3s infinite linear;
+  display: inline-block; }
+
+.logo-spin.logo-xs img {
+  width: 10px; }
+
+.logo-spin.logo-sm img {
+  width: 20px; }
+
+.logo-spin.logo-md img {
+  width: 30px; }
+
+.logo-spin.logo-lg img {
+  width: 50px; }
+
+.logo-spin.logo-xl img {
+  width: 100px; }
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
+@keyframes opacity {
+  0% {
+    opacity: 0.1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
 /* Navbar */
 .osf-navbar {
   background-color: #214762;
@@ -263,10 +320,16 @@ h1, h2, h3, h4, h1 small {
 .navbar a:hover {
   color: #E0EBF3; }
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
   color: #FFF; }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
   color: #FFF;
   background: rgba(187, 187, 187, 0.2); }
 
@@ -275,7 +338,8 @@ h1, h2, h3, h4, h1 small {
   padding-bottom: 7px;
   line-height: 27px; }
 
-.osf-navbar .navbar-nav > li > a, .osf-project-navbar li > a {
+.osf-navbar .navbar-nav > li > a,
+.osf-project-navbar li > a {
   padding-left: 15px;
   padding-right: 15px; }
 
