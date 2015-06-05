@@ -1,4 +1,6 @@
-/* Bootstrap overrides */
+/*
+ * Bootstrap Overrides
+ */
 .btn-default {
   background-color: #F8F8F8;
 }
@@ -7,7 +9,6 @@
 }
 
 /* FLAT PANELS */
-
 .panel {
   border-radius: 0;
 }
@@ -25,7 +26,6 @@
 }
 
 /* FLAT MODALS */
-
 .modal-footer {
   border-top: none;
 }
@@ -36,7 +36,8 @@
   padding: 10px 15px;
 }
 
-.alert-dismissable, .alert-dismissible {
+.alert-dismissable,
+.alert-dismissible {
   padding-right: 35px;
 }
 
@@ -50,7 +51,9 @@
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 0;
 }
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
   background-color: #F8F8F8;
   border: none;
   border-bottom: 2px solid #204762;
@@ -61,4 +64,65 @@
 }
 .nav>li>a:hover, .nav>li>a:focus {
   background-color: #f8f8f8;
+}
+
+/* Navbar */
+.osf-navbar {
+  background-color: #214762;
+  box-shadow: 0 0 3px #AEADAD;
+  min-height: 40px;
+}
+
+.brand-version {
+  font-size: 8px;
+}
+
+.navbar {
+  background: $color-blue;
+  border-bottom: $border-light;}
+
+.navbar a:hover {
+  color: $color-hover;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand {
+  color: #FFF;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #FFF;
+  background: rgba(187, 187, 187, 0.2);
+}
+.osf-navbar .navbar-nav>li>a {
+  padding-top: 8px;
+  padding-bottom: 7px;
+  line-height: 27px;
+}
+
+.osf-navbar .navbar-nav>li>a,
+.osf-project-navbar li>a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar-brand {
+  margin-left: 0!important;
+  height: 42px!important;
+  line-height: 27px;
+  padding: 8px 15px 7px;
+}
+.osf-navbar-logo {
+  float: left;
+  margin-right: 8px;
+}
+.osf-navbar .navbar-form {
+  margin: 5px 0 2px;
+}
+.osf-gravatar > img {
+  border: 1px solid #CDCDCD;
+  border-radius: 13px;
+  margin-right: 5px;
 }

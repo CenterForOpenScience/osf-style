@@ -1,4 +1,11 @@
+/*
+ * Variables Used Across other files
+ */
 /* Sizes */
+/* Defaults */
+/*
+ * OSF Color Palette
+ */
 .bg-color-blue {
   background-color: #204762; }
 
@@ -17,6 +24,9 @@
 .bg-color-grey {
   background-color: #333333; }
 
+/*
+ * Layout and Sizing Classes
+ */
 .container-full {
   width: 100%; }
 
@@ -172,6 +182,9 @@
 .p-xl {
   padding: 50px; }
 
+/*
+ * Typography Classes
+ */
 h1, h2, h3, h4, h1 small {
   font-weight: 300; }
 
@@ -191,7 +204,9 @@ h1, h2, h3, h4, h1 small {
 .f-w-xl {
   font-weight: 600; }
 
-/* Bootstrap overrides */
+/*
+ * Bootstrap Overrides
+ */
 .btn-default {
   background-color: #F8F8F8; }
 
@@ -223,7 +238,8 @@ h1, h2, h3, h4, h1 small {
   border-radius: 2px;
   padding: 10px 15px; }
 
-.alert-dismissable, .alert-dismissible {
+.alert-dismissable,
+.alert-dismissible {
   padding-right: 35px; }
 
 /* FIX BORDER RADIUS ACROSS THE BOARD*/
@@ -235,7 +251,9 @@ h1, h2, h3, h4, h1 small {
   border: 1px solid transparent;
   border-radius: 0; }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
   background-color: #F8F8F8;
   border: none;
   border-bottom: 2px solid #204762; }
@@ -247,63 +265,6 @@ h1, h2, h3, h4, h1 small {
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: #f8f8f8; }
 
-/* Loader */
-.logo-spin {
-  -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
-  animation: spin 3s infinite linear, opacity 3s infinite linear;
-  display: inline-block; }
-
-.logo-spin.logo-xs img {
-  width: 10px; }
-
-.logo-spin.logo-sm img {
-  width: 20px; }
-
-.logo-spin.logo-md img {
-  width: 30px; }
-
-.logo-spin.logo-lg img {
-  width: 50px; }
-
-.logo-spin.logo-xl img {
-  width: 100px; }
-
-@-moz-keyframes spin {
-  from {
-    -moz-transform: rotate(0deg); }
-  to {
-    -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-@keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-@-moz-keyframes opacity {
-  0% {
-    opacity: 0.1; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0.1; } }
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0.1; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0.1; } }
-@keyframes opacity {
-  0% {
-    opacity: 0.1; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0.1; } }
 /* Navbar */
 .osf-navbar {
   background-color: #214762;
@@ -361,6 +322,66 @@ h1, h2, h3, h4, h1 small {
   border-radius: 13px;
   margin-right: 5px; }
 
+/*
+ * Components specific to OSF
+ */
+/* LOADER */
+.logo-spin {
+  -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
+  animation: spin 3s infinite linear, opacity 3s infinite linear;
+  display: inline-block; }
+
+.logo-spin.logo-xs img {
+  width: 10px; }
+
+.logo-spin.logo-sm img {
+  width: 20px; }
+
+.logo-spin.logo-md img {
+  width: 30px; }
+
+.logo-spin.logo-lg img {
+  width: 50px; }
+
+.logo-spin.logo-xl img {
+  width: 100px; }
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
+@keyframes opacity {
+  0% {
+    opacity: 0.1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
