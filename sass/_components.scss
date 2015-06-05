@@ -91,3 +91,45 @@
   background-color: $color-select;
   color: white;
 }
+
+
+/* PROJECT NAVIGATION */
+.osf-project-navbar {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 43px;
+  background: #EEE;
+  z-index: 99;
+  box-shadow: 0 0 9px -1px #838383;
+  border-radius: 0;
+  border: none;
+  min-height: 40px;
+}
+.osf-project-navbar li>a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 15px;
+}
+
+.osf-project-navbar .navbar-nav li>a:hover {
+  background-color: #DADADA;
+}
+
+.osf-project-navbar li.active,
+.osf-project-navbar li.active a:hover,
+.osf-project-navbar li:hover{
+  background-color: #337AB7;
+}
+
+.osf-project-navbar li.active a {
+  color: white;
+}
+
+.osf-project-navbar a.project-title {
+  font-weight: 300;
+  font-size: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

@@ -31,7 +31,7 @@ li, p {
     padding-left: 25px;
 }
 
-.nav>li>a {
+#side-menu .nav>li>a {
     padding: 4px 15px;
 }
 
@@ -44,4 +44,15 @@ li, p {
 p {
     margin-top: 10px;
     margin-bottom: 25px;
+}
+
+.example {
+    width: 100%;
+    background: #EEEEEE;
+}
+
+/* Overriding these here because the context of the OSf is different than this inline version but the OSF should use the base.css style */
+.osf-project-navbar {
+    position: relative;
+    top: 0;
 }

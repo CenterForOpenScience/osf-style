@@ -782,12 +782,11 @@
                 </div>
 
                 <hr />
-                <h3 id="navbar"> Navbar </h3>
+                <h3 id="navbar"> Navigation </h3>
 
                 <div class="row">
                     <div class="col-xs-12">
                         <p> The navigation bar is one of the most edited styles borrowed from Bootstrap. If you need to add components to the OSF navigation bar follow the style shown in the example bar below.  </p>
-
                         <div>
                             <nav class="navbar osf-navbar navbar-default">
                                 <div class="container-fluid">
@@ -923,6 +922,87 @@
                     </div>
                 </div>
 
+                <h3> Project Navigation </h3>
+                <div class="row" id="project">
+                    <div class="col-xs-12">
+                        <p> Another important navigation component is the project navigation: </p>
+                        <div id="projectBanner">
+                            <header class="subhead" id="overview">
+                                <nav id="projectSubnav" class="navbar osf-project-navbar" role="navigation">
+                                    <div class="container">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".project-nav">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="fa fa-bars fa-lg"></span>
+                                            </button>
+                                            <a class="navbar-brand visible-xs" href="/53dnv/">
+                                                Project Navigation
+                                            </a>
+                                        </div>
+                                        <div class="collapse navbar-collapse project-nav">
+                                            <ul class="nav navbar-nav">
+                                                <li class="active"><a href="/53dnv/" class="project-title"> Project Name</a></li>
+                                                <li><a href="#project">Files</a></li>
+                                                <!-- Add-on tabs -->
+                                                <li>
+                                                    <a href="#project">
+                                                        Wiki
+                                                    </a>
+                                                </li>
+                                                <li><a href="#project">Statistics</a></li>
+                                                <li><a href="#project">Registrations</a></li>
+                                                <li><a href="#project">Forks</a></li>
+                                                <li><a href="#project">Sharing</a></li>
+                                                <li><a href="#project">Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </header>
+                        </div>
+
+                        <pre>
+    <code class="language-markup">
+&lt;div id="projectBanner"&gt;
+    &lt;header class="subhead" id="overview"&gt;
+        &lt;nav id="projectSubnav" class="navbar osf-project-navbar" role="navigation"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="navbar-header"&gt;
+                    &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".project-nav"&gt;
+                        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+                        &lt;span class="fa fa-bars fa-lg"&gt;&lt;/span&gt;
+                    &lt;/button&gt;
+                    &lt;a class="navbar-brand visible-xs" href="/53dnv/"&gt;
+                        Project Navigation
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="collapse navbar-collapse project-nav"&gt;
+                    &lt;ul class="nav navbar-nav"&gt;
+                        &lt;li class="active"&gt;&lt;a href="/53dnv/" class="project-title"&gt; Project Name&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#project"&gt;Files&lt;/a&gt;&lt;/li&gt;
+                        &lt;!-- Add-on tabs --&gt;
+                        &lt;li&gt;
+                            &lt;a href="#project"&gt;
+                                Wiki
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#project"&gt;Statistics&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#project"&gt;Registrations&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#project"&gt;Forks&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#project"&gt;Sharing&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#project"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+
+
                 <hr />
                 <h3 id="tabs"> Tabs </h3>
 
@@ -1040,6 +1120,12 @@
                         <div class="m-b-md p-md osf-box box-round">Round box, neutral background.</div>
                         <div class="m-b-md p-md osf-box box-round box-lt">Round box, light background.</div>
                         <div class="m-b-md p-md osf-box box-round box-dk">Round box, dark background.</div>
+
+                        <p> You can also use the boxes over light backgrounds:  </p>
+                        <div class="example text-center p-lg">
+                            <div class="m-b-md p-md osf-box" style="width: 80%; margin: 0 auto; height: 100px;">This is a special box.</div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -1092,7 +1178,7 @@
                         <li><a href="#panels">Panels</a></li>
                         <li><a href="#modals">Modals</a></li>
                         <li><a href="#alerts">Alerts</a></li>
-                        <li><a href="#navbar">Navbar</a></li>
+                        <li><a href="#navbar">Navigation</a></li>
                         <li><a href="#tabs">Tabs</a></li>
                         <li><a href="#loader">OSF Loader</a></li>
                         <li><a href="#containers">Containers</a></li>

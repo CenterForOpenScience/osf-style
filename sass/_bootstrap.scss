@@ -79,11 +79,9 @@
 
 .navbar {
   background: $color-blue;
-  border-bottom: $border-light;}
-
-.navbar a:hover {
-  color: $color-hover;
+  border-bottom: $border-light;
 }
+
 .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-brand {
   color: #FFF;
