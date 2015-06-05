@@ -72,3 +72,22 @@
     opacity: 0.1
   }
 }
+
+/* OSF BOX */
+
+.osf-box {
+  border: 1px solid #eee;
+  border-radius: 0;
+  background: #ffffff;
+}
+.osf-box.box-round {
+  border-radius: 5px;
+}
+.osf-box.box-lt {
+  background: $color-hover;
+  color: $color-grey;
+}
+.osf-box.box-dk {
+  background-color: $color-select;
+  color: white;
+}

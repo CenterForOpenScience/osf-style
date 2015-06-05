@@ -382,6 +382,23 @@ h1, h2, h3, h4, h1 small {
     opacity: 1; }
   100% {
     opacity: 0.1; } }
+/* OSF BOX */
+.osf-box {
+  border: 1px solid #eee;
+  border-radius: 0;
+  background: #ffffff; }
+
+.osf-box.box-round {
+  border-radius: 5px; }
+
+.osf-box.box-lt {
+  background: #E0EBF3;
+  color: #333333; }
+
+.osf-box.box-dk {
+  background-color: #337AB7;
+  color: white; }
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
