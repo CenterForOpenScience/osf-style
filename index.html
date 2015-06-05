@@ -711,15 +711,7 @@
                                         </form>
 
                                         <ul class="nav navbar-nav navbar-right">
-                                            <!-- ko ifnot: onSearchPage -->
-                                            <li class="hidden-xs" data-bind="click : toggleSearch, css: searchCSS">
-                                                <a href="#">
-                                                    <span rel="tooltip" data-placement="bottom" title="Search OSF" class="fa fa-search fa-lg"></span>
-                                                </a>
-                                            </li>
-                                            <!-- /ko -->
                                             <li>
-
                                                 <a href="#">
                                                     <span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"><span class="osf-gravatar"> <img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"> </span></span>
                                                 </a>
@@ -750,6 +742,65 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
+&lt;nav class="navbar osf-navbar navbar-default"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+        &lt;div class="navbar-header"&gt;
+            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+                &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a class="navbar-brand " href="/"&gt;&lt;img src="https://staging.osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"&gt; OSF &lt;span class="brand-version"&gt; BETA&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+        &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+            &lt;ul class="nav navbar-nav"&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown"&gt;
+                    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;ul class="dropdown-menu" role="menu"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;form class="navbar-form navbar-left" role="search"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;input type="text" class="form-control" placeholder="Search"&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+
+            &lt;ul class="nav navbar-nav navbar-right"&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"&gt;&lt;span class="osf-gravatar"&gt; &lt;img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"&gt; &lt;/span&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;span rel="tooltip" data-placement="bottom" title="Settings" class="fa fa-cog hidden-xs fa-lg"&gt;&lt;/span&gt;
+                        &lt;span class="visible-xs"&gt;Settings&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;span rel="tooltip" data-placement="bottom" title="Log&nbsp;out" class="fa fa-sign-out hidden-xs fa-lg"&gt;&lt;/span&gt;
+                        &lt;span class="visible-xs"&gt;Log out&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+    &lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;
 
     </code>
                         </pre>
