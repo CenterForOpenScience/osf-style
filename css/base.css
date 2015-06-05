@@ -249,13 +249,14 @@ h1, h2, h3, h4, h1 small {
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
   color: #FFF; }
 
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #FFF;
+  background: rgba(187, 187, 187, 0.2); }
+
 .osf-navbar .navbar-nav > li > a {
   padding-top: 8px;
   padding-bottom: 7px;
   line-height: 27px; }
-
-.osf-navbar .nav .open > a, .osf-navbar .nav .open > a:hover, .osf-navbar .nav .open > a:focus, .osf-navbar a:hover, .osf-navbar li > a:hover, .osf-navbar li.active, .osf-navbar li.a:focus, .osf-navbar .navbar-nav > li > a:focus {
-  background: rgba(187, 187, 187, 0.2); }
 
 .osf-navbar .navbar-nav > li > a, .osf-project-navbar li > a {
   padding-left: 15px;
