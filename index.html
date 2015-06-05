@@ -807,6 +807,81 @@
                     </div>
                 </div>
 
+                <hr />
+                <h3 id="tabs"> Tabs </h3>
+
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p> Use tabs to separate content within the page. Our design uses exact same Bootstrap syntax with some style changes. You do not need to use any additional classes to apply these styles, just use tabs as normal.  </p>
+                        <p> Your tabs will not be including margin and padding out of the box within the divs themselves. You can use helper classes or define contents as required. </p>
+
+                        <div role="tabpanel">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs m-b-md" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non ex sit amet nulla viverra vulputate. Vestibulum tortor erat, efficitur in tincidunt sed, ultrices et est. Morbi vestibulum massa sed mi sollicitudin accumsan. Maecenas erat dolor, molestie ac turpis hendrerit, porttitor fringilla mauris. Praesent maximus neque at dui viverra, non fermentum eros placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis id velit ut dui feugiat pulvinar. Aliquam orci tortor, tempor quis lectus eu, pretium finibus augue. Duis suscipit tortor in orci malesuada ullamcorper. Proin eget elit vitae justo eleifend scelerisque sed eget risus. Quisque dignissim nec neque vel interdum. Mauris id lacus dui. In consequat velit mi, at pretium orci consequat vitae.
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                    Nunc vitae augue in mi condimentum dignissim sed at ante. Praesent et imperdiet massa. Donec vel euismod turpis, sed elementum urna. Duis pharetra sapien vel libero tempor rutrum. Ut purus lectus, tincidunt eget nisl at, cursus dignissim magna. Aenean eu malesuada magna. Cras sed justo sollicitudin, luctus sem a, fermentum dui. Fusce eu tempor magna. Proin sed fermentum velit.
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="messages">
+                                    Proin scelerisque eget dui eu mattis. Donec convallis semper ligula in commodo. Pellentesque sit amet gravida ex. Quisque mattis tempor turpis, nec fermentum enim. Etiam sed imperdiet sapien. Curabitur vitae ex vel orci sodales vehicula non suscipit ex. Fusce et justo ac est tincidunt feugiat vel accumsan tortor.
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="http://getbootstrap.com/javascript/#tabs" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <pre>
+    <code class="language-markup">
+ &lt;div role="tabpanel"&gt;
+
+    &lt;!-- Nav tabs --&gt;
+    &lt;ul class="nav nav-tabs m-b-md" role="tablist"&gt;
+        &lt;li role="presentation" class="active"&gt;
+            &lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li role="presentation"&gt;
+            &lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li role="presentation"&gt;
+            &lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- Tab panes --&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div role="tabpanel" class="tab-pane active" id="home"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="profile"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="messages"&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+    </code>
+                        </pre>
+                    </div>
+                </div>
 
 
 
@@ -842,6 +917,7 @@
                         <li><a href="#modals">Modals</a></li>
                         <li><a href="#alerts">Alerts</a></li>
                         <li><a href="#navbar">Navbar</a></li>
+                        <li><a href="#tabs">Tabs</a></li>
 
                     </ul>
                 </li>

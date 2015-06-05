@@ -230,6 +230,23 @@ h1, h2, h3, h4, h1 small {
 .well, .progress, .modal-content {
   border-radius: 2px; }
 
+/* TABS */
+.nav-tabs > li > a {
+  border: 1px solid transparent;
+  border-radius: 0; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: #F8F8F8;
+  border: none;
+  border-bottom: 2px solid #204762; }
+
+.nav-tabs > li > a:hover {
+  border-color: transparent;
+  border-bottom: none; }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #f8f8f8; }
+
 /* Navbar */
 .osf-navbar {
   background-color: #214762;
