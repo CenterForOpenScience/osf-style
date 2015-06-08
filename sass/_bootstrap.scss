@@ -2,7 +2,7 @@
  * Bootstrap Overrides
  */
 .btn-default {
-  background-color: #F8F8F8;
+  background-color: $bg-light;
 }
 .btn {
   border-radius: $radius;
@@ -54,7 +54,7 @@
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
-  background-color: #F8F8F8;
+  background-color: $bg-light;
   border: none;
   border-bottom: 2px solid #204762;
 }
@@ -63,7 +63,7 @@
   border-bottom: none;
 }
 .nav>li>a:hover, .nav>li>a:focus {
-  background-color: #f8f8f8;
+  background-color: $bg-light;
 }
 
 /* Navbar */
@@ -95,10 +95,6 @@
   padding-right: 15px;
 }
 
-.brand-version {
-  font-size: 8px;
-}
-
 .navbar-default {
   .navbar-nav>li>a, .navbar-brand {
    color: #FFF;
@@ -115,13 +111,16 @@
   }
 }
 
-
 .navbar-brand {
   margin-left: 0!important;
   height: 42px!important;
   line-height: 27px;
   padding: 8px 15px 7px;
 }
+.brand-version {
+  font-size: 8px;
+}
+
 .osf-navbar-logo {
   float: left;
   margin-right: 8px;
