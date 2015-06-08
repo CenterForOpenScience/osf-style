@@ -204,6 +204,16 @@ h1, h2, h3, h4, h1 small {
 .f-w-xl {
   font-weight: 600; }
 
+.link-solid,
+.link-solid:hover {
+  border-bottom: 1px solid #337AB7;
+  text-decoration: none; }
+
+.link-dashed,
+.link-dashed:hover {
+  border-bottom: 1px dashed #337AB7;
+  text-decoration: none; }
+
 /*
  * Bootstrap Overrides
  */
