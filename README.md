@@ -3,24 +3,26 @@ OSF Style Guidelines
 
 This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests.
 ### Quick Start
-Clone the remote repo to your local
+* Clone the remote repo to your local
 
-    $ git clone https://github.com/caneruguz/osf-style.git
-    $ cd osf-style
-Install the dependent libraries (listed in [package.json](https://github.com/haoyuchen1992/osf-style/blob/Edit-Readme/package.json)) with npm
+        $ git clone https://github.com/caneruguz/osf-style.git
+        $ cd osf-style
+    
+* Install the dependent libraries (listed in [package.json](https://github.com/haoyuchen1992/osf-style/blob/Edit-Readme/package.json)) with npm
 
-    $ npm install
-Then run gulp script and the project dashboard could be found in `http://localhost:8000/`
+        $ npm install
 
-    $ npm run gulp
+* Besides those dependencies, SASS should also be installed to compile the SASS code in this repo. 
+
+        $ sudo gem install sass
+[Click here](http://sass-lang.com/install) for more details about installation of SASS.     
+    
+* Then run gulp script and the project dashboard could be found in `http://localhost:8000/`
+
+        $ npm run gulp
 After that, click `index.html` in the list directory and now the guideline is running in your local.
 
-### Edit SASS
-With the help of gulp, every change in SASS code will automatically be complied after saving. However, you have to make sure SASS is installed in your local. 
-
-    $ sudo gem install sass
-[Click here](http://sass-lang.com/install) for more details about installation of SASS. 
-
+With the help of gulp, every change in repo code will automatically be complied and changed after saving.  
 
 ### Libraries Used Here
 This Project relies on these technologies for its workflow so it's important to familiarize yourself before starting.
