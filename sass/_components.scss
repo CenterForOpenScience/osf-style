@@ -15,63 +15,74 @@
   }
 }
 
-@-moz-keyframes spin {
-  from {
-    -moz-transform: rotate(0deg);
+// Set spin animation for the log
+@mixin spin-animation($startDegree, $endDegree, $animation-name){
+  @-moz-keyframes #{$animation-name} {
+    from {
+      -moz-transform: rotate($startDegree);
+    }
+    to {
+      -moz-transform: rotate($endDegree);
+    }
   }
-  to {
-    -moz-transform: rotate(360deg);
+  @-webkit-keyframes  #{$animation-name} {
+    from {
+      -webkit-transform: rotate($startDegree);
+    }
+    to {
+     -webkit-transform: rotate($endDegree);
+    }
   }
-}
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@-moz-keyframes opacity {
-  0% {
-    opacity : 0.1
-  }
-  50% {
-    opacity: 1
-  }
-  100% {
-    opacity: 0.1
+  @keyframes  #{$animation-name} {
+    from {
+      -webkit-transform: rotate($startDegree);
+    }
+    to {
+     -webkit-transform: rotate($endDegree);
+    }
   }
 }
-@-webkit-keyframes opacity {
-  0% {
-    opacity : 0.1
+
+@include spin-animation(0deg, 360deg,"spin");
+
+// opacity change animation, Start, Middle, End
+@mixin opacity-animation($start, $middle, $end, $animation-name){
+  @-moz-keyframes #{$animation-name} {
+    0% {
+      opacity : $start
+    }
+    50% {
+      opacity: $middle
+    }
+    100% {
+      opacity: $end
+    }
   }
-  50% {
-    opacity: 1
+  @-webkit-keyframes  #{$animation-name} {
+    0% {
+      opacity : $start
+    }
+    50% {
+      opacity: $middle
+    }
+    100% {
+      opacity: $end
+    }
   }
-  100% {
-    opacity: 0.1
+  @keyframes #{$animation-name} {
+    0% {
+      opacity : $start
+    }
+    50% {
+      opacity: $middle
+    }
+    100% {
+      opacity: $end
+    }
   }
-}
-@keyframes opacity {
-  0% {
-    opacity : 0.1
-  }
-  50% {
-    opacity: 1
-  }
-  100% {
-    opacity: 0.1
-  }
-}
+}  
+
+@include opacity-animation(0.1, 1, 0.1,"opacity");
 
 /* OSF BOX */
 
