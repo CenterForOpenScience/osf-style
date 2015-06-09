@@ -1,7 +1,26 @@
-osf-style
+OSF Style Guidelines
 =========
 
-Stylesheet and guidelines for OSF 
+This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests.
+### Quick Start
+Clone the remote repo to your local
+
+    $ git clone https://github.com/caneruguz/osf-style.git
+    $ cd osf-style
+Install the dependent libraries (listed in package.json) with npm
+
+    $ npm install
+Then run gulp script and the project dashboard could be found in `http://localhost:8000/`
+
+    $ npm run gulp
+After that, click `index.html` in the list directory and now the guideline is running in your local.
+
+### Edit SASS
+With the help of gulp, every change in SASS code will automatically be complied after saving. However, you have to make sure SASS is installed in your local. 
+
+    $ sudo gem install sass
+[Click here](http://sass-lang.com/install) for more details about installation of SASS. 
+
 
 ### Libraries Used Here
 - **Gulp**
@@ -10,26 +29,5 @@ Stylesheet and guidelines for OSF
 ...
 
 
-### TO DO:
-#### Stage 1:
-- Load OSF CSS Files into here
-- Use prism for code syntax highlighting
-- Display Following Items
-  - Navigation Bar
-  - Buttons
-  - Button Groups
-  - Modals
-  - Typography
-  - Tooltips
-  - Wells
-  - Widget Boxes
-  - Tabs
-- Prepare documentation for helper classes
-- Add color palette and button color codes
 
-#### Stage 2:
-- Utilize gulp
-- Utilize SASS 
-- Create SASS variables and mixins for colors
-- Create build step for helpers, colors, and component changes (ie. a Bootstrap theme file) 
 
