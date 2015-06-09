@@ -23,11 +23,13 @@ With the help of gulp, every change in SASS code will automatically be complied 
 
 
 ### Libraries Used Here
-- **Gulp**
-- **SASS** and **gulp-ruby-sass**
-- **Livereload**
-...
+This Project relies on these technologies for its workflow so it's important to familiarize yourself before starting.
 
+1. [Npm](https://www.npmjs.org) 
+Node package management, for server side dependencies and making gulp work. We will use it to install all the dependent libraries(such as Gulp) in package.json.
 
+2. [Gulp](http://gulpjs.com/)  
+Builds the distribution by running important tasks including concatenation, minification(we are not doing this yet, but will), compiling less files.
 
-
+3. [Bootstrap](http://getbootstrap.com/)  
+Forms the basic design with flat colors taken from elsewhere. If you are working with html you need to use the Bootstrap syntax. 
