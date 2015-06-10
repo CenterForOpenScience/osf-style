@@ -326,6 +326,14 @@ h1, h2, h3, h4, h1 small {
   border-radius: 13px;
   margin-right: 5px; }
 
+/* Editable Overrides */
+.editable {
+  border-bottom: none;
+  cursor: pointer; }
+
+.editable:hover {
+  background-color: #E0EBF3; }
+
 /*
  * Components specific to OSF
  */
