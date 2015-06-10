@@ -88,16 +88,8 @@
   .navbar-form {
    margin: 5px 0 2px;
   }
-}
-
-.osf-project-navbar li>a {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.navbar-default {
   .navbar-nav>li>a, .navbar-brand {
-   color: #FFF;
+    color: #FFF;
   }
 
   .navbar-nav>.active>a,
@@ -109,6 +101,11 @@
     color: #FFF;
     background: rgba(187, 187, 187, 0.2);
   }
+}
+
+.osf-project-navbar li>a {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navbar-brand {
