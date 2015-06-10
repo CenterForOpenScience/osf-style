@@ -337,6 +337,23 @@ h1, h2, h3, h4, h1 small {
 .editable:hover {
   background-color: #E0EBF3; }
 
+/* Progress Bar Sizes Override */
+/* Build Margins */
+.progress-bar-xs {
+  height: 5px; }
+
+.progress-bar-sm {
+  height: 10px; }
+
+.progress-bar-md {
+  height: 15px; }
+
+.progress-bar-lg {
+  height: 25px; }
+
+.progress-bar-xl {
+  height: 50px; }
+
 /*
  * Components specific to OSF
  */

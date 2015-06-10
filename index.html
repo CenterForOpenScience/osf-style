@@ -1220,6 +1220,88 @@
                 </div>
 
                 <hr />
+                <h3 id="progress">Progrss Bars</h3>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <p> Progress Bar come in the regular XS-XL sizes that we use throughout the size. In this case sizes denote the height of the bar. </p>
+                        <div class="progress progress-bar-xs">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr-only">40% Complete (success)</span>
+                            </div>
+                        </div>
+                        <div class="progress progress-bar-sm">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <span class="sr-only">20% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress progress-bar-md">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <span class="sr-only">60% Complete (warning)</span>
+                            </div>
+                        </div>
+                        <div class="progress progress-bar-lg">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                        <div class="progress progress-bar-xl">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <span class="sr-only">20% Complete</span>
+                            </div>
+                        </div>
+
+
+                   </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <pre>
+    <code class="language-markup">
+&lt;div class="progress progress-bar-xs"&gt;
+    &lt;div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"&gt;
+        &lt;span class="sr-only"&gt;40% Complete (success)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-bar-sm"&gt;
+    &lt;div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;
+        &lt;span class="sr-only"&gt;20% Complete&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-bar-md"&gt;
+    &lt;div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"&gt;
+        &lt;span class="sr-only"&gt;60% Complete (warning)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-bar-lg"&gt;
+    &lt;div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"&gt;
+        &lt;span class="sr-only"&gt;80% Complete (danger)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-bar-xl"&gt;
+    &lt;div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;
+        &lt;span class="sr-only"&gt;20% Complete&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+                        </pre>
+
+                        <div class="m-t-md m-b-md p-md osf-box box-lt">
+                            <h4 class="text-success"> The height of the bar you use can be determined by looking at:</h4>
+                            <ul>
+                                <li>If you don't have enough space use smaller bars. </li>
+                                <li> If the information is important use bigger bars.</li>
+                                <li> If a lot of bars will repeat, use smaller bars.</li>
+                                <li> If you need to put labels use medium to large bars.  </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <hr />
                 <h3 id="containers"> Containers </h3>
                 <div class="row">
                     <div class="col-xs-12 m-b-lg">
@@ -1239,20 +1321,20 @@
                             <div class="m-b-md p-md osf-box" style="width: 80%; margin: 0 auto; height: 100px;">This is a special box.</div>
                         </div>
 
-                       </div>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;div class="well well-sm"&gt;Small well... Wells have sizes too like well-sm&lt;/div&gt;
-&lt;div class="m-b-md p-md osf-box"&gt;Flat box, neutral background.&lt;/div&gt;
-&lt;div class="m-b-md p-md osf-box box-lt"&gt;Flat box, light background.&lt;/div&gt;
-&lt;div class="m-b-md p-md osf-box box-dk"&gt;Flat box, dark background.&lt;/div&gt;
-&lt;div class="m-b-md p-md osf-box box-round"&gt;Round box, neutral background.&lt;/div&gt;
-&lt;div class="m-b-md p-md osf-box box-round box-lt"&gt;Round box, light background.&lt;/div&gt;
-&lt;div class="m-b-md p-md osf-box box-round box-dk"&gt;Round box, dark background.&lt;/div&gt;
+        &lt;div class="well well-sm"&gt;Small well... Wells have sizes too like well-sm&lt;/div&gt;
+        &lt;div class="m-b-md p-md osf-box"&gt;Flat box, neutral background.&lt;/div&gt;
+        &lt;div class="m-b-md p-md osf-box box-lt"&gt;Flat box, light background.&lt;/div&gt;
+        &lt;div class="m-b-md p-md osf-box box-dk"&gt;Flat box, dark background.&lt;/div&gt;
+        &lt;div class="m-b-md p-md osf-box box-round"&gt;Round box, neutral background.&lt;/div&gt;
+        &lt;div class="m-b-md p-md osf-box box-round box-lt"&gt;Round box, light background.&lt;/div&gt;
+        &lt;div class="m-b-md p-md osf-box box-round box-dk"&gt;Round box, dark background.&lt;/div&gt;
     </code>
                         </pre>
 
@@ -1269,6 +1351,7 @@
 
                     </div>
                 </div>
+
 
 
                 <hr />
@@ -1315,6 +1398,8 @@
                         <li><a href="#tabs">Tabs</a></li>
                         <li><a href="#loader">OSF Loader</a></li>
                         <li><a href="#containers">Containers</a></li>
+                        <li><a href="#progress">Progress Bars</a></li>
+
                     </ul>
                 </li>
                 <li ><a href="#ally">Accesibility</a></li>

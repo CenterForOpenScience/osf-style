@@ -143,3 +143,10 @@
   background-color:$color-hover;
 }
 
+/* Progress Bar Sizes Override */
+/* Build Margins */
+@for $i from 1 to 6 {
+  .progress-bar-#{nth($sizes, $i)} {
+    height: unquote(nth($margins, $i) + 'px');
+  }
+}
