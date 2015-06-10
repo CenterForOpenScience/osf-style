@@ -328,8 +328,11 @@ h1, h2, h3, h4, h1 small {
 
 /* Editable Overrides */
 .editable {
-  border-bottom: none;
   cursor: pointer; }
+
+.editable,
+.editable-click {
+  border-bottom: none; }
 
 .editable:hover {
   background-color: #E0EBF3; }

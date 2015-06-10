@@ -132,8 +132,11 @@
 
 /* Editable Overrides */
 .editable {
+  cursor: pointer;
+}
+.editable,
+.editable-click {
   border-bottom: none;
-    cursor: pointer;
 }
 
 .editable:hover{
