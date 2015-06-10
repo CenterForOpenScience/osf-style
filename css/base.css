@@ -283,7 +283,8 @@ h1, h2, h3, h4, h1 small {
 .osf-navbar {
   background-color: #214762;
   box-shadow: 0 0 3px #AEADAD;
-  min-height: 40px; }
+  min-height: 40px;
+  border-bottom: none; }
   .osf-navbar .navbar-nav > li > a {
     padding-top: 8px;
     padding-bottom: 7px;
