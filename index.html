@@ -1418,6 +1418,12 @@
 <script src="vendor/prism/prism.js"></script>
 <script type="text/javascript">
     $('body').scrollspy({ target: '#side-menu' , offset : 100})
+    var disableEvent = function(e) {
+       e.preventDefault();
+    }
+    $('a[href="#"]').click(disableEvent);
+    $('button[type="submit"]').click(disableEvent);
+
 </script>
 
 </body>
