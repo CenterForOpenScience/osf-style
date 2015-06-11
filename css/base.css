@@ -237,7 +237,8 @@ h1, h2, h3, h4, h1 small {
 
 .panel-title {
   display: inline-block;
-  float: left; }
+  float: left;
+  font-weight: 400; }
 
 /* FLAT MODALS */
 .modal-footer {
