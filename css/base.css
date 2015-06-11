@@ -418,13 +418,13 @@ h1, h2, h3, h4, h1 small {
 .osf-box {
   border: 1px solid #eee;
   border-radius: 0;
-  background: #ffffff; }
+  background-color: #ffffff; }
 
 .osf-box.box-round {
   border-radius: 5px; }
 
 .osf-box.box-lt {
-  background: #E0EBF3;
+  background-color: #E0EBF3;
   color: #333333; }
 
 .osf-box.box-dk {
@@ -437,7 +437,7 @@ h1, h2, h3, h4, h1 small {
   width: 100%;
   left: 0;
   top: 43px;
-  background: #EEE;
+  background-color: #EEE;
   z-index: 99;
   box-shadow: 0 0 9px -1px #838383;
   border-radius: 0;

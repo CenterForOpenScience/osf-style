@@ -89,13 +89,13 @@
 .osf-box {
   border: 1px solid #eee;
   border-radius: 0;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 .osf-box.box-round {
   border-radius: 5px;
 }
 .osf-box.box-lt {
-  background: $color-hover;
+  background-color: $color-hover;
   color: $color-grey;
 }
 .osf-box.box-dk {
@@ -110,7 +110,7 @@
   width: 100%;
   left: 0;
   top: 43px;
-  background: #EEE;
+  background-color: #EEE;
   z-index: 99;
   box-shadow: 0 0 9px -1px #838383;
   border-radius: 0;
