@@ -1347,7 +1347,7 @@
                 </div>
 
                 <hr />
-                <h3 id="progress">Progrss Bars</h3>
+                <h3 id="progress">Progress Bars</h3>
                 <div class="row">
                     <div class="col-xs-12 m-b-lg">
                         <p> Progress Bar come in the regular XS-XL sizes that we use throughout the size. In this case sizes denote the height of the bar. </p>
@@ -1479,6 +1479,154 @@
                     </div>
                 </div>
 
+                <hr>
+                <hr />
+                <h3 id="inputs"> Inputs </h3>
+                <div class="row">
+                    <div class="col-xs-9 m-b-lg">
+                        <p> Use Bootstrap Form styles in all forms as it is. </p>
+
+                        <h4>Text Input</h4>
+                        <ul>
+                            <li>Add "noresize" class to remove the ability of the user to resize this box. </li>
+                        </ul>
+                        <div class="osf-box p-lg text-center">
+                            <input type="text" class="form-control" placeholder="Text input">
+                        </div>
+                        <pre><code class="language-markup">
+&lt;input type="text" class="form-control" placeholder="Text input"&gt;
+                            </code> </pre>
+
+                        <h4 class="m-t-lg">Text Area</h4>
+                        <ul>
+                            <li>Text area input should be used for long form inputs. </li>
+                            <li>Add "noresize" class to remove the ability of the user to resize this box. </li>
+                        </ul>
+                        <div class="osf-box p-lg text-center">
+                            <textarea class="form-control noresize" rows="3"></textarea>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;textarea class="form-control noresize" rows="3"&gt;&lt;/textarea&gt;
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Checkboxes and Options</h4>
+                        <ul>
+                            <li>Use checkboxes for elements that can have multiple selections </li>
+                            <li>Use options for elements with single possible selection. </li>
+                            <li>For short options text you should use ".checkbox-inline" or ".radio-inline" to keep everything in one line </li>
+                        </ul>
+                        <div class="osf-box p-lg">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="checkbox disabled">
+                                <label>
+                                    <input type="checkbox" value="" disabled>
+                                    Option two is disabled
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Option two can be something else and selecting it will deselect option one
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    Option three is disabled
+                                </label>
+                            </div>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="checkbox disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value="" disabled&gt;
+    Option two is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+    Option two can be something else and selecting it will deselect option one
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
+    Option three is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Selects</h4>
+                        <ul>
+                            <li>In general DO NOT USE Selects. Try to find an alternative solution</li>
+                            <li>If you have fewer than 6 items consider using options input instead</li>
+                            <li>Select works best with large amount of selection options</li>
+                            <li>Alphabetize the option list</li>
+
+                        </ul>
+                        <div class="osf-box p-lg text-center">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;select class="form-control"&gt;
+    &lt;option&gt;1&lt;/option&gt;
+    &lt;option&gt;2&lt;/option&gt;
+    &lt;option&gt;3&lt;/option&gt;
+    &lt;option&gt;4&lt;/option&gt;
+    &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+                        </code></pre>
+
+
+
+
+
+                        <div class="m-t-md m-b-md p-md osf-box box-lt">
+                            <h4 class="text-success"> Input and Form Tips:</h4>
+                            <ul>
+                                <li> Input elements will generally fill in the container unless size is specified. Try to combine row and column wrappers to maintain responsiveness or use inline and horizontal form styles shown in the Bootstrap documentation.</li>
+                                <li> Avoid making form elements too wide, consider other options for layout if the window is too wide. </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="http://getbootstrap.com/css/#forms" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
+
 
 
                 <hr />
@@ -1524,8 +1672,9 @@
                         <li><a href="#navbar">Navigation</a></li>
                         <li><a href="#tabs">Tabs</a></li>
                         <li><a href="#loader">OSF Loader</a></li>
-                        <li><a href="#containers">Containers</a></li>
                         <li><a href="#progress">Progress Bars</a></li>
+                        <li><a href="#containers">Containers</a></li>
+                        <li><a href="#inputs">Inputs</a></li>
 
                     </ul>
                 </li>

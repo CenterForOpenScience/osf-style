@@ -468,6 +468,10 @@ h1, h2, h3, h4, h1 small {
   text-overflow: ellipsis;
   overflow: hidden; }
 
+/* Form Inputs */
+.noresize {
+  resize: none; }
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
