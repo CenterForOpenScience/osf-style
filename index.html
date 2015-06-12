@@ -1664,11 +1664,83 @@
                             </ul>
                         </div>
 
+                    </div>
+                </div>
+
+                <h3 id="feedback"> Feedback Examples </h3>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <h4 class="m-t-lg">Form validation</h4>
+                        <p>Use existing Bootstrap style to communicate errors related to forms. Don't use Growl notications. <a href="http://getbootstrap.com/css/#forms-control-validation">Learn more here</a>. </p>
+                        <div class="osf-box p-lg">
+                            <div class="form-group has-error">
+                                <label for="inputHelpBlock">Input with help text</label>
+                                <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                                <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                            </div>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;div class="form-group has-error"&gt;
+    &lt;label for="inputHelpBlock"&gt;Input with help text&lt;/label&gt;
+    &lt;input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock"&gt;
+    &lt;span id="helpBlock" class="help-block"&gt;A block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Growl Errors</h4>
+                        <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
+
+                        <h4 class="m-t-lg">Button State Feedback</h4>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <h5>Regular Button</h5>
+                                    <button class="btn btn-success">Save</button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5>Active State Button</h5>
+                                    <button class="btn btn-default"><i class="text-muted">Saving...</i></button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5>Disabled State Button</h5>
+                                    <button class="btn btn-default disabled"><span class="text-muted">Save</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <pre><code class="language-markup">
+&lt;h5&gt;Regular Button&lt;/h5&gt;
+&lt;button class="btn btn-success"&gt;Save&lt;/button&gt;
+
+&lt;h5&gt;Active State Button&lt;/h5&gt;
+&lt;button class="btn btn-default"&gt;&lt;i class="text-muted"&gt;Saving...&lt;/i&gt;&lt;/button&gt;
+
+&lt;h5&gt;Disabled State Button&lt;/h5&gt;
+&lt;button class="btn btn-default disabled"&gt;&lt;span class="text-muted"&gt;Save&lt;/span&gt;&lt;/button&gt;
+
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Do not Hide Submit Button if the button is not yet available</h4>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h5 class="text-success"> Do this: </h5>
+                                    <button class="btn btn-default">Cancel</button>
+                                    <button class="btn btn-default disabled">Save</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <h5 class="text-danger"> Don't do this: </h5>
+                                    <button class="btn btn-default">Cancel</button>
+                                    <span class="text-muted"> Submit button becomes visible magically later</span>
+                                </div>
+                            </div>
+                        </div>
 
 
-
+                        <div class="alert alert-danger m-t-lg"><b>Never use Javascript alerts!</b> (except for onunload events).</div>
 
                     </div>
+
                 </div>
 
                 <hr />
