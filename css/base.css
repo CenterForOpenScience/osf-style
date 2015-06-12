@@ -379,7 +379,8 @@ h1, h2, h3, h4, h1 small {
 .editable {
   cursor: pointer; }
 
-.editable, .editable-click {
+.editable,
+.editable-click {
   border-bottom: none; }
 
 .editable:hover {

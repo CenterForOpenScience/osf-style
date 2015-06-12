@@ -204,7 +204,8 @@
 .editable {
   cursor: pointer;
 }
-.editable, .editable-click {
+.editable, 
+.editable-click {
   border-bottom: none;
 }
 
