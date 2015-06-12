@@ -1628,9 +1628,51 @@
                 </div>
 
 
+                <hr />
+                <h2 id="ui"> UI Examples </h2>
+
+                <h3 id="autosave"> Autosave Example </h3>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <h4 class="m-t-lg"> Continous Save with a continously changed document (i.e. Wiki) </h4>
+                        <p>Have save time information and button just in case. Similar to Google Docs.  </p>
+                        <div class="osf-box p-lg">
+                            <div style="border-bottom:1px solid #ccc" class="text-right p-xs">
+                                <span class="text-muted">Last Saved: 2 minutes ago.</span> <button class="btn btn-sm btn-success">Save</button>
+                            </div>
+                        </div>
+
+                        <h4 class="m-t-lg"> Save on Input control change  </h4>
+                        <p>Show change alert that disappears after about 3 seconds. </p>
+                        <div class="osf-box p-lg">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" value="Name here">
+                                </div>
+                                <div class="col-xs-6">
+                                    <span class="text-success">Changes saved!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-t-md m-b-md p-md osf-box box-lt">
+                            <h4> When you should NOT autosave: </h4>
+                            <ul>
+                                <li>If the edit is highly sensitive never autosave. The extra step of saving adds a level of security.</li>
+                                <li>If the edit is going to be public immediately think about implications. The step to save gives users a moment to revise.</li>
+                                <li>When intermediate changes being applied would alter the layout or page. For example selecting to hide certain elements in a settings page should not hide those immediately and move the page around, resulting in the user losing location. </li>
+                                <li>When one edit is related to another edit that is yet to be made. I.e. when the edit is not independent.</li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
 
                 <hr />
-                <h3 id="ally"> Accesibility </h3>
+                <h2 id="ally"> Accesibility </h2>
                 <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
 
 
@@ -1678,6 +1720,7 @@
 
                     </ul>
                 </li>
+                <li ><a href="#ui">UI Examples</a></li>
                 <li ><a href="#ally">Accesibility</a></li>
 
 
