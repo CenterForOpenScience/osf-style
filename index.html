@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OSF Style Guidelines</title>
+    <title>OSF Style & UI Guidelines</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,9 +32,13 @@
     <div id="top" class="container theme-showcase" >
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <h1>OSF Style Guidelines</h1>
+            <h1>OSF Style and UI Guidelines</h1>
             <p>This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests. </p>
-            <a href="https://github.com/caneruguz/osf-style" class="btn btn-info">Contribute</a>
+            <p class="m-t-lg">
+                <a href="https://github.com/caneruguz/osf-style" class="btn btn-success btn-lg">Contribute</a>
+                <a href="https://github.com/caneruguz/osf-style/issues" class="btn btn-warning btn-lg">Report Issues</a>
+            </p>
+
         </div>
 
     </div>
@@ -67,28 +71,32 @@
                                 <h4 class="f-w-md"><a></a>Use professional language in our interface</h4>
                                 <p>Where long form text is used it is best to use descriptive language.</p>
                                 <p>Good examples:</p>
-<pre><code><span class="hljs-string">"Please follow the link to view this file"</span>.
-    <span class="hljs-string">"The project you selected is not available at this time."</span>
-    <span class="hljs-string">"You have entered an incorrect name, please try again."</span>
-</code></pre>
+                                    <div class="osf-box box-lt p-lg">
+                                        <div class="text-success">"Please follow the link to view this file"</div>
+                                        <div class="text-success">"The project you selected is not available at this time."</div>
+                                        <div class="text-success">"You have entered an incorrect name, please try again."</div>
+                                    </div>
                                 <p>Bad Examples:</p>
-<pre><code><span class="hljs-string">"That's not right. Try again!"</span> <span class="hljs-comment">//Too collequal: </span>
-    <span class="hljs-string">"Go here."</span> <span class="hljs-comment">// Too curt</span>
-    <span class="hljs-string">"Error: undefined"</span> <span class="hljs-comment">// Not human enough</span>
-    <span class="hljs-string">"Yay, your form is submitted, awesome!"</span> <span class="hljs-comment">// Unnecessarily emotional</span>
-</code></pre>
+                                <div class="osf-box box-lt p-lg">
+                                    <div class="text-danger">"That's not right. Try again!"<span class="text-muted">//Too collequal: </span>  </div>
+                                    <div class="text-danger">"Go here." <span class="text-muted">// Too curt </span></div>
+                                    <div class="text-danger">"Error: undefined" <span class="text-muted">// Not human enough</span></div>
+                                    <div class="text-danger">"Yay, your form is submitted, awesome!"<span class="text-muted">// Unnecessarily emotional</span></div>
+                                </div>
                                 <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
                                 <p>Good examples:</p>
-<pre><code><span class="hljs-string">"Open"</span>.
-    <span class="hljs-string">"Delete Multiple"</span>
-    <span class="hljs-string">"Keep Both"</span>
-</code></pre>
+                                <div class="osf-box box-lt p-lg">
+                                    <span class="text-success">"Open"</span>.
+                                    <span class="text-success">"Delete Multiple"</span>
+                                    <span class="text-success">"Keep Both"</span>
+                                </div>
                                 <p>Bad Examples:</p>
-<pre><code><span class="hljs-string">"Open this file"</span> <span class="hljs-comment">// No need to define what element the action is on </span>
-    <span class="hljs-string">"Delete Everything"</span> <span class="hljs-comment">// Too general</span>
-    <span class="hljs-string">"Name:"</span> <span class="hljs-comment">// Not descriptive enough, full name, first name? </span>
-    <span class="hljs-string">"Cancel, Dismiss, Close"</span> <span class="hljs-comment">// Should use uniform name for same action</span>
-</code></pre>
+                                <div class="osf-box box-lt p-lg">
+                                    <div class="text-danger">"Open this file" <span class="text-muted">// No need to define what element the action is on </span></div>
+                                    <div class="text-danger">"Delete Everything" <span class="text-muted">// Too general</span></div>
+                                    <div class="text-danger">"Name:"<span class="text-muted">// Not descriptive enough, full name, first name? </span></div>
+                                    <div class="text-danger">"Cancel, Dismiss, Close" <span class="text-muted">// Should use uniform name for same action</span></div>
+                                </div>
                             </div>
                             <hr>
                             <h4 id="app_state" class="f-w-md"><a></a>Let the user know about state where applicable</h4>
@@ -116,11 +124,13 @@
                             <h4 id="errors" class="f-w-md"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
                             <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
                             <p>Example with space limitation :</p>
-<pre><code>Can't connect to dropbox at the moment.  [Learn more]
-</code></pre>
+                            <div class="osf-box box-lt p-lg">
+                                Can't connect to dropbox at the moment.  [Learn more]
+                            </div>
                             <p>Example:</p>
-<pre><code>We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
-</code></pre>
+                            <div class="osf-box box-lt p-lg">
+                                We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
+                            </div>
                             <hr>
                             <h4 id="consistency" class="f-w-md"><a ></a>Be consistent about UI components</h4>
                             <p>To the extent possible all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
@@ -135,9 +145,10 @@
                             <h4 id="empty_space" class="f-w-md"><a ></a>Utilize empty space with actionable suggestions</h4>
                             <p>There are many areas where users don't have content available. In these cases their pages or elements will be empty. We can use these isntances to offer actionable tasks with appropriate links.</p>
                             <p>Example:</p>
-<pre><code>You don't have any registrations at the moment.
-    [Learn more about Registrations] [Create a Registration]
-</code></pre>
+                            <div class="osf-box box-lt p-lg">
+                                You don't have any registrations at the moment.<br>
+                                [Learn more about Registrations] [Create a Registration]
+                            </div>
                             <hr>
                             <h4 id="mobile" class="f-w-md"><a ></a>Take steps to make website functional in mobile devices</h4>
                             <ul>
@@ -179,12 +190,8 @@
                                 <li>Tie your labels to your form elements with "for" so that when users click on the label the input gets selection.</li>
                             </ul>
                             <hr>
-                            <h4 id="history" class="f-w-md"><a ></a>Respect history and SEO</h4>
-                            <p>If you are using a single page approach where page loads are not required for significant events remember that two things happen:</p>
-                            <ul>
-                                <li>Because most of the interaction does not require page loads, search engines may not be able to get a sense of your content and therefore fail to index</li>
-                                <li>Users consider significant layout changes to denote page changes and will want to press back to go back to the previous state.</li>
-                            </ul>
+                            <h4 id="history" class="f-w-md"><a ></a>Respect history</h4>
+                            <p>If you are using a single page approach where page loads are not required for significant events remember that users consider significant layout changes to denote page changes and will want to press back to go back to the previous state.</p>
                             <p>Make sure that your implementation takes care of these two issues.</p>
                             <hr>
                             <h4 class="f-w-md"><a id="Ignore_these_rules_when_necessary_148"></a>Ignore these rules when necessary</h4>
@@ -686,6 +693,104 @@
 &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
     </code>
 </pre>
+
+                        <div class="m-t-md m-b-md p-md osf-box box-lt">
+                            <h4 class="text-success"> Which buttons to use:</h4>
+                            <p> Follow the colors and text below in your use of buttons.</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Button and text to use</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Non modifying changes:</td>
+                                        <td>
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-default">Close</button>
+                                            <button type="button" class="btn btn-default">Back</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saving and Adding</td>
+                                        <td>
+                                            <button type="button" class="btn btn-success">Save</button>
+                                            <button type="button" class="btn btn-success">Upload</button>
+                                            <button type="button" class="btn btn-success">New Registration</button>
+                                            <button type="button" class="btn btn-success">Add User</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Removal</td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger">Delete All</button>
+                                            <button type="button" class="btn btn-danger">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Information and Settings</td>
+                                        <td>
+                                            <button type="button" class="btn btn-info">Learn More</button>
+                                            <button type="button" class="btn btn-info">Settings</button>
+                                            <button type="button" class="btn btn-info">Options</button>
+                                            <button type="button" class="btn btn-info"><i class="fa fa-info"></i> </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other Call to Action</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Create an Account</button>
+                                            <button type="button" class="btn btn-primary">Download</button>
+                                            <button type="button" class="btn btn-primary">Open</button>
+                                            <button type="button" class="btn btn-primary">Auto Fill</button>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4 class="m-t-lg">Guidelines for Button Text</h4>
+                        <ul>
+                            <li>Do not use OK, even if it makes sense with the question being asked. People skim to the button often and OK doesn't help understand the meaning quickly. </li>
+                            <li>Buttons should have verbs and should start with verbs. i.e. "Make Public" instead of "Public" alone or "Visibility Setting" </li>
+                            <li> The button does not need to repeat the header. I.e "Add" is enough for the submit button for a modal that says "Add Contributors".</li>
+                            <li> Be deliberate in your use of Cancel vs Close. Cancel is supposed to undo any potential change visually or with data or denote change of intention by the user (i.e. Don't save). Close simply removes an element from view. Modals need a Close button and forms need a Cancel button. If the form has brought the user to a different page Cancel should bring them back to where they were. </li>
+                            <li> Don't abandon Cancel or Close buttons next to Save in favor of Dismiss buttons (x at the top right of content). Cancel is easier to find and click and the X button is conventional, both are useful. </li>
+                        </ul>
+
+                        <h4>Form buttons</h4>
+                        <p>With forms don't use Submit. Use the word that the activity requires. </p>
+
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Text to use</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Creating a new item</td>
+                                    <td>Create</td>
+                                </tr>
+                                <tr>
+                                    <td>Editing the information of an exiting item</td>
+                                    <td>Save</td>
+                                </tr>
+                                <tr>
+                                    <td>Deleting an Item</td>
+                                    <td>Delete</td>
+                                </tr>
+                                <tr>
+                                    <td>Applying a setting (for instance add ons)</td>
+                                    <td>Apply</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="col-xs-3">
                         <a href="http://getbootstrap.com/css/#buttons" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
@@ -1239,7 +1344,7 @@
                 </div>
 
                 <hr />
-                <h3 id="progress">Progrss Bars</h3>
+                <h3 id="progress">Progress Bars</h3>
                 <div class="row">
                     <div class="col-xs-12 m-b-lg">
                         <p> Progress Bar come in the regular XS-XL sizes that we use throughout the size. In this case sizes denote the height of the bar. </p>
@@ -1371,6 +1476,154 @@
                     </div>
                 </div>
 
+                <hr>
+                <hr />
+                <h3 id="inputs"> Inputs </h3>
+                <div class="row">
+                    <div class="col-xs-9 m-b-lg">
+                        <p> Use Bootstrap Form styles in all forms as it is. </p>
+
+                        <h4>Text Input</h4>
+                        <ul>
+                            <li>Add "noresize" class to remove the ability of the user to resize this box. </li>
+                        </ul>
+                        <div class="osf-box p-lg text-center">
+                            <input type="text" class="form-control" placeholder="Text input">
+                        </div>
+                        <pre><code class="language-markup">
+&lt;input type="text" class="form-control" placeholder="Text input"&gt;
+                            </code> </pre>
+
+                        <h4 class="m-t-lg">Text Area</h4>
+                        <ul>
+                            <li>Text area input should be used for long form inputs. </li>
+                            <li>Add "noresize" class to remove the ability of the user to resize this box. </li>
+                        </ul>
+                        <div class="osf-box p-lg text-center">
+                            <textarea class="form-control noresize" rows="3"></textarea>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;textarea class="form-control noresize" rows="3"&gt;&lt;/textarea&gt;
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Checkboxes and Options</h4>
+                        <ul>
+                            <li>Use checkboxes for elements that can have multiple selections </li>
+                            <li>Use options for elements with single possible selection. </li>
+                            <li>For short options text you should use ".checkbox-inline" or ".radio-inline" to keep everything in one line </li>
+                        </ul>
+                        <div class="osf-box p-lg">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="checkbox disabled">
+                                <label>
+                                    <input type="checkbox" value="" disabled>
+                                    Option two is disabled
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Option two can be something else and selecting it will deselect option one
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    Option three is disabled
+                                </label>
+                            </div>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="checkbox disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value="" disabled&gt;
+    Option two is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+    Option two can be something else and selecting it will deselect option one
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
+    Option three is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Selects</h4>
+                        <ul>
+                            <li>In general DO NOT USE Selects. Try to find an alternative solution</li>
+                            <li>If you have fewer than 6 items consider using options input instead</li>
+                            <li>Select works best with large amount of selection options</li>
+                            <li>Alphabetize the option list</li>
+
+                        </ul>
+                        <div class="osf-box p-lg text-center">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;select class="form-control"&gt;
+    &lt;option&gt;1&lt;/option&gt;
+    &lt;option&gt;2&lt;/option&gt;
+    &lt;option&gt;3&lt;/option&gt;
+    &lt;option&gt;4&lt;/option&gt;
+    &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+                        </code></pre>
+
+
+
+
+
+                        <div class="m-t-md m-b-md p-md osf-box box-lt">
+                            <h4 class="text-success"> Input and Form Tips:</h4>
+                            <ul>
+                                <li> Input elements will generally fill in the container unless size is specified. Try to combine row and column wrappers to maintain responsiveness or use inline and horizontal form styles shown in the Bootstrap documentation.</li>
+                                <li> Avoid making form elements too wide, consider other options for layout if the window is too wide. </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="http://getbootstrap.com/css/#forms" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                    </div>
+                </div>
+
 
 
                 <hr />
@@ -1416,8 +1669,9 @@
                         <li><a href="#navbar">Navigation</a></li>
                         <li><a href="#tabs">Tabs</a></li>
                         <li><a href="#loader">OSF Loader</a></li>
-                        <li><a href="#containers">Containers</a></li>
                         <li><a href="#progress">Progress Bars</a></li>
+                        <li><a href="#containers">Containers</a></li>
+                        <li><a href="#inputs">Inputs</a></li>
 
                     </ul>
                 </li>

@@ -145,49 +145,8 @@
   overflow: hidden;
 }
 
-// Media query for navigation bar
-@media (max-width: 767px) {
-    .navbar-nav .open .dropdown-menu>li>a {
-        color: #FFF;
-    }
-    .osf-project-navbar li>a {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
 
-    .navbar-brand {
-        margin-left: 0 !important;
-        height: 48px !important;
-        line-height: 27px !important;
-        padding: 11px 15px 10px 15px !important;
-    }
-    .osf-navbar-logo {
-        margin-top: 0px !important;
-    }
-
-}
-
-@media (min-width: 768px) {
-    .osf-navbar .navbar-nav>li>a {
-        padding-left: 7px;
-        padding-right: 7px;
-    }
-
-    .navbar-brand {
-        margin-left: 0 !important;
-        padding-left: 0;
-    }
-}
-
-@media (min-width: 992px) {
-    .osf-navbar .navbar-nav>li>a {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-@media (min-width: 1200px) {
-    .osf-navbar .navbar-nav>li>a {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+/* Form Inputs */
+.noresize {
+  resize: none;
 }
