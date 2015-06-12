@@ -286,6 +286,11 @@ h1, h2, h3, h4, h1 small {
   box-shadow: 0 0 3px #AEADAD;
   min-height: 40px;
   border-bottom: none; }
+  .osf-navbar .navbar-nav > li > a.btn {
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin-top: 4px;
+    margin-left: 8px; }
   .osf-navbar .navbar-nav > li > a {
     padding-top: 8px;
     padding-bottom: 7px;
@@ -296,6 +301,8 @@ h1, h2, h3, h4, h1 small {
     margin: 5px 0 2px; }
   .osf-navbar .navbar-nav > li > a, .osf-navbar .navbar-brand {
     color: #FFF; }
+  .osf-navbar a {
+    color: #FFF; }
   .osf-navbar .navbar-nav > .active > a,
   .osf-navbar .navbar-nav > .active > a:hover,
   .osf-navbar .navbar-nav > li > a:hover,
@@ -303,6 +310,15 @@ h1, h2, h3, h4, h1 small {
   .osf-navbar .navbar-brand:hover,
   .osf-navbar .navbar-brand:focus {
     color: #FFF;
+    background: rgba(187, 187, 187, 0.2); }
+  .osf-navbar .nav .open > a,
+  .osf-navbar .nav .open > a:hover,
+  .osf-navbar .nav .open > a:focus,
+  .osf-navbar a:hover,
+  .osf-navbar li > a:hover,
+  .osf-navbar li.active,
+  .osf-navbar li.a:focus,
+  .osf-navbar .navbar-nav > li > a:focus {
     background: rgba(187, 187, 187, 0.2); }
 
 .osf-project-navbar li > a {
@@ -468,6 +484,38 @@ h1, h2, h3, h4, h1 small {
   text-overflow: ellipsis;
   overflow: hidden; }
 
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu > li > a {
+    color: #FFF; }
+
+  .osf-project-navbar li > a {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+    height: 48px !important;
+    line-height: 27px !important;
+    padding: 11px 15px 10px 15px !important; }
+
+  .osf-navbar-logo {
+    margin-top: 0px !important; } }
+@media (min-width: 768px) {
+  .osf-navbar .navbar-nav > li > a {
+    padding-left: 7px;
+    padding-right: 7px; }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+    padding-left: 0; } }
+@media (min-width: 992px) {
+  .osf-navbar .navbar-nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px; } }
+@media (min-width: 1200px) {
+  .osf-navbar .navbar-nav > li > a {
+    padding-left: 15px;
+    padding-right: 15px; } }
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
