@@ -322,9 +322,7 @@ h1, h2, h3, h4, h1 small {
   .osf-navbar li > a:hover,
   .osf-navbar li.active,
   .osf-navbar li.a:focus,
-  .osf-navbar .navbar-nav > li > a:focus,
-  .osf-navbar .dropdown-menu > li > a:focus,
-  .osf-navbar .dropdown-menu > li > a:hover {
+  .osf-navbar .navbar-nav > li > a:focus {
     background: rgba(187, 187, 187, 0.2); }
 
 .osf-project-navbar li > a {
