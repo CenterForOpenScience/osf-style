@@ -214,6 +214,12 @@ h1, h2, h3, h4, h1 small {
   border-bottom: 1px dashed #337AB7;
   text-decoration: none; }
 
+.text-smaller {
+  font-size: 0.9em; }
+
+.text-bigger {
+  font-size: 1.1em; }
+
 /*
  * Bootstrap Overrides
  */
@@ -531,3 +537,7 @@ h1, h2, h3, h4, h1 small {
 .theme-showcase .navbar .container {
   width: auto;
   color: blue; }
+
+.osf-selected {
+  background-color: #337AB7;
+  color: white; }

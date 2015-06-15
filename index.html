@@ -1768,7 +1768,7 @@
                             </div>
                         </div>
 
-                        <h4 class="m-t-lg">UI specific toggle with more than 2 states</h4>
+                        <h4 class="m-t-xl">UI specific toggle with more than 2 states</h4>
                         <p>If there is a UI component that shows more than 2 states and it's effects are immediate (such as toggling views) use a button group with a disabled button as label. This shows the user that these view changes belong together and work in a similar way.</p>
                         <div class="m-b-md p-md osf-box box-round">
                             <div class="row">
@@ -1779,7 +1779,6 @@
                                         <button class="btn btn-default">Peview</button>
                                         <button class="btn btn-primary">Edit</button>
                                         <button class="btn btn-primary">Compare</button>
-
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
@@ -1791,12 +1790,75 @@
                             </div>
                         </div>
 
-                        <h4 class="m-t-lg">Inline selection with multiple states without using Select</h4>
-                        <p>If for some reason you need to have users choose from multiple options that are not part of a UI change but still needs to be part of a toolbar you can use a design similar to Github.</p>
+                        <h4 class="m-t-xl">Inline selection with multiple states without using Select</h4>
+                        <p>If for some reason you need to have users choose from multiple options that are not part of a UI change but still needs to be part of a toolbar you can use split button drop downs from Bootstrap.</p>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <!-- Split button -->
+                                <div class="btn-group m-b-lg">
+                                    <button type="button" class="btn btn-default">Detailed Options</button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li class="active">
+                                            <a href="#">
+                                                <div>Selected option</div>
+                                                <div class="text-smaller">With some more details here.</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div>Options can take HTML</div>
+                                                <div class="text-smaller">Make <b>Bold</b> or <i>Italic</i>.</div>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+
+                                 <pre><code class="language-markup">
+&lt;div class="btn-group m-b-lg"&gt;
+    &lt;button type="button" class="btn btn-default"&gt;Detailed Options&lt;/button&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+        &lt;span class="caret"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Toggle Dropdown&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" role="menu"&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#"&gt;
+                &lt;div&gt;Selected option&lt;/div&gt;
+                &lt;div class="text-smaller"&gt;With some more details here.&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#"&gt;
+                &lt;div&gt;Options can take HTML&lt;/div&gt;
+                &lt;div class="text-smaller"&gt;Make &lt;b&gt;Bold&lt;/b&gt; or &lt;i&gt;Italic&lt;/i&gt;.&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                 </code></pre>
+
+
+                            </div>
+                            <div class="col-xs-3">
+                                <a href=" http://getbootstrap.com/components/#btn-dropdowns-split" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                            </div>
+                        </div>
 
 
 
-                        <h4 class="m-t-lg">Non-UI form inputs</h4>
+
+
+                        <h4 class="m-t-xl">Non-UI form inputs</h4>
                         <p>If the input changes are not part of a UI element, use regular form standards.</p>
                         <ul>
                             <li>If multiple items can be selected use checkboxes.</li>
@@ -1885,6 +1947,8 @@
     $('a[href="#"]').click(disableEvent);
     $('button[type="submit"]').click(disableEvent);
 
+    // Initialize popovers
+    $('[data-toggle="popover"]').popover()
 </script>
 
 </body>
