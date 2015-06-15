@@ -78,7 +78,7 @@
                                     </div>
                                 <p>Bad Examples:</p>
                                 <div class="osf-box box-lt p-lg">
-                                    <div class="text-danger">"That's not right. Try again!"<span class="text-muted">//Too collequal: </span>  </div>
+                                    <div class="text-danger">"That's not right. Try again!"<span class="text-muted">//Too colloquial: </span>  </div>
                                     <div class="text-danger">"Go here." <span class="text-muted">// Too curt </span></div>
                                     <div class="text-danger">"Error: undefined" <span class="text-muted">// Not human enough</span></div>
                                     <div class="text-danger">"Yay, your form is submitted, awesome!"<span class="text-muted">// Unnecessarily emotional</span></div>
@@ -125,7 +125,7 @@
                             <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
                             <p>Example with space limitation :</p>
                             <div class="osf-box box-lt p-lg">
-                                Can't connect to dropbox at the moment.  [Learn more]
+                                Can't connect to Dropbox at the moment.  [Learn more]
                             </div>
                             <p>Example:</p>
                             <div class="osf-box box-lt p-lg">
@@ -133,7 +133,7 @@
                             </div>
                             <hr>
                             <h4 id="consistency" class="f-w-md"><a ></a>Be consistent about UI components</h4>
-                            <p>To the extent possible all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
+                            <p>To the greatest extent possible, all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
                             <ul>
                                 <li>Buttons should look exactly the same in style, with color differences denoting similar meaning</li>
                                 <li>Color palette should be used in similar ways; (e.g. we should have a single highlight background color for all hover effects)</li>
@@ -251,7 +251,7 @@
                                 <li>Grid columns need to add up to 12.</li>
                                 <li>Each total of 12 should be inside its own "row" div.</li>
                                 <li>Plan out the layout of your component on paper before you start coding and then write the html code of the row structure first. This will alleviate the problem of columns not matching up or some div tags not closing.</li>
-                                <li>Bootstrap grid is designed to fit columns together, if there is an unnecessary amount of space in between components, first check that your grid is properly built.</li>
+                                <li>Bootstrap grid is designed to fit columns together. If there is an unnecessary amount of space in between components, first check that your grid is properly built.</li>
                                 <li>Bootstrap grids do not align heights of columns. If you need column heights to be equal you will need to manually set them or use other libraries.</li>
                                 <li>Do not use grids to center align a component horizontally unless there is no other semantically meaningful way to do so.</li>
                             </ul>
@@ -362,7 +362,7 @@
                         <div class="row">
                             <div class="col-xs-9">
                                 <p> Bootstrap documentation provides many other alternatives. Please do NOT change font sizing of your elements. Check to see if you can use an existing convention instead at the Bootstrap website.</p>
-                                <p> You can for instance use different colored text with existing css classes.</p>
+                                <p> For instance, you can use different colored text with existing css classes.</p>
                                 <div class="bs-example">
                                     <p class="text-muted">text-muted:  Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
                                     <p class="text-primary">text-primary: Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -580,7 +580,7 @@
                 <div class="row">
                     <div class="row">
                         <div class="col-xs-9">
-                            <p> OSF Uses Font Awesome 4 without any overrides. Use as shown below and check documentation for details.</p>
+                            <p> OSF uses Font Awesome 4 without any overrides. Use as shown below and check documentation for details.</p>
                             <div class="alert alert-info"><b><i class="fa fa-info"></i> Tip: </b> There is a lot more you can do with font awesome, such as spin, use different sizes, stack two on top of each other etc. Make sure you check out the documentation. </div>
                             <a class="btn btn-danger" href="#">
                                 <i class="fa fa-trash-o fa-lg"></i> Delete</a>
@@ -1625,9 +1625,196 @@
                 </div>
 
 
+                <hr />
+                <h2 id="ui"> UI Examples </h2>
+
+                <h3 id="autosave"> Autosave Example </h3>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <h4 class="m-t-lg"> Continous Save with a continously changed document (i.e. Wiki) </h4>
+                        <p>Have save time information and button just in case. Similar to Google Docs.  </p>
+                        <div class="osf-box p-lg">
+                            <div style="border-bottom:1px solid #ccc" class="text-right p-xs">
+                                <span class="text-muted">Last Saved: 2 minutes ago.</span> <button class="btn btn-sm btn-success">Save</button>
+                            </div>
+                        </div>
+
+                        <h4 class="m-t-lg"> Save on Input control change  </h4>
+                        <p>Show change alert that disappears after about 3 seconds. </p>
+                        <div class="osf-box p-lg">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" value="Name here">
+                                </div>
+                                <div class="col-xs-6">
+                                    <span class="text-success">Changes saved!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-t-md m-b-md p-md osf-box box-lt">
+                            <h4> When you should NOT autosave: </h4>
+                            <ul>
+                                <li>If the edit is highly sensitive, never autosave. The extra step of saving adds a level of security.</li>
+                                <li>If the edit is going to be public immediately think about implications. The step to save gives users a moment to revise.</li>
+                                <li>When intermediate changes being applied would alter the layout or page. For example selecting to hide certain elements in a settings page should not hide those immediately and move the page around, resulting in the user losing location. </li>
+                                <li>When one edit is related to another edit that is yet to be made. I.e. when the edit is not independent.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h3 id="feedback"> Feedback Examples </h3>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <h4 class="m-t-lg">Form validation</h4>
+                        <p>Use existing Bootstrap style to communicate errors related to forms. Don't use Growl notications. <a href="http://getbootstrap.com/css/#forms-control-validation">Learn more here</a>. </p>
+                        <div class="osf-box p-lg">
+                            <div class="form-group has-error">
+                                <label for="inputHelpBlock">Input with help text</label>
+                                <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                                <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                            </div>
+                        </div>
+                        <pre><code class="language-markup">
+&lt;div class="form-group has-error"&gt;
+    &lt;label for="inputHelpBlock"&gt;Input with help text&lt;/label&gt;
+    &lt;input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock"&gt;
+    &lt;span id="helpBlock" class="help-block"&gt;A block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Growl Errors</h4>
+                        <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
+
+                        <h4 class="m-t-lg">Button State Feedback</h4>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <h5>Regular Button</h5>
+                                    <button class="btn btn-success">Save</button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5>Active State Button</h5>
+                                    <button class="btn btn-default"><i class="text-muted">Saving...</i></button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5>Disabled State Button</h5>
+                                    <button class="btn btn-default disabled"><span class="text-muted">Save</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <pre><code class="language-markup">
+&lt;h5&gt;Regular Button&lt;/h5&gt;
+&lt;button class="btn btn-success"&gt;Save&lt;/button&gt;
+
+&lt;h5&gt;Active State Button&lt;/h5&gt;
+&lt;button class="btn btn-default"&gt;&lt;i class="text-muted"&gt;Saving...&lt;/i&gt;&lt;/button&gt;
+
+&lt;h5&gt;Disabled State Button&lt;/h5&gt;
+&lt;button class="btn btn-default disabled"&gt;&lt;span class="text-muted"&gt;Save&lt;/span&gt;&lt;/button&gt;
+
+                        </code></pre>
+
+                        <h4 class="m-t-lg">Do not Hide Submit Button if the button is not yet available</h4>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h5 class="text-success"> Do this: </h5>
+                                    <button class="btn btn-default">Cancel</button>
+                                    <button class="btn btn-default disabled">Save</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <h5 class="text-danger"> Don't do this: </h5>
+                                    <button class="btn btn-default">Cancel</button>
+                                    <span class="text-muted"> Submit button becomes visible magically later</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="alert alert-danger m-t-lg"><b>Never use Javascript alerts!</b> (except for onunload events).</div>
+
+                    </div>
+
+                </div>
+
+                <h3 id="options"> Saving Options </h3>
+                <p> Often you will give users the opportunity to make a selection to either immediately save an option or to save together with the rest of the form. Follow these guidelines when making your decision about which component to use:</p>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <h4 class="m-t-lg">Selection between on or off states.</h4>
+                        <p>Do not use single flip-flop buttons that show the current state. You can however use the action verbs and utilize a single button this way.</p>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <h5 class="text-success">Do this:</h5>
+                                    <button class="btn btn-success"><i class="fa fa-eye"></i> Show</button>
+                                    <button class="btn btn-default"><i class="fa fa-eye-slash"></i> Hide</button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5 class="text-danger">Don't do this:</h5>
+                                    <button class="btn btn-success"><i class="fa fa-eye"></i></button>
+                                    <button class="btn btn-default"><i class="fa fa-eye-slash"></i></button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5 class="text-danger">Don't do this:</h5>
+                                    <select class="form-control">
+                                        <option>Show</option>
+                                        <option>Hide</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="m-t-lg">UI specific toggle with more than 2 states</h4>
+                        <p>If there is a UI component that shows more than 2 states and it's effects are immediate (such as toggling views) use a button group with a disabled button as label. This shows the user that these view changes belong together and work in a similar way.</p>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h5 class="text-success">Do this:</h5>
+                                    <div class="btn-group">
+                                        <button class="btn btn-default disabled">Show:</button>
+                                        <button class="btn btn-default">Peview</button>
+                                        <button class="btn btn-primary">Edit</button>
+                                        <button class="btn btn-primary">Compare</button>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <h5 class="text-danger">Don't do this:</h5>
+                                    <button class="btn btn-default">Preview</button>
+                                    <button class="btn btn-primary">Edit</button>
+                                    <button class="btn btn-primary">Compare</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="m-t-lg">Inline selection with multiple states without using Select</h4>
+                        <p>If for some reason you need to have users choose from multiple options that are not part of a UI change but still needs to be part of a toolbar you can use a design similar to Github.</p>
+
+
+
+                        <h4 class="m-t-lg">Non-UI form inputs</h4>
+                        <p>If the input changes are not part of a UI element, use regular form standards.</p>
+                        <ul>
+                            <li>If multiple items can be selected use checkboxes.</li>
+                            <li>If single item can be selected use radio button.</li>
+                            <li>If the individual items are shorter than ~10 characters keep your checkboxes and radio buttons inline (if you have space)</li>
+                            <li>If the individual items are longer keep each checkbox or radio button in its own line.</li>
+                            <li>Use radio buttons if you have less than 6 choices so that each one is visible.</li>
+                            <li>Use drowdown if you have 6 or more choices. </li>
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
 
                 <hr />
-                <h3 id="ally"> Accesibility </h3>
+                <h2 id="ally"> Accessibility </h2>
                 <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
 
 
@@ -1643,16 +1830,16 @@
                 <li  class="active"><a href="#top">Top</a></li>
                 <li >
                     <a href="#principles">General Principles</a>
-                    <ul class="nav subnav" >
-                        <li><a href="#language">Language</a></li>
-                        <li><a href="#app_state">Application State</a></li>
-                        <li><a href="#errors">Errors</a></li>
-                        <li><a href="#empty_space">Empty Space</a></li>
-                        <li><a href="#mobile">Mobile</a></li>
-                        <li><a href="#large">Large screens</a></li>
-                        <li><a href="#form_inputs">Form Inputs</a></li>
-                        <li><a href="#history">History and SEO</a></li>
-                    </ul>
+                    <!--<ul class="nav subnav" >-->
+                        <!--<li><a href="#language">Language</a></li>-->
+                        <!--<li><a href="#app_state">Application State</a></li>-->
+                        <!--<li><a href="#errors">Errors</a></li>-->
+                        <!--<li><a href="#empty_space">Empty Space</a></li>-->
+                        <!--<li><a href="#mobile">Mobile</a></li>-->
+                        <!--<li><a href="#large">Large screens</a></li>-->
+                        <!--<li><a href="#form_inputs">Form Inputs</a></li>-->
+                        <!--<li><a href="#history">History and SEO</a></li>-->
+                    <!--</ul>-->
                 </li>
                 <li ><a href="#layout">Layout</a></li>
                 <li ><a href="#typography">Typography</a></li>
@@ -1675,7 +1862,8 @@
 
                     </ul>
                 </li>
-                <li ><a href="#ally">Accesibility</a></li>
+                <li ><a href="#ui">UI Examples</a></li>
+                <li ><a href="#ally">Accessibility</a></li>
 
 
             </ul>
