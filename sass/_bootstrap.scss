@@ -47,6 +47,11 @@
   border-radius: $radius;
 }
 
+/* Normal the heading in modal-header */
+.modal-header>h3 {
+  font-weight: normal;
+}
+
 /* TABS */
 .nav-tabs>li>a {
   border: 1px solid rgba(0, 0, 0, 0);
@@ -122,10 +127,14 @@
   li > a:hover, 
   li.active, 
   li.a:focus, 
-  .navbar-nav>li>a:focus {
+  .navbar-nav>li>a:focus ,
+  .dropdown-menu>li>a:focus, 
+  .dropdown-menu>li>a:hover {
     background: rgba(187, 187, 187, 0.2);
   }
 }
+
+
 
 .osf-project-navbar li>a {
   padding-left: 15px;
