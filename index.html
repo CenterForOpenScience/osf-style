@@ -70,9 +70,10 @@
                             <div id="language">
                                 <h4 class="f-w-md"><a></a>Use professional language in our interface</h4>
                                 <p>Where long form text is used it is best to use descriptive language.</p>
+                                <p>Include a period at the end of all directions and warnings if they are full sentences.</p>
                                 <p>Good examples:</p>
                                     <div class="osf-box box-lt p-lg">
-                                        <div class="text-success">"Please follow the link to view this file"</div>
+                                        <div class="text-success">"Please follow the link to view this file."</div>
                                         <div class="text-success">"The project you selected is not available at this time."</div>
                                         <div class="text-success">"You have entered an incorrect name, please try again."</div>
                                     </div>
@@ -86,7 +87,7 @@
                                 <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
                                 <p>Good examples:</p>
                                 <div class="osf-box box-lt p-lg">
-                                    <span class="text-success">"Open"</span>.
+                                    <span class="text-success">"Open"</span>
                                     <span class="text-success">"Delete Multiple"</span>
                                     <span class="text-success">"Keep Both"</span>
                                 </div>
@@ -103,42 +104,42 @@
                             <p>When a state change in the UI is happening the user should be notified of some of these processes where it helps the user understand what's going on and differentiate the situation from a potential unresponsive or erroneous scenario.</p>
                             <p>Some examples:</p>
                             <ul>
-                                <li>Items that are actionable need to be visually distinct (i.e. links, buttons, draggable items)</li>
-                                <li>Pending processes should be identified if taking long</li>
-                                <li>When page loads if there are still asynchronous components loading, a loading indicator needs to make that clear</li>
-                                <li>Normally actionable items that are non-actionable should be muted (greyed out)</li>
-                                <li>Tooltips should be used to explain states that do not otherwise make sense</li>
-                                <li>Actionable items should be protected against multiple hits (i.e. Delete buttons turning to muted Deleting...)</li>
+                                <li>Items that are actionable need to be visually distinct (e.g. links, buttons, draggable items).</li>
+                                <li>Pending processes should be identified if taking long.</li>
+                                <li>When page loads if there are still asynchronous components loading, a loading indicator needs to make that clear.</li>
+                                <li>Normally actionable items that are non-actionable should be muted (greyed out).</li>
+                                <li>Tooltips should be used to explain states that do not otherwise make sense.</li>
+                                <li>Actionable items should be protected against multiple hits (e.g. Delete buttons turning to muted Deleting...).</li>
                                 <li>If using active states, the active component needs to be visually distinc, for instance in buttons, panels, tabs.</li>
                                 <li>Toggle buttons should change to reflect the current state. For instance a collapsed item should have an icon that suggests opening and that icon should change when the state needs to suggest closing.</li>
-                                <li>Utilize the <strong>cursor</strong> attribute of CSS to change cursors on hover but only when this change makes sense (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>)
+                                <li>Utilize the <strong>cursor</strong> attribute of CSS to change cursors on hover but only when this change makes sense. (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>)
                                     <ul>
-                                        <li><strong>default</strong> is for general purpose</li>
-                                        <li><strong>pointer</strong> is for links and items that are clickable</li>
-                                        <li><strong>move</strong> is for items that can be moved with drag already</li>
+                                        <li><strong>default</strong> is for general purpose.</li>
+                                        <li><strong>pointer</strong> is for links and items that are clickable.</li>
+                                        <li><strong>move</strong> is for items that can be moved with drag already.</li>
                                         <li><strong>row/col-resize</strong> To drag and resize horizontal or vertical items, content.</li>
                                     </ul>
                                 </li>
                             </ul>
                             <hr>
                             <h4 id="errors" class="f-w-md"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
-                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
-                            <p>Example with space limitation :</p>
+                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information.</p>
+                            <p>Example with space limitation:</p>
                             <div class="osf-box box-lt p-lg">
                                 Can't connect to Dropbox at the moment.  [Learn more]
                             </div>
                             <p>Example:</p>
                             <div class="osf-box box-lt p-lg">
-                                We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
+                                We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error].
                             </div>
                             <hr>
                             <h4 id="consistency" class="f-w-md"><a ></a>Be consistent about UI components</h4>
                             <p>To the greatest extent possible, all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
                             <ul>
-                                <li>Buttons should look exactly the same in style, with color differences denoting similar meaning</li>
+                                <li>Buttons should look exactly the same in style, with color differences denoting similar meaning.</li>
                                 <li>Color palette should be used in similar ways; (e.g. we should have a single highlight background color for all hover effects)</li>
-                                <li>Element use for common tasks should be the same. I.e. different sections within pages should not use tabs in one place and accordion menus in others if the target elements are exactly the same.</li>
-                                <li>Different icons should not be used to mean the same thing and one icon should not be used for multiple meanings. Icon association should make sense to the task</li>
+                                <li>Element use for common tasks should be the same, e.g. different sections within pages should not use tabs in one place and accordion menus in others if the target elements are exactly the same.</li>
+                                <li>Different icons should not be used to mean the same thing and one icon should not be used for multiple meanings. Icon association should make sense to the task.</li>
                                 <li>Responsive components should become responsive in similar ways. For instance if icons lose their labels in small views, that should be the case with all icons.</li>
                             </ul>
                             <hr>
@@ -152,37 +153,37 @@
                             <hr>
                             <h4 id="mobile" class="f-w-md"><a ></a>Take steps to make website functional in mobile devices</h4>
                             <ul>
-                                <li>Check responsiveness in every page</li>
+                                <li>Check responsiveness in every page.</li>
                                 <li>Make Header texts proportionally smaller in smaller devices, no need for an H1 in a phone.</li>
                                 <li>Make text that does not fit constrained widths end with ...</li>
-                                <li>Make different versions for mobile buttons that have less text. - Make sure all images are responsive</li>
+                                <li>Make different versions for mobile buttons that have less text. - Make sure all images are responsive.</li>
                                 <li>Check show/hide relationships in mobile devices, often it's unnecessary.</li>
                                 <li>Check empty vertical space in rows.</li>
-                                <li>Check that horizontally listed items stack properly in narrow view</li>
-                                <li>Check that tables respond properly to narrow views, scrolling if necessary</li>
+                                <li>Check that horizontally listed items stack properly in narrow view.</li>
+                                <li>Check that tables respond properly to narrow views, scrolling if necessary.</li>
                                 <li>Make sure touch and event based actions either work well or have fallbacks in mobile devices.</li>
                             </ul>
                             <hr>
-                            <h4 id="large" class="f-w-md"><a ></a>Take steps to make sure the website is functional in very large devices</h4>
+                            <h4 id="large" class="f-w-md"><a ></a>Take steps to make sure the website is functional in very large devices.</h4>
                             <p>Where possible, let the user utilize the large workspace that they have by providing meaningful expansion of the space:</p>
                             <ul>
-                                <li>Expand tables, grids, and stacked components that have uniform items (i.e. galleries)</li>
+                                <li>Expand tables, grids, and stacked components that have uniform items (e.g. galleries).</li>
                                 <li>Do not expand Text! Instead fit several columns.</li>
-                                <li>Remove show/hide options to show everything as space allows, that reduces an extra step</li>
-                                <li>Stack similar content horizontally as columns</li>
-                                <li>Center content if not utilizing the entire width</li>
+                                <li>Remove show/hide options to show everything as space allows, that reduces an extra step.</li>
+                                <li>Stack similar content horizontally as columns.</li>
+                                <li>Center content if not utilizing the entire width.</li>
                             </ul>
                             <hr>
                             <h4 id="form_inputs" class="f-w-md"><a ></a>Improve the form input and toggle process where possible</h4>
                             <p>Follow these guidelines when making forms or add elements such as drop downs.</p>
                             <ul>
                                 <li>If your dropdown has few elements, consider another input or toggle method, like a button group.</li>
-                                <li>Alphabetically organize your dropdowns</li>
-                                <li>Make input elements large and text visible</li>
+                                <li>Alphabetically organize your dropdowns.</li>
+                                <li>Make input elements large and text visible.</li>
                                 <li>Uniformity in input elements is important, stick to themes or frameworks; if you are adding custom css to established framework css for inputs you are most likely doing it wrong.</li>
                                 <li>Do not remove the visual separation of focus on input elements, but make it fit to your general theme.</li>
-                                <li>Most of the time select and checkbox items are too small, consider increasing their size or generally make sure they fill your font's line height</li>
-                                <li>Make sure tab goes to the next item if there is a form with multiple items</li>
+                                <li>Most of the time select and checkbox items are too small, consider increasing their size or generally make sure they fill your font's line height.</li>
+                                <li>Make sure tab goes to the next item if there is a form with multiple items.</li>
                                 <li>If usign JS for form inputs, bind Enter key.</li>
                                 <li>Don't have a "Clear Form" button.</li>
                                 <li>Avoid using too many borders in form structures. Alignment is a way to denote edges as well and inputs already have borders.</li>
@@ -228,7 +229,7 @@
                 <h2>Grid</h2>
                 <div class="row">
                     <div class="col-sm-9">
-                        <p> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. do not use margins, padding, float or tables for layout arrangements.</p>
+                        <p> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. Do not use margins, padding, float or tables for layout arrangements.</p>
 <pre>
 <code class="language-markup">
     &lt;div class="row"&gt;
@@ -522,10 +523,10 @@
                         <div class="btn btn-lg btn-success">Success</div>
                     </div>
                     <div class="col-sm-9">
-                        <p> Use for: </p>
+                        <p> Use cases: </p>
                         <ul>
-                            <li>Save buttons.</li>
-                            <li>Messages which indicate a successful action, such as server connection, or successful save.</li>
+                            <li>Save buttons</li>
+                            <li>Messages which indicate a successful action, such as server connection, or successful save</li>
                         </ul>
                     </div>
                 </div>
@@ -534,10 +535,10 @@
                         <div class="btn btn-lg btn-primary">Primary</div>
                     </div>
                     <div class="col-sm-9">
-                        <p> Use for:</p>
+                        <p> Use cases:</p>
                         <ul>
-                            <li>Any neutral BUT primary action item, that is neither good not bad. This depends on the order of items.</li>
-                            <li>Use if the only button on the page, the color coordinates better with overall theme.</li>
+                            <li>Any neutral BUT primary action item, that is neither good nor bad. This depends on the order of items.</li>
+                            <li>When it is the only button on the page (the color coordinates better with overall theme)</li>
                         </ul>
                     </div>
                 </div>
@@ -546,10 +547,10 @@
                         <div class="btn btn-lg btn-info">Info</div>
                     </div>
                     <div class="col-sm-9">
-                        <p> Use for: </p>
+                        <p> Use cases: </p>
                         <ul>
                             <li>Help and info buttons and texts</li>
-                            <li>Messages which indicate a successful action, such as server connection, or successful save.</li>
+                            <li>Messages which indicate a successful action, such as server connection, or successful save</li>
                         </ul>
                     </div>
                 </div>
@@ -558,10 +559,10 @@
                         <div class="btn btn-lg btn-warning">Warning</div>
                     </div>
                     <div class="col-sm-9">
-                        <p> Use for: </p>
+                        <p> Use cases: </p>
                         <ul>
-                            <li>Alerts that bring attention to a potentially problematic issue that is not yet causing an error but might. </li>
-                            <li>Buttons that don't have a full delete effect but should be alerting, for instance "Delete Some".</li>
+                            <li>Alerts that bring attention to a potentially problematic issue that is not yet causing an error but might </li>
+                            <li>Buttons that don't have a full delete effect but should be alerting, for instance "Delete Some"</li>
                         </ul>
                     </div>
                 </div>
@@ -570,10 +571,10 @@
                         <div class="btn btn-lg btn-danger">Danger</div>
                     </div>
                     <div class="col-sm-9">
-                        <p> Use for: </p>
+                        <p> Use cases: </p>
                         <ul>
                             <li>Error alerts</li>
-                            <li>All Delete and remove buttons.</li>
+                            <li>All Delete and remove buttons</li>
                         </ul>
                     </div>
                 </div>
@@ -764,9 +765,9 @@
                         <h4 class="m-t-lg">Guidelines for Button Text</h4>
                         <ul>
                             <li>Do not use OK, even if it makes sense with the question being asked. People skim to the button often and OK doesn't help understand the meaning quickly. </li>
-                            <li>Buttons should have verbs and should start with verbs. i.e. "Make Public" instead of "Public" alone or "Visibility Setting" </li>
-                            <li> The button does not need to repeat the header. I.e "Add" is enough for the submit button for a modal that says "Add Contributors".</li>
-                            <li> Be deliberate in your use of Cancel vs Close. Cancel is supposed to undo any potential change visually or with data or denote change of intention by the user (i.e. Don't save). Close simply removes an element from view. Modals need a Close button and forms need a Cancel button. If the form has brought the user to a different page Cancel should bring them back to where they were. </li>
+                            <li>Buttons should have verbs and should start with verbs, e.g. "Make Public" instead of "Public" alone or "Visibility Setting".</li>
+                            <li> The button does not need to repeat the header, e.g. "Add" is enough for the submit button for a modal that says "Add Contributors".</li>
+                            <li> Be deliberate in your use of Cancel vs Close. Cancel is supposed to undo any potential visual or data change or to denote change of intention by the user (e.g. Don't Save). Close simply removes an element from view. Modals need a Close button and forms need a Cancel button. If the form has brought the user to a different page Cancel should bring them back to where they were. </li>
                             <li> Don't abandon Cancel or Close buttons next to Save in favor of Dismiss buttons (x at the top right of content). Cancel is easier to find and click and the X button is conventional, both are useful. </li>
                         </ul>
 
@@ -1869,10 +1870,10 @@
                         <h4 class="m-t-xl">Non-UI form inputs</h4>
                         <p>If the input changes are not part of a UI element, use regular form standards.</p>
                         <ul>
-                            <li>If multiple items can be selected use checkboxes.</li>
-                            <li>If single item can be selected use radio button.</li>
-                            <li>If the individual items are shorter than ~10 characters keep your checkboxes and radio buttons inline (if you have space)</li>
-                            <li>If the individual items are longer keep each checkbox or radio button in its own line.</li>
+                            <li>If multiple items can be selected, use checkboxes.</li>
+                            <li>If single item can be selected, use radio button.</li>
+                            <li>If the individual items are shorter than ~10 characters, keep your checkboxes and radio buttons inline (if you have space).</li>
+                            <li>If the individual items are longer, keep each checkbox or radio button in its own line.</li>
                             <li>Use radio buttons if you have less than 6 choices so that each one is visible.</li>
                             <li>Use drowdown if you have 6 or more choices. </li>
                         </ul>
