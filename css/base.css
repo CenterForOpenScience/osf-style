@@ -263,6 +263,10 @@ h1, h2, h3, h4, h1 small {
 .well, .progress, .modal-content {
   border-radius: 2px; }
 
+/* Normal the heading in modal-header */
+.modal-header > h3 {
+  font-weight: normal; }
+
 /* TABS */
 .nav-tabs > li > a {
   border: 1px solid transparent;
