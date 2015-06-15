@@ -1743,6 +1743,79 @@
 
                 </div>
 
+                <h3 id="options"> Saving Options </h3>
+                <p> Often you will give users the opportunity to make a selection to either immediately save an option or to save together with the rest of the form. Follow these guidelines when making your decision about which component to use:</p>
+                <div class="row">
+                    <div class="col-xs-12 m-b-lg">
+                        <h4 class="m-t-lg">Selection between on or off states.</h4>
+                        <p>Do not use single flip-flop buttons that show the current state. You can however use the action verbs and utilize a single button this way.</p>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <h5 class="text-success">Do this:</h5>
+                                    <button class="btn btn-success"><i class="fa fa-eye"></i> Show</button>
+                                    <button class="btn btn-default"><i class="fa fa-eye-slash"></i> Hide</button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5 class="text-danger">Don't do this:</h5>
+                                    <button class="btn btn-success"><i class="fa fa-eye"></i></button>
+                                    <button class="btn btn-default"><i class="fa fa-eye-slash"></i></button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5 class="text-danger">Don't do this:</h5>
+                                    <select class="form-control">
+                                        <option>Show</option>
+                                        <option>Hide</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="m-t-lg">UI specific toggle with more than 2 states</h4>
+                        <p>If there is a UI component that shows more than 2 states and it's effects are immediate (such as toggling views) use a button group with a disabled button as label. This shows the user that these view changes belong together and work in a similar way.</p>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h5 class="text-success">Do this:</h5>
+                                    <div class="btn-group">
+                                        <button class="btn btn-default disabled">Show:</button>
+                                        <button class="btn btn-default">Peview</button>
+                                        <button class="btn btn-primary">Edit</button>
+                                        <button class="btn btn-primary">Compare</button>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <h5 class="text-danger">Don't do this:</h5>
+                                    <button class="btn btn-default">Preview</button>
+                                    <button class="btn btn-primary">Edit</button>
+                                    <button class="btn btn-primary">Compare</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="m-t-lg">Inline selection with multiple states without using Select</h4>
+                        <p>If for some reason you need to have users choose from multiple options that are not part of a UI change but still needs to be part of a toolbar you can use a design similar to Github.</p>
+
+
+
+                        <h4 class="m-t-lg">Non-UI form inputs</h4>
+                        <p>If the input changes are not part of a UI element, use regular form standards.</p>
+                        <ul>
+                            <li>If multiple items can be selected use checkboxes.</li>
+                            <li>If single item can be selected use radio button.</li>
+                            <li>If the individual items are shorter than ~10 characters keep your checkboxes and radio buttons inline (if you have space)</li>
+                            <li>If the individual items are longer keep each checkbox or radio button in its own line.</li>
+                            <li>Use radio buttons if you have less than 6 choices so that each one is visible.</li>
+                            <li>Use drowdown if you have 6 or more choices. </li>
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
+
                 <hr />
                 <h2 id="ally"> Accesibility </h2>
                 <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
@@ -1760,16 +1833,16 @@
                 <li  class="active"><a href="#top">Top</a></li>
                 <li >
                     <a href="#principles">General Principles</a>
-                    <ul class="nav subnav" >
-                        <li><a href="#language">Language</a></li>
-                        <li><a href="#app_state">Application State</a></li>
-                        <li><a href="#errors">Errors</a></li>
-                        <li><a href="#empty_space">Empty Space</a></li>
-                        <li><a href="#mobile">Mobile</a></li>
-                        <li><a href="#large">Large screens</a></li>
-                        <li><a href="#form_inputs">Form Inputs</a></li>
-                        <li><a href="#history">History and SEO</a></li>
-                    </ul>
+                    <!--<ul class="nav subnav" >-->
+                        <!--<li><a href="#language">Language</a></li>-->
+                        <!--<li><a href="#app_state">Application State</a></li>-->
+                        <!--<li><a href="#errors">Errors</a></li>-->
+                        <!--<li><a href="#empty_space">Empty Space</a></li>-->
+                        <!--<li><a href="#mobile">Mobile</a></li>-->
+                        <!--<li><a href="#large">Large screens</a></li>-->
+                        <!--<li><a href="#form_inputs">Form Inputs</a></li>-->
+                        <!--<li><a href="#history">History and SEO</a></li>-->
+                    <!--</ul>-->
                 </li>
                 <li ><a href="#layout">Layout</a></li>
                 <li ><a href="#typography">Typography</a></li>
