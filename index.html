@@ -176,8 +176,7 @@
                             <h4 id="form_inputs" class="f-w-md"><a ></a>Improve the form input and toggle process where possible</h4>
                             <p>Follow these guidelines when making forms or add elements such as drop downs.</p>
                             <ul>
-                                <li>If your dropdown has few elements, consider another input or toggle method, like a button group.</li>
-                                <li>Alphabetically organize your dropdowns</li>
+                                <li>If your dropdown has few elements, consider another input or toggle method, like a button group or radio buttons.</li>
                                 <li>Make input elements large and text visible</li>
                                 <li>Uniformity in input elements is important, stick to themes or frameworks; if you are adding custom css to established framework css for inputs you are most likely doing it wrong.</li>
                                 <li>Do not remove the visual separation of focus on input elements, but make it fit to your general theme.</li>
@@ -1592,7 +1591,7 @@
                             <li>In general DO NOT USE Selects. Try to find an alternative solution</li>
                             <li>If you have fewer than 6 items consider using options input instead</li>
                             <li>Select works best with large amount of selection options</li>
-                            <li>Alphabetize the option list</li>
+                            <li>Alphabetize the option list if appropriate -- <a href="#alphabetize"> see more below</a></li>
 
                         </ul>
                         <div class="osf-box p-lg text-center">
@@ -1863,6 +1862,47 @@
                         </div>
 
 
+
+                        <h4 class="m-t-xl" id="alphabetize">When to Alphabetize?</h4>
+                        <p> When using drop downs, think carefully about the ordering of the options. Is the a hierarchical, or temporal order to the options that could be used to order them? Are they're certain options that users should see before others, assuming they are scanning down the list [this is actually just good practice whether they are using drop downs, check boxes, or radical buttons]? If none of these apply, then the drop down options should be in alphabetical order.</p>
+                        <div class="m-b-md p-md osf-box box-round">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <p>Alphabetize general and equal structures like country names:</p>
+                                    <select class="form-control">
+                                        <option>Adipiscing</option>
+                                        <option>Amet</option>
+                                        <option>Consectetur</option>
+                                        <option>Dolor</option>
+                                        <option>Elit</option>
+                                        <option>Ipsum</option>
+                                        <option>Lorem</option>
+                                        <option>Mauris</option>
+                                        <option>Sit</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-4">
+                                    <p>Don't alphabetize order and hierarchy</p>
+                                    <select class="form-control">
+                                        <option>Read</option>
+                                        <option>Read & Write</option>
+                                        <option selected>Administrator</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-4">
+                                    <p>Break alphabetical order in favor of common uses</p>
+                                    <select class="form-control">
+                                        <option>Select Person</option>
+                                        <option>Me</option>
+                                        <option>Ally</option>
+                                        <option>Carlos</option>
+                                        <option>Jamal</option>
+                                        <option>Kim</option>
+                                        <option>Zach</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
 
 
