@@ -5,17 +5,14 @@
 }
 .container-full .jumbotron {
     background-color: rgba(0, 0, 0, 0);
-    color: #FFF;
     text-align: center;
 
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .container .jumbotron, .container-fluid .jumbotron {
-         padding-right: 0;
-         padding-left: 0;
+        padding-right: 0;
+        padding-left: 0;
     }
-.container-full {
-    background: #204762;
 }
 
 #side-menu .affix {
@@ -65,4 +62,9 @@ p {
 .osf-project-navbar {
     position: relative;
     top: 0;
+}
+.style-header{
+    background: #f8f8f8;
+    margin-top: 44px;
+    border-bottom: 1px solid #eee;
 }

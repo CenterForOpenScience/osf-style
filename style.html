@@ -42,12 +42,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="style.html">Style Guide</a></li>
+                <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="style.html">Style Guide</a></li>
                 <li><a href="ui.html">UI Guide </a></li>
                 <li><a href="ally.html">Accesibility </a></li>
                 <li><a href="js.html">Javascript</a></li>
             </ul>
+
             <form class="navbar-form navbar-right">
                 <button id="openGithub" role="button" class="btn btn-info"><i class="fa fa-github"></i> Open in Github</button>
             </form>
@@ -58,178 +59,10 @@
 </nav>
 
 
-<div class="container-full style-header">
-    <div id="top" class="container theme-showcase" >
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-            <h1>OSF Style and UI Guidelines</h1>
-            <p>This project aims to bring together resources to build Design and Layout of OSF components. As you are working with OSF please use this project as reference for how elements on your page should look and how the HTML and CSS should be used. This is a collaborative project so feel free to suggest changes or Pull Requests. </p>
-            <p class="m-t-lg">
-                <a href="https://github.com/caneruguz/osf-style" class="btn btn-success btn-lg">Contribute</a>
-                <a href="https://github.com/caneruguz/osf-style/issues" class="btn btn-warning btn-lg">Report Issues</a>
-            </p>
 
-        </div>
-
-    </div>
-</div>
-
-
-<div class="nav-rows container">
+<div class="nav-rows container m-t-xl">
     <div class="row">
         <div class="col-xs-9">
-            <div class="row m-t-lg">
-                <div class="col-xs-12">
-                    <div class="alert alert-warning text-center">
-                        <h3> Is what you are looking for not here? </h3>
-                        <p class="m-b-lg"> If the style or component you are looking for is not featured here then you should follow the exact syntax of Bootstrap. </p>
-                        <a href="http://getbootstrap.com/" class="btn btn-default m-t-lg">Check Bootstrap Documentation</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--GENERAL PRINCIPLES PAGE-->
-            <div id="principles" >
-                <div class="page-header">
-                    <h1>General Principles</h1>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div>
-                            <p>These are general guidelines that developers need to keep in mind when developing user interactions. They identify our priorities and UI development needs to take into consideration these principles.</p>
-                            <div id="language">
-                                <h4 class="f-w-md"><a></a>Use professional language in our interface</h4>
-                                <p>Where long form text is used it is best to use descriptive language.</p>
-                                <p>Include a period at the end of all directions and warnings if they are full sentences.</p>
-                                <p>Good examples:</p>
-                                    <div class="osf-box box-lt p-lg">
-                                        <div class="text-success">"Please follow the link to view this file."</div>
-                                        <div class="text-success">"The project you selected is not available at this time."</div>
-                                        <div class="text-success">"You have entered an incorrect name, please try again."</div>
-                                    </div>
-                                <p>Bad Examples:</p>
-                                <div class="osf-box box-lt p-lg">
-                                    <div class="text-danger">"That's not right. Try again!"<span class="text-muted">//Too colloquial: </span>  </div>
-                                    <div class="text-danger">"Go here." <span class="text-muted">// Too curt </span></div>
-                                    <div class="text-danger">"Error: undefined" <span class="text-muted">// Not human enough</span></div>
-                                    <div class="text-danger">"Yay, your form is submitted, awesome!"<span class="text-muted">// Unnecessarily emotional</span></div>
-                                </div>
-                                <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
-                                <p>Good examples:</p>
-                                <div class="osf-box box-lt p-lg">
-                                    <span class="text-success">"Open"</span>
-                                    <span class="text-success">"Delete Multiple"</span>
-                                    <span class="text-success">"Keep Both"</span>
-                                </div>
-                                <p>Bad Examples:</p>
-                                <div class="osf-box box-lt p-lg">
-                                    <div class="text-danger">"Open this file" <span class="text-muted">// No need to define what element the action is on </span></div>
-                                    <div class="text-danger">"Delete Everything" <span class="text-muted">// Too general</span></div>
-                                    <div class="text-danger">"Name:"<span class="text-muted">// Not descriptive enough, full name, first name? </span></div>
-                                    <div class="text-danger">"Cancel, Dismiss, Close" <span class="text-muted">// Should use uniform name for same action</span></div>
-                                </div>
-                            </div>
-                            <hr>
-                            <h4 id="app_state" class="f-w-md"><a></a>Let the user know about state where applicable</h4>
-                            <p>When a state change in the UI is happening the user should be notified of some of these processes where it helps the user understand what's going on and differentiate the situation from a potential unresponsive or erroneous scenario.</p>
-                            <p>Some examples:</p>
-                            <ul>
-                                <li>Items that are actionable need to be visually distinct (e.g. links, buttons, draggable items).</li>
-                                <li>Pending processes should be identified if taking long.</li>
-                                <li>When page loads if there are still asynchronous components loading, a loading indicator needs to make that clear.</li>
-                                <li>Normally actionable items that are non-actionable should be muted (greyed out).</li>
-                                <li>Tooltips should be used to explain states that do not otherwise make sense.</li>
-                                <li>Actionable items should be protected against multiple hits (e.g. Delete buttons turning to muted Deleting...).</li>
-                                <li>If using active states, the active component needs to be visually distinc, for instance in buttons, panels, tabs.</li>
-                                <li>Toggle buttons should change to reflect the current state. For instance a collapsed item should have an icon that suggests opening and that icon should change when the state needs to suggest closing.</li>
-                                <li>Utilize the <strong>cursor</strong> attribute of CSS to change cursors on hover but only when this change makes sense. (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>)
-                                    <ul>
-                                        <li><strong>default</strong> is for general purpose.</li>
-                                        <li><strong>pointer</strong> is for links and items that are clickable.</li>
-                                        <li><strong>move</strong> is for items that can be moved with drag already.</li>
-                                        <li><strong>row/col-resize</strong> To drag and resize horizontal or vertical items, content.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr>
-                            <h4 id="errors" class="f-w-md"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
-                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information (<a href="#feedback">see more UI examples</a>).</p>
-                            <p>Example with space limitation:</p>
-                            <div class="osf-box box-lt p-lg">
-                                Can't connect to Dropbox at the moment.  [Learn more]
-                            </div>
-                            <p>Example:</p>
-                            <div class="osf-box box-lt p-lg">
-                                We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error].
-                            </div>
-                            <hr>
-                            <h4 id="consistency" class="f-w-md"><a ></a>Be consistent about UI components</h4>
-                            <p>To the greatest extent possible, all our components should be using the exact same styling by using the OSF Style Guidelines. This means:</p>
-                            <ul>
-                                <li>Buttons should look exactly the same in style, with color differences denoting similar meaning.</li>
-                                <li>Color palette should be used in similar ways; (e.g. we should have a single highlight background color for all hover effects)</li>
-                                <li>Element use for common tasks should be the same, e.g. different sections within pages should not use tabs in one place and accordion menus in others if the target elements are exactly the same.</li>
-                                <li>Different icons should not be used to mean the same thing and one icon should not be used for multiple meanings. Icon association should make sense to the task.</li>
-                                <li>Responsive components should become responsive in similar ways. For instance if icons lose their labels in small views, that should be the case with all icons.</li>
-                            </ul>
-                            <hr>
-                            <h4 id="empty_space" class="f-w-md"><a ></a>Utilize empty space with actionable suggestions</h4>
-                            <p>There are many areas where users don't have content available. In these cases their pages or elements will be empty. We can use these isntances to offer actionable tasks with appropriate links.</p>
-                            <p>Example:</p>
-                            <div class="osf-box box-lt p-lg">
-                                You don't have any registrations at the moment.<br>
-                                [Learn more about Registrations] [Create a Registration]
-                            </div>
-                            <hr>
-                            <h4 id="mobile" class="f-w-md"><a ></a>Take steps to make website functional in mobile devices</h4>
-                            <ul>
-                                <li>Check <a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/"> responsiveness </a> in every page.</li>
-                                <li>Make Header texts proportionally smaller in smaller devices, no need for an H1 in a phone.</li>
-                                <li>Make text that does not fit constrained widths end with ...</li>
-                                <li>Make different versions for mobile buttons that have less text. - Make sure all images are responsive.</li>
-                                <li>Check show/hide relationships in mobile devices, often it's unnecessary.</li>
-                                <li>Check empty vertical space in rows.</li>
-                                <li>Check that horizontally listed items stack properly in narrow view.</li>
-                                <li>Check that tables respond properly to narrow views, scrolling if necessary.</li>
-                                <li>Make sure touch and event based actions either work well or have fallbacks in mobile devices.</li>
-                            </ul>
-                            <hr>
-                            <h4 id="large" class="f-w-md"><a ></a>Take steps to make sure the website is functional in very large devices.</h4>
-                            <p>Where possible, let the user utilize the large workspace that they have by providing meaningful expansion of the space:</p>
-                            <ul>
-                                <li>Expand tables, grids, and stacked components that have uniform items (e.g. galleries).</li>
-                                <li>Do not expand Text! Instead fit several columns.</li>
-                                <li>Remove show/hide options to show everything as space allows, that reduces an extra step.</li>
-                                <li>Stack similar content horizontally as columns.</li>
-                                <li>Center content if not utilizing the entire width.</li>
-                            </ul>
-                            <hr>
-                            <h4 id="form_inputs" class="f-w-md"><a ></a>Improve the form input and toggle process where possible</h4>
-                            <p>Follow these guidelines when making forms or add elements such as drop downs.</p>
-                            <ul>
-                                <li>If your dropdown has few elements, consider another input or toggle method, like a button group or radio buttons.</li>
-                                <li>Make input elements large and text visible.</li>
-                                <li>Uniformity in input elements is important, stick to themes or frameworks; if you are adding custom css to established framework css for inputs you are most likely doing it wrong.</li>
-                                <li>Do not remove the visual separation of focus on input elements, but make it fit to your general theme.</li>
-                                <li>Most of the time select and checkbox items are too small, consider increasing their size or generally make sure they fill your font's line height.</li>
-                                <li>Make sure tab goes to the next item if there is a form with multiple items.</li>
-                                <li>If usign JS for form inputs, bind Enter key.</li>
-                                <li>Don't have a "Clear Form" button.</li>
-                                <li>Avoid using too many borders in form structures. Alignment is a way to denote edges as well and inputs already have borders.</li>
-                                <li>Use a good combination of placeholder and label for inputs, often one is enough, both are unnecessary. Don't repeat the label in the placeholder. Label is better for cross browser use.</li>
-                                <li>Tie your labels to your form elements with "for" so that when users click on the label the input gets selection.</li>
-                            </ul>
-                            <hr>
-                            <h4 id="history" class="f-w-md"><a ></a>Respect history</h4>
-                            <p>If you are using a single page approach where page loads are not required for significant events remember that users consider significant layout changes to denote page changes and will want to press back to go back to the previous state.</p>
-                            <p>Make sure that your implementation takes care of these two issues.</p>
-                            <hr>
-                            <h4 class="f-w-md"><a id="Ignore_these_rules_when_necessary_148"></a>Ignore these rules when necessary</h4>
-                            <p>There are times where these general practices may not make sense for rare isntances. In those cases it is better UI practice to abandon convention and use custom solutions. These cases should be few and should require discussion.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!--LAYOUT PAGE-->
             <div id="layout" >
@@ -237,7 +70,7 @@
                     <h1>Layout</h1>
                 </div>
 
-                <h2>Container</h2>
+                <h2 id="container" >Container</h2>
                 <div class="row">
                     <div class="col-sm-9">
                         <p> OSF uses a fixed container layout as opposed to fluid. This makes sure that the width does not continue to adjust past 1200px width. Your documents should be wrapper inside a div with class "container".  </p>
@@ -255,7 +88,7 @@
                 </div>
 
 
-                <h2>Grid</h2>
+                <h2 id="grid" >Grid</h2>
                 <div class="row">
                     <div class="col-sm-9">
                         <p> Using the grid properly is critical for the correct view of the OSF components on all devices. Within a container you should ALWAYS use grids for layout and horizontal alignment. Do not use margins, padding, float or tables for layout arrangements.</p>
@@ -292,7 +125,7 @@
                         <a href="http://getbootstrap.com/css/#grid" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
                     </div>
                 </div>
-                <h3> Layout Helper CSS Classes</h3>
+                <h3 id="layout-helper" > Layout Helper CSS Classes</h3>
                 <div class="row">
                     <div class="col-xs-12">
                         <p> For <b>margin</b> and <b>padding</b> OSF has helper classes that provide a quick method to add granular layout without having to define these distances for every item. </p>
@@ -315,7 +148,7 @@
     &lt;div class="m-b-md box p-md">MD Padding: 15px &lt;/div&gt;
     &lt;div class="m-b-md box p-lg">LG Padding: 25px &lt;/div&gt;
     &lt;div class="m-b-md box p-xl">XL Padding: 50px;&lt;/div&gt;
-    </code>
+</code>
 </pre>
 
                         <div class="m-t-md m-b-md p-md osf-box box-lt">
@@ -368,7 +201,7 @@
                     </div>
                 </div>
 
-                <h3> Typography Helper Classes</h3>
+                <h3 id="font-weight" > Typography Helper Classes</h3>
                 <div class="row">
                     <div class="col-xs-12">
                         <h4> Font Weight Helpers</h4>
@@ -393,10 +226,10 @@
     &lt;p class="f-w-xl">XL Thickness&lt;/p&gt;
     &lt;p&gt;Regular Text &lt;span class="text-smaller text-muted"&gt;Smaller text&lt;/span&gt;&lt;/p&gt;
     &lt;p&gt;Regular Text &lt;span class="text-bigger text-muted"&gt;Bigger text&lt;/span&gt;&lt;/p&gt;
-    </code>
+</code>
 </pre>
                         <hr />
-                        <h4>Other text options</h4>
+                        <h4 id="other-text" >Other text options</h4>
                         <div class="row">
                             <div class="col-xs-9">
                                 <p> Bootstrap documentation provides many other alternatives. Please do NOT change font sizing of your elements. Check to see if you can use an existing convention instead at the Bootstrap website.</p>
@@ -540,12 +373,12 @@
                         <p>.bg-color-grey</p>
                     </div>
                     <div class="col-sm-6">
-                         <ul>
-                             <li>General Text Color</li>
-                         </ul>
+                        <ul>
+                            <li>General Text Color</li>
+                        </ul>
                     </div>
                 </div>
-                <h2> Understanding Bootstrap Colors</h2>
+                <h2 id="bootstrap-colors" > Understanding Bootstrap Colors</h2>
                 <hr>
                 <div class="row">
                     <div class="col-sm-3">
@@ -656,100 +489,100 @@
                             </div>
 <pre>
     <code class="language-markup">
-&lt;a class="btn btn-danger" href="#"&gt;
-  &lt;i class="fa fa-trash-o fa-lg"&gt;&lt;/i&gt; Delete&lt;/a&gt;
-&lt;a class="btn btn-default btn-sm" href="#"&gt;
-  &lt;i class="fa fa-cog"&gt;&lt;/i&gt; Settings&lt;/a&gt;
+        &lt;a class="btn btn-danger" href="#"&gt;
+        &lt;i class="fa fa-trash-o fa-lg"&gt;&lt;/i&gt; Delete&lt;/a&gt;
+        &lt;a class="btn btn-default btn-sm" href="#"&gt;
+        &lt;i class="fa fa-cog"&gt;&lt;/i&gt; Settings&lt;/a&gt;
 
-&lt;div class="btn-group"&gt;
-  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+        &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a class="btn btn-default" href="#"&gt;&lt;i class="fa fa-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
 
-&lt;div class="input-group margin-bottom-sm"&gt;
-  &lt;span class="input-group-addon"&gt;&lt;i class="fa fa-envelope-o fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;
-  &lt;input class="form-control" type="text" placeholder="Email address"&gt;
-&lt;/div&gt;
-&lt;div class="input-group"&gt;
-  &lt;span class="input-group-addon"&gt;&lt;i class="fa fa-key fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;
-  &lt;input class="form-control" type="password" placeholder="Password"&gt;
-&lt;/div&gt;
+        &lt;div class="input-group margin-bottom-sm"&gt;
+        &lt;span class="input-group-addon"&gt;&lt;i class="fa fa-envelope-o fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;input class="form-control" type="text" placeholder="Email address"&gt;
+        &lt;/div&gt;
+        &lt;div class="input-group"&gt;
+        &lt;span class="input-group-addon"&gt;&lt;i class="fa fa-key fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;input class="form-control" type="password" placeholder="Password"&gt;
+        &lt;/div&gt;
 
-&lt;div class="btn-group open"&gt;
-  &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="fa fa-user fa-fw"&gt;&lt;/i&gt; User&lt;/a&gt;
-  &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;
-    &lt;span class="fa fa-caret-down"&gt;&lt;/span&gt;&lt;/a&gt;
-  &lt;ul class="dropdown-menu"&gt;
-    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-pencil fa-fw"&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-trash-o fa-fw"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-ban fa-fw"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="divider"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
+        &lt;div class="btn-group open"&gt;
+        &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="fa fa-user fa-fw"&gt;&lt;/i&gt; User&lt;/a&gt;
+        &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+        &lt;span class="fa fa-caret-down"&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-pencil fa-fw"&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-trash-o fa-fw"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-ban fa-fw"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/div&gt;
     </code>
 </pre>
 
-                    <div class="osf-box box-lt p-lg m-b-lg">
-                        <h4> Which icons to use?</h4>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>Action</th>
-                                <th>Icon to use</th>
-                                <th>FA Class</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Toggling show/hide of content</td>
-                                <td><i class="fa fa-caret-right"></i> <i class="fa fa-caret-down"></i> </td>
-                                <td>fa-caret-right, fa-caret-down</td>
-                            </tr>
-                            <tr>
-                                <td>Deleting tabular or repeating data</td>
-                                <td><i class="fa fa-times"></i></td>
-                                <td>fa-times</td>
-                            </tr>
-                            <tr>
-                                <td>Deleting stand alone items or important items</td>
-                                <td><i class="fa fa-trash-o"></i></td>
-                                <td>fa-trash-o</td>
-                            </tr>
-                            <tr>
-                                <td>Inline help buttons</td>
-                                <td><i class="fa fa-question-circle"></i></td>
-                                <td>fa-question-circle</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="osf-box box-lt p-lg">
-                        <h4>Should we use icons with buttons?</h4>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <h5 class="text-success">YES if:</h5>
-                                <ul>
-                                    <li>There are a lot of buttons, i.e in a toolbar</li>
-                                    <li>Icons are repeated in other sections of the page to show that they are related to button text</li>
-                                    <li>If narrow screens show only icons and not the text</li>
-                                    <li>The button is very widely used together with text in general user experience. I.e. Create, Delete, Edit type of single words get icons; but not "Create Registration"</li>
-                                </ul>
+                            <div class="osf-box box-lt p-lg m-b-lg">
+                                <h4> Which icons to use?</h4>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Icon to use</th>
+                                        <th>FA Class</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Toggling show/hide of content</td>
+                                        <td><i class="fa fa-caret-right"></i> <i class="fa fa-caret-down"></i> </td>
+                                        <td>fa-caret-right, fa-caret-down</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deleting tabular or repeating data</td>
+                                        <td><i class="fa fa-times"></i></td>
+                                        <td>fa-times</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deleting stand alone items or important items</td>
+                                        <td><i class="fa fa-trash-o"></i></td>
+                                        <td>fa-trash-o</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Inline help buttons</td>
+                                        <td><i class="fa fa-question-circle"></i></td>
+                                        <td>fa-question-circle</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="col-xs-6">
-                                <h5 class="text-danger">NO if:</h5>
-                                <ul>
-                                    <li>There is a stand alone button</li>
-                                    <li>Button text is not general enough to be natural. I.e. Make Public </li>
-                                    <li>The icon is not intuitive for that task i.e. <button class="btn btn-sm btn-default"><i class="fa fa-globe"></i> Open Dropbox </button></li>
 
-                                </ul>
+                            <div class="osf-box box-lt p-lg">
+                                <h4>Should we use icons with buttons?</h4>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <h5 class="text-success">YES if:</h5>
+                                        <ul>
+                                            <li>There are a lot of buttons, i.e in a toolbar</li>
+                                            <li>Icons are repeated in other sections of the page to show that they are related to button text</li>
+                                            <li>If narrow screens show only icons and not the text</li>
+                                            <li>The button is very widely used together with text in general user experience. I.e. Create, Delete, Edit type of single words get icons; but not "Create Registration"</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <h5 class="text-danger">NO if:</h5>
+                                        <ul>
+                                            <li>There is a stand alone button</li>
+                                            <li>Button text is not general enough to be natural. I.e. Make Public </li>
+                                            <li>The icon is not intuitive for that task i.e. <button class="btn btn-sm btn-default"><i class="fa fa-globe"></i> Open Dropbox </button></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
                         </div>
                         <div class="col-xs-3">
@@ -782,13 +615,13 @@
                         </p>
 <pre>
     <code class="language-markup">
-&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
-&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
-&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
-&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
-&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
-&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
-&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+        &lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+        &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+        &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+        &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+        &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+        &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
     </code>
 </pre>
 
@@ -797,56 +630,56 @@
                             <p> Follow the colors and text below in your use of buttons.</p>
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th>Action</th>
-                                        <th>Button and text to use</th>
-                                    </tr>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Button and text to use</th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Non modifying changes:</td>
-                                        <td>
-                                            <button type="button" class="btn btn-default">Cancel</button>
-                                            <button type="button" class="btn btn-default">Close</button>
-                                            <button type="button" class="btn btn-default">Back</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saving and Adding</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Save</button>
-                                            <button type="button" class="btn btn-success">Upload</button>
-                                            <button type="button" class="btn btn-success">New Registration</button>
-                                            <button type="button" class="btn btn-success">Add User</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Removal</td>
-                                        <td>
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                            <button type="button" class="btn btn-danger">Delete All</button>
-                                            <button type="button" class="btn btn-danger">Remove</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Information and Settings</td>
-                                        <td>
-                                            <button type="button" class="btn btn-info">Learn More</button>
-                                            <button type="button" class="btn btn-info">Settings</button>
-                                            <button type="button" class="btn btn-info">Options</button>
-                                            <button type="button" class="btn btn-info"><i class="fa fa-info"></i> </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other Call to Action</td>
-                                        <td>
-                                            <button type="button" class="btn btn-primary">Create an Account</button>
-                                            <button type="button" class="btn btn-primary">Download</button>
-                                            <button type="button" class="btn btn-primary">Open</button>
-                                            <button type="button" class="btn btn-primary">Auto Fill</button>
+                                <tr>
+                                    <td>Non modifying changes:</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-default">Close</button>
+                                        <button type="button" class="btn btn-default">Back</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Saving and Adding</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Save</button>
+                                        <button type="button" class="btn btn-success">Upload</button>
+                                        <button type="button" class="btn btn-success">New Registration</button>
+                                        <button type="button" class="btn btn-success">Add User</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Removal</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                        <button type="button" class="btn btn-danger">Delete All</button>
+                                        <button type="button" class="btn btn-danger">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Information and Settings</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info">Learn More</button>
+                                        <button type="button" class="btn btn-info">Settings</button>
+                                        <button type="button" class="btn btn-info">Options</button>
+                                        <button type="button" class="btn btn-info"><i class="fa fa-info"></i> </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Other Call to Action</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary">Create an Account</button>
+                                        <button type="button" class="btn btn-primary">Download</button>
+                                        <button type="button" class="btn btn-primary">Open</button>
+                                        <button type="button" class="btn btn-primary">Auto Fill</button>
 
-                                        </td>
-                                    </tr>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -871,22 +704,22 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Creating a new item</td>
-                                    <td>Create</td>
-                                </tr>
-                                <tr>
-                                    <td>Editing the information of an exiting item</td>
-                                    <td>Save</td>
-                                </tr>
-                                <tr>
-                                    <td>Deleting an Item</td>
-                                    <td>Delete</td>
-                                </tr>
-                                <tr>
-                                    <td>Applying a setting (for instance add ons)</td>
-                                    <td>Apply</td>
-                                </tr>
+                            <tr>
+                                <td>Creating a new item</td>
+                                <td>Create</td>
+                            </tr>
+                            <tr>
+                                <td>Editing the information of an exiting item</td>
+                                <td>Save</td>
+                            </tr>
+                            <tr>
+                                <td>Deleting an Item</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr>
+                                <td>Applying a setting (for instance add ons)</td>
+                                <td>Apply</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -920,9 +753,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <pre><code class="language-markup">
-&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt; dolor sit amet.
-&lt;a class="link-solid" href="#"&gt;Lorem ipsum&lt;/a&gt; dolor sit amet.
-&lt;a class="link-dashed" href="#"&gt;Lorem ipsum&lt;/a&gt; dolor sit amet.</code></pre>
+                            &lt;a href="#"&gt;Lorem ipsum&lt;/a&gt; dolor sit amet.
+                            &lt;a class="link-solid" href="#"&gt;Lorem ipsum&lt;/a&gt; dolor sit amet.
+                            &lt;a class="link-dashed" href="#"&gt;Lorem ipsum&lt;/a&gt; dolor sit amet.</code></pre>
                     </div>
                 </div>
 
@@ -935,7 +768,7 @@
                         <p> <b> Tip:</b> You can use the bootstrap colors for the panels by adding panel type such as "panel-info" as class. Footer is not going to change color. </p>
                     </div>
                     <div class="col-xs-3">
-                        <a href="http://getbootstrap.com/components/#panels" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                        <a href="http://getbootstrap.com/components/#style.html" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
                     </div>
                 </div>
 
@@ -957,7 +790,7 @@
                             <div class="panel-footer clearfix">
                                 Footer contents here.
                                 <div class="pull-right">
-                                   <button class="btn btn-success">Save</button>
+                                    <button class="btn btn-success">Save</button>
                                 </div>
                             </div>
                         </div>
@@ -966,29 +799,29 @@
                     <div class="col-sm-6">
                         <pre>
     <code class="language-markup">
-&lt;div class="panel panel-default"&gt;
-    &lt;div class="panel-heading"&gt;
-    &lt;h3 class="panel-title"&gt;Wiki&lt;/h3&gt;
+        &lt;div class="panel panel-default"&gt;
+        &lt;div class="panel-heading"&gt;
+        &lt;h3 class="panel-title"&gt;Wiki&lt;/h3&gt;
         &lt;div class="pull-right"&gt;
-            &lt;a href="/abrs9/wiki/" class="btn btn-sm btn-default"&gt;
-                Button
-            &lt;/a&gt;
+        &lt;a href="/abrs9/wiki/" class="btn btn-sm btn-default"&gt;
+        Button
+        &lt;/a&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="panel-body"&gt;
+        &lt;/div&gt;
+        &lt;div class="panel-body"&gt;
         &lt;div class="break-word"&gt;
-            &lt;p&gt;
-                Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ip...
-            &lt;/p&gt;
+        &lt;p&gt;
+        Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ip...
+        &lt;/p&gt;
         &lt;/div&gt;
-    &lt;div class="panel-footer clearfix"&gt;
+        &lt;div class="panel-footer clearfix"&gt;
         Footer contents here.
         &lt;div class="pull-right"&gt;
-            &lt;button class="btn btn-success"&gt;Save&lt;/button&gt;
+        &lt;button class="btn btn-success"&gt;Save&lt;/button&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code>
+        &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
                         </pre>
                     </div>
                 </div>
@@ -998,7 +831,7 @@
                 <div class="row">
                     <div class="col-xs-9">
                         <p> OSF Uses modals that are based on the bootstrap versions but modified to be more flat and similar to the Google Material design modals. Use the code as shown below.   </p>
-                    <p><button class="btn btn-info" data-toggle="modal" data-target="#myModal">Click to Open Modal </button></p>
+                        <p><button class="btn btn-info" data-toggle="modal" data-target="#myModal">Click to Open Modal </button></p>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -1027,26 +860,26 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;p&gt;&lt;button class="btn btn-info" data-toggle="modal" data-target="#myModal"&gt;Click to Open Modal &lt;/button&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;button class="btn btn-info" data-toggle="modal" data-target="#myModal"&gt;Click to Open Modal &lt;/button&gt;&lt;/p&gt;
 
-&lt;!-- Modal --&gt;
-&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+        &lt;!-- Modal --&gt;
+        &lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
         &lt;div class="modal-dialog"&gt;
-            &lt;div class="modal-content"&gt;
-                &lt;div class="modal-header"&gt;
-                    &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
-                    &lt;h3 class="modal-title" id="myModalLabel"&gt;Modal title&lt;/h3&gt;
-                &lt;/div&gt;
-                &lt;div class="modal-body"&gt;
-                    &lt;p&gt; Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. &lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;div class="modal-footer"&gt;
-                    &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
-                    &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+        &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+        &lt;h3 class="modal-title" id="myModalLabel"&gt;Modal title&lt;/h3&gt;
         &lt;/div&gt;
-&lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+        &lt;p&gt; Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
     </code>
                         </pre>
                     </div>
@@ -1080,7 +913,7 @@
 
                     </div>
                     <div class="col-xs-3">
-                        <a href="http://getbootstrap.com/components/#alerts" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
+                        <a href="http://getbootstrap.com/components/#style.html" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
                     </div>
                 </div>
 
@@ -1088,22 +921,22 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;div class="alert alert-success" role="alert"&gt;
-    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
-&lt;/div&gt;
-&lt;div class="alert alert-info" role="alert"&gt;
-    &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs your attention, but it's not super important.
-&lt;/div&gt;
-&lt;div class="alert alert-warning" role="alert"&gt;
-    &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.
-&lt;/div&gt;
-&lt;div class="alert alert-danger" role="alert"&gt;
-    &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try submitting again.
-&lt;/div&gt;
-&lt;div class="alert alert-warning alert-dismissible" role="alert"&gt;
-    &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
-    &lt;strong&gt;Dismissable Alert!&lt;/strong&gt; click X to dismiss.
-&lt;/div&gt;
+        &lt;div class="alert alert-success" role="alert"&gt;
+        &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+        &lt;/div&gt;
+        &lt;div class="alert alert-info" role="alert"&gt;
+        &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs your attention, but it's not super important.
+        &lt;/div&gt;
+        &lt;div class="alert alert-warning" role="alert"&gt;
+        &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.
+        &lt;/div&gt;
+        &lt;div class="alert alert-danger" role="alert"&gt;
+        &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try submitting again.
+        &lt;/div&gt;
+        &lt;div class="alert alert-warning alert-dismissible" role="alert"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;
+        &lt;strong&gt;Dismissable Alert!&lt;/strong&gt; click X to dismiss.
+        &lt;/div&gt;
     </code>
                         </pre>
                     </div>
@@ -1184,63 +1017,63 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;nav class="navbar osf-navbar"&gt;
-    &lt;div class="container-fluid"&gt;
+        &lt;nav class="navbar osf-navbar"&gt;
+        &lt;div class="container-fluid"&gt;
         &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
         &lt;div class="navbar-header"&gt;
-            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
-                &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-                &lt;span class="fa fa-bars fa-lg fa-inverse"&gt; &lt;/span&gt;
-            &lt;/button&gt;
-            &lt;a class="navbar-brand " href="/"&gt;&lt;img src="https://staging.osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"&gt; OSF &lt;span class="brand-version"&gt; BETA&lt;/span&gt;&lt;/a&gt;
+        &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="fa fa-bars fa-lg fa-inverse"&gt; &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class="navbar-brand " href="/"&gt;&lt;img src="https://staging.osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"&gt; OSF &lt;span class="brand-version"&gt; BETA&lt;/span&gt;&lt;/a&gt;
         &lt;/div&gt;
 
         &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
         &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
-            &lt;ul class="nav navbar-nav"&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="dropdown"&gt;
-                    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-                    &lt;ul class="dropdown-menu" role="menu"&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class="divider"&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class="divider"&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;form class="navbar-form navbar-left" role="search"&gt;
-                &lt;div class="form-group"&gt;
-                    &lt;input type="text" class="form-control" placeholder="Search"&gt;
-                &lt;/div&gt;
-                &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
-            &lt;/form&gt;
+        &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class="dropdown-menu" role="menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form class="navbar-form navbar-left" role="search"&gt;
+        &lt;div class="form-group"&gt;
+        &lt;input type="text" class="form-control" placeholder="Search"&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
 
-            &lt;ul class="nav navbar-nav navbar-right"&gt;
-                &lt;li&gt;
-                    &lt;a href="#"&gt;
-                        &lt;span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"&gt;&lt;span class="osf-gravatar"&gt; &lt;img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"&gt; &lt;/span&gt;&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#"&gt;
-                        &lt;span rel="tooltip" data-placement="bottom" title="Settings" class="fa fa-cog hidden-xs fa-lg"&gt;&lt;/span&gt;
-                        &lt;span class="visible-xs"&gt;Settings&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#"&gt;
-                        &lt;span rel="tooltip" data-placement="bottom" title="Log&nbsp;out" class="fa fa-sign-out hidden-xs fa-lg"&gt;&lt;/span&gt;
-                        &lt;span class="visible-xs"&gt;Log out&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
+        &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li&gt;
+        &lt;a href="#"&gt;
+        &lt;span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"&gt;&lt;span class="osf-gravatar"&gt; &lt;img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"&gt; &lt;/span&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;a href="#"&gt;
+        &lt;span rel="tooltip" data-placement="bottom" title="Settings" class="fa fa-cog hidden-xs fa-lg"&gt;&lt;/span&gt;
+        &lt;span class="visible-xs"&gt;Settings&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;a href="#"&gt;
+        &lt;span rel="tooltip" data-placement="bottom" title="Log&nbsp;out" class="fa fa-sign-out hidden-xs fa-lg"&gt;&lt;/span&gt;
+        &lt;span class="visible-xs"&gt;Log out&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
         &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
-    &lt;/div&gt;&lt;!-- /.container-fluid --&gt;
-&lt;/nav&gt;
+        &lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+        &lt;/nav&gt;
 
     </code>
                         </pre>
@@ -1288,41 +1121,41 @@
 
                         <pre>
     <code class="language-markup">
-&lt;div id="projectBanner"&gt;
-    &lt;header class="subhead" id="overview"&gt;
+        &lt;div id="projectBanner"&gt;
+        &lt;header class="subhead" id="overview"&gt;
         &lt;nav id="projectSubnav" class="navbar osf-project-navbar" role="navigation"&gt;
-            &lt;div class="container"&gt;
-                &lt;div class="navbar-header"&gt;
-                    &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".project-nav"&gt;
-                        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-                        &lt;span class="fa fa-bars fa-lg"&gt;&lt;/span&gt;
-                    &lt;/button&gt;
-                    &lt;a class="navbar-brand visible-xs" href="/53dnv/"&gt;
-                        Project Navigation
-                    &lt;/a&gt;
-                &lt;/div&gt;
-                &lt;div class="collapse navbar-collapse project-nav"&gt;
-                    &lt;ul class="nav navbar-nav"&gt;
-                        &lt;li class="active"&gt;&lt;a href="/53dnv/" class="project-title"&gt; Project Name&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#project"&gt;Files&lt;/a&gt;&lt;/li&gt;
-                        &lt;!-- Add-on tabs --&gt;
-                        &lt;li&gt;
-                            &lt;a href="#project"&gt;
-                                Wiki
-                            &lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#project"&gt;Statistics&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#project"&gt;Registrations&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#project"&gt;Forks&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#project"&gt;Sharing&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#project"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+        &lt;div class="container"&gt;
+        &lt;div class="navbar-header"&gt;
+        &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".project-nav"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="fa fa-bars fa-lg"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class="navbar-brand visible-xs" href="/53dnv/"&gt;
+        Project Navigation
+        &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="collapse navbar-collapse project-nav"&gt;
+        &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;&lt;a href="/53dnv/" class="project-title"&gt; Project Name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#project"&gt;Files&lt;/a&gt;&lt;/li&gt;
+        &lt;!-- Add-on tabs --&gt;
+        &lt;li&gt;
+        &lt;a href="#project"&gt;
+        Wiki
+        &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#project"&gt;Statistics&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#project"&gt;Registrations&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#project"&gt;Forks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#project"&gt;Sharing&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#project"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
         &lt;/nav&gt;
-    &lt;/header&gt;
-&lt;/div&gt;
-                            </code>
+        &lt;/header&gt;
+        &lt;/div&gt;
+    </code>
                         </pre>
                     </div>
                 </div>
@@ -1370,35 +1203,35 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
- &lt;div role="tabpanel"&gt;
+        &lt;div role="tabpanel"&gt;
 
-    &lt;!-- Nav tabs --&gt;
-    &lt;ul class="nav nav-tabs m-b-md" role="tablist"&gt;
+        &lt;!-- Nav tabs --&gt;
+        &lt;ul class="nav nav-tabs m-b-md" role="tablist"&gt;
         &lt;li role="presentation" class="active"&gt;
-            &lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;
+        &lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;
         &lt;/li&gt;
         &lt;li role="presentation"&gt;
-            &lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;
+        &lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;
         &lt;/li&gt;
         &lt;li role="presentation"&gt;
-            &lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;
+        &lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;
         &lt;/li&gt;
-    &lt;/ul&gt;
+        &lt;/ul&gt;
 
-    &lt;!-- Tab panes --&gt;
-    &lt;div class="tab-content"&gt;
+        &lt;!-- Tab panes --&gt;
+        &lt;div class="tab-content"&gt;
         &lt;div role="tabpanel" class="tab-pane active" id="home"&gt;
-            ...
+        ...
         &lt;/div&gt;
         &lt;div role="tabpanel" class="tab-pane" id="profile"&gt;
-            ...
+        ...
         &lt;/div&gt;
         &lt;div role="tabpanel" class="tab-pane" id="messages"&gt;
-            ...
+        ...
         &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;/div&gt;
 
-&lt;/div&gt;
+        &lt;/div&gt;
     </code>
                         </pre>
 
@@ -1431,11 +1264,11 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;div class="logo-spin logo-xs"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
-&lt;div class="logo-spin logo-sm"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
-&lt;div class="logo-spin logo-md"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
-&lt;div class="logo-spin logo-lg"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
-&lt;div class="logo-spin logo-xl"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+        &lt;div class="logo-spin logo-xs"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+        &lt;div class="logo-spin logo-sm"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+        &lt;div class="logo-spin logo-md"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+        &lt;div class="logo-spin logo-lg"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
+        &lt;div class="logo-spin logo-xl"&gt;&lt;img src="img/logo_spin.png" alt="loader"&gt;&lt;/div&gt;
     </code>
                         </pre>
 
@@ -1483,38 +1316,38 @@
                         </div>
 
 
-                   </div>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;div class="progress progress-bar-xs"&gt;
-    &lt;div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"&gt;
+        &lt;div class="progress progress-bar-xs"&gt;
+        &lt;div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"&gt;
         &lt;span class="sr-only"&gt;40% Complete (success)&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="progress progress-bar-sm"&gt;
-    &lt;div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="progress progress-bar-sm"&gt;
+        &lt;div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;
         &lt;span class="sr-only"&gt;20% Complete&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="progress progress-bar-md"&gt;
-    &lt;div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="progress progress-bar-md"&gt;
+        &lt;div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"&gt;
         &lt;span class="sr-only"&gt;60% Complete (warning)&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="progress progress-bar-lg"&gt;
-    &lt;div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="progress progress-bar-lg"&gt;
+        &lt;div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"&gt;
         &lt;span class="sr-only"&gt;80% Complete (danger)&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="progress progress-bar-xl"&gt;
-    &lt;div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="progress progress-bar-xl"&gt;
+        &lt;div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"&gt;
         &lt;span class="sr-only"&gt;20% Complete&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
     </code>
                         </pre>
 
@@ -1599,8 +1432,8 @@
                             <input type="text" class="form-control" placeholder="Text input">
                         </div>
                         <pre><code class="language-markup">
-&lt;input type="text" class="form-control" placeholder="Text input"&gt;
-                            </code> </pre>
+                            &lt;input type="text" class="form-control" placeholder="Text input"&gt;
+                        </code> </pre>
 
                         <h4 class="m-t-lg">Text Area</h4>
                         <ul>
@@ -1611,7 +1444,7 @@
                             <textarea class="form-control noresize" rows="3"></textarea>
                         </div>
                         <pre><code class="language-markup">
-&lt;textarea class="form-control noresize" rows="3"&gt;&lt;/textarea&gt;
+                            &lt;textarea class="form-control noresize" rows="3"&gt;&lt;/textarea&gt;
                         </code></pre>
 
                         <h4 class="m-t-lg">Checkboxes and Options</h4>
@@ -1654,37 +1487,37 @@
                             </div>
                         </div>
                         <pre><code class="language-markup">
-&lt;div class="checkbox"&gt;
-  &lt;label&gt;
-    &lt;input type="checkbox" value=""&gt;
-    Option one is this and that&mdash;be sure to include why it's great
-  &lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="checkbox disabled"&gt;
-  &lt;label&gt;
-    &lt;input type="checkbox" value="" disabled&gt;
-    Option two is disabled
-  &lt;/label&gt;
-&lt;/div&gt;
+                            &lt;div class="checkbox"&gt;
+                            &lt;label&gt;
+                            &lt;input type="checkbox" value=""&gt;
+                            Option one is this and that&mdash;be sure to include why it's great
+                            &lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class="checkbox disabled"&gt;
+                            &lt;label&gt;
+                            &lt;input type="checkbox" value="" disabled&gt;
+                            Option two is disabled
+                            &lt;/label&gt;
+                            &lt;/div&gt;
 
-&lt;div class="radio"&gt;
-  &lt;label&gt;
-    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
-    Option one is this and that&mdash;be sure to include why it's great
-  &lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="radio"&gt;
-  &lt;label&gt;
-    &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
-    Option two can be something else and selecting it will deselect option one
-  &lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="radio disabled"&gt;
-  &lt;label&gt;
-    &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
-    Option three is disabled
-  &lt;/label&gt;
-&lt;/div&gt;
+                            &lt;div class="radio"&gt;
+                            &lt;label&gt;
+                            &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+                            Option one is this and that&mdash;be sure to include why it's great
+                            &lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class="radio"&gt;
+                            &lt;label&gt;
+                            &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+                            Option two can be something else and selecting it will deselect option one
+                            &lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class="radio disabled"&gt;
+                            &lt;label&gt;
+                            &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
+                            Option three is disabled
+                            &lt;/label&gt;
+                            &lt;/div&gt;
                         </code></pre>
 
                         <h4 class="m-t-lg">Selects</h4>
@@ -1705,13 +1538,13 @@
                             </select>
                         </div>
                         <pre><code class="language-markup">
-&lt;select class="form-control"&gt;
-    &lt;option&gt;1&lt;/option&gt;
-    &lt;option&gt;2&lt;/option&gt;
-    &lt;option&gt;3&lt;/option&gt;
-    &lt;option&gt;4&lt;/option&gt;
-    &lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;
+                            &lt;select class="form-control"&gt;
+                            &lt;option&gt;1&lt;/option&gt;
+                            &lt;option&gt;2&lt;/option&gt;
+                            &lt;option&gt;3&lt;/option&gt;
+                            &lt;option&gt;4&lt;/option&gt;
+                            &lt;option&gt;5&lt;/option&gt;
+                            &lt;/select&gt;
                         </code></pre>
 
 
@@ -1732,421 +1565,33 @@
                     </div>
                 </div>
 
-
-                <hr />
-                <h2 id="ui"> UI Examples </h2>
-
-                <h3 id="autosave"> Autosave Example </h3>
-                <div class="row">
-                    <div class="col-xs-12 m-b-lg">
-                        <h4 class="m-t-lg"> Continous Save with a continously changed document (i.e. Wiki) </h4>
-                        <p>Have save time information and button just in case. Similar to Google Docs.  </p>
-                        <div class="osf-box p-lg">
-                            <div style="border-bottom:1px solid #ccc" class="text-right p-xs">
-                                <span class="text-muted">Last Saved: 2 minutes ago.</span> <button class="btn btn-sm btn-success">Save</button>
-                            </div>
-                        </div>
-
-                        <h4 class="m-t-lg"> Save on Input control change  </h4>
-                        <p>Show change alert that disappears after about 3 seconds. </p>
-                        <div class="osf-box p-lg">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <input type="text" class="form-control" value="Name here">
-                                </div>
-                                <div class="col-xs-6">
-                                    <span class="text-success">Changes saved!</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-t-md m-b-md p-md osf-box box-lt">
-                            <h4> When you should NOT autosave: </h4>
-                            <ul>
-                                <li>If the edit is highly sensitive, never autosave. The extra step of saving adds a level of security.</li>
-                                <li>If the edit is going to be public immediately think about implications. The step to save gives users a moment to revise.</li>
-                                <li>When intermediate changes being applied would alter the layout or page. For example selecting to hide certain elements in a settings page should not hide those immediately and move the page around, resulting in the user losing location. </li>
-                                <li>When one edit is related to another edit that is yet to be made. I.e. when the edit is not independent.</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <h3 id="feedback"> Feedback Examples </h3>
-                <div class="row">
-                    <div class="col-xs-12 m-b-lg">
-                        <h4 class="m-t-lg">Form validation</h4>
-                        <p>Use existing Bootstrap style to communicate errors related to forms. Don't use Growl notications. <a href="http://getbootstrap.com/css/#forms-control-validation">Learn more here</a>. </p>
-                        <div class="osf-box p-lg">
-                            <div class="form-group has-error">
-                                <label for="inputHelpBlock">Input with help text</label>
-                                <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
-                                <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-                            </div>
-                        </div>
-                        <pre><code class="language-markup">
-&lt;div class="form-group has-error"&gt;
-    &lt;label for="inputHelpBlock"&gt;Input with help text&lt;/label&gt;
-    &lt;input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock"&gt;
-    &lt;span id="helpBlock" class="help-block"&gt;A block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
-&lt;/div&gt;
-                        </code></pre>
-
-                        <h4 class="m-t-lg">Error Reporting</h4>
-                        <p>Site related errors should use Growl style error reporting. OSF uses <a href="https://github.com/ifightcrime/bootstrap-growl/">Bootstrap Growl</a> plugin to display messages. The advantage of this library is that is builds on top of bootstrap design and utilizes alert boxes, which means it already complies with the style guide.</p>
-
-                        <div class="osf-box box-lt p-lg">
-                            <h4>Which feedback to use when? </h4>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Action examples</th>
-                                        <th>Feedback type</th>
-                                        <th>Auto vs manual dissmiss</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <h5> Mundane Success Events</h5>
-                                            <p>Events that user expects to happen and occurs frequently.</p>
-                                            <ul>
-                                                <li>Page loaded succesfully</li>
-                                                <li>Login was successful</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                           Does not need feedback
-                                        </td>
-                                        <td>N/A</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h5>Expected but critical success events</h5>
-                                            <p>Events that the user expects to succeed but it's success is important</p>
-                                            <ul>
-                                                <li>File uploaded successfully</li>
-                                                <li>File deleted successfully</li>
-                                                <li>Wiki changes are saved</li>
-
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            Use text with "text-success" within the vicinity of the action elements.. i.e: <span class="text-success">Files uploaded!</span>
-                                        </td>
-                                        <td>Auto dismiss</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h5>Not critical error events</h5>
-                                            <p>Errors that are caused by events that will try to repeat action or are not breaking.</p>
-                                            <ul>
-                                                <li>Dropbox files could not be loaded</li>
-                                                <li>Collaborative editing is not available at the moment</li>
-
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            Use text with "text-danger" within the vicinity of the action elements. i.e: <span class="text-danger">Dropbox files could not be loaded!</span>
-                                        </td>
-                                        <td>Auto dismiss</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h5>Input Errors</h5>
-                                            <p>Validation or input requirement errors that need the user to correct the error before moving on.</p>
-                                            <ul>
-                                                <li>First name is required</li>
-                                                <li>Please enter DELETE to remove this item.</li>
-                                                <li>This user name already exists</li>
-
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            Use text with "text-danger" using the form validation error example above. If not using a form place near input field. See example in Validation section above.
-                                        </td>
-                                        <td>Dismiss when user fixes error or cancels.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h5>Critical Errors</h5>
-                                            <p>Errors that break the user workflow and may result in problems, mainly due to connectivity</p>
-                                            <ul>
-                                                <li>Profile settings could not be saved!</li>
-                                                <li>File did not upload</li>
-                                                <li>Wiki changes cannot be saved at the moment</li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            Use Growl box error
-                                        </td>
-                                        <td>Manual dismiss</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-
-                        <h4 class="m-t-lg">Button State Feedback</h4>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <h5>Regular Button</h5>
-                                    <button class="btn btn-success">Save</button>
-                                </div>
-                                <div class="col-xs-4">
-                                    <h5>Active State Button</h5>
-                                    <button class="btn btn-default"><i class="text-muted">Saving...</i></button>
-                                </div>
-                                <div class="col-xs-4">
-                                    <h5>Disabled State Button</h5>
-                                    <button class="btn btn-default disabled"><span class="text-muted">Save</span></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <pre><code class="language-markup">
-&lt;h5&gt;Regular Button&lt;/h5&gt;
-&lt;button class="btn btn-success"&gt;Save&lt;/button&gt;
-
-&lt;h5&gt;Active State Button&lt;/h5&gt;
-&lt;button class="btn btn-default"&gt;&lt;i class="text-muted"&gt;Saving...&lt;/i&gt;&lt;/button&gt;
-
-&lt;h5&gt;Disabled State Button&lt;/h5&gt;
-&lt;button class="btn btn-default disabled"&gt;&lt;span class="text-muted"&gt;Save&lt;/span&gt;&lt;/button&gt;
-
-                        </code></pre>
-
-                        <h4 class="m-t-lg">Do not Hide Submit Button if the button is not yet available</h4>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <h5 class="text-success"> Do this: </h5>
-                                    <button class="btn btn-default">Cancel</button>
-                                    <button class="btn btn-default disabled">Save</button>
-                                </div>
-                                <div class="col-xs-6">
-                                    <h5 class="text-danger"> Don't do this: </h5>
-                                    <button class="btn btn-default">Cancel</button>
-                                    <span class="text-muted"> Submit button becomes visible magically later</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="alert alert-danger m-t-lg"><b>Never use Javascript alerts!</b> (except for onunload events).</div>
-
-                    </div>
-
-                </div>
-
-                <h3 id="options"> Saving Options </h3>
-                <p> Often you will give users the opportunity to make a selection to either immediately save an option or to save together with the rest of the form. Follow these guidelines when making your decision about which component to use:</p>
-                <div class="row">
-                    <div class="col-xs-12 m-b-lg">
-                        <h4 class="m-t-lg">Selection between on or off states.</h4>
-                        <p>Do not use single flip-flop buttons that show the current state. You can however use the action verbs and utilize a single button this way.</p>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <h5 class="text-success">Do this:</h5>
-                                    <button class="btn btn-success"><i class="fa fa-eye"></i> Show</button>
-                                    <button class="btn btn-default"><i class="fa fa-eye-slash"></i> Hide</button>
-                                </div>
-                                <div class="col-xs-4">
-                                    <h5 class="text-danger">Don't do this:</h5>
-                                    <button class="btn btn-success"><i class="fa fa-eye"></i></button>
-                                    <button class="btn btn-default"><i class="fa fa-eye-slash"></i></button>
-                                </div>
-                                <div class="col-xs-4">
-                                    <h5 class="text-danger">Don't do this:</h5>
-                                    <select class="form-control">
-                                        <option>Show</option>
-                                        <option>Hide</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="m-t-xl">UI specific toggle with more than 2 states</h4>
-                        <p>If there is a UI component that shows more than 2 states and it's effects are immediate (such as toggling views) use a button group with a disabled button as label. This shows the user that these view changes belong together and work in a similar way.</p>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <h5 class="text-success">Do this:</h5>
-                                    <div class="btn-group">
-                                        <button class="btn btn-default disabled">Show:</button>
-                                        <button class="btn btn-default">Peview</button>
-                                        <button class="btn btn-primary">Edit</button>
-                                        <button class="btn btn-primary">Compare</button>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <h5 class="text-danger">Don't do this:</h5>
-                                    <button class="btn btn-default">Preview</button>
-                                    <button class="btn btn-primary">Edit</button>
-                                    <button class="btn btn-primary">Compare</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="m-t-xl">Inline selection with multiple states without using Select</h4>
-                        <p>If for some reason you need to have users choose from multiple options that are not part of a UI change but still needs to be part of a toolbar you can use split button drop downs from Bootstrap.</p>
-                        <div class="row">
-                            <div class="col-xs-9">
-                                <!-- Split button -->
-                                <div class="btn-group m-b-lg">
-                                    <button type="button" class="btn btn-default">Detailed Options</button>
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <span class="caret"></span>
-                                        <span class="sr-only">Toggle Dropdown</span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li class="active">
-                                            <a href="#">
-                                                <div>Selected option</div>
-                                                <div class="text-smaller">With some more details here.</div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div>Options can take HTML</div>
-                                                <div class="text-smaller">Make <b>Bold</b> or <i>Italic</i>.</div>
-                                            </a>
-                                        </li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
-
-                                 <pre><code class="language-markup">
-&lt;div class="btn-group m-b-lg"&gt;
-    &lt;button type="button" class="btn btn-default"&gt;Detailed Options&lt;/button&gt;
-    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
-        &lt;span class="caret"&gt;&lt;/span&gt;
-        &lt;span class="sr-only"&gt;Toggle Dropdown&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;ul class="dropdown-menu" role="menu"&gt;
-        &lt;li class="active"&gt;
-            &lt;a href="#"&gt;
-                &lt;div&gt;Selected option&lt;/div&gt;
-                &lt;div class="text-smaller"&gt;With some more details here.&lt;/div&gt;
-            &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a href="#"&gt;
-                &lt;div&gt;Options can take HTML&lt;/div&gt;
-                &lt;div class="text-smaller"&gt;Make &lt;b&gt;Bold&lt;/b&gt; or &lt;i&gt;Italic&lt;/i&gt;.&lt;/div&gt;
-            &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="divider"&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-                                 </code></pre>
-
-
-                            </div>
-                            <div class="col-xs-3">
-                                <a href=" http://getbootstrap.com/components/#btn-dropdowns-split" class="btn btn-sm btn-default"> Bootstrap Documentation </a>
-                            </div>
-                        </div>
-
-
-
-                        <h4 class="m-t-xl" id="alphabetize">When to Alphabetize?</h4>
-                        <p> When using drop downs, think carefully about the ordering of the options. Is the a hierarchical, or temporal order to the options that could be used to order them? Are they're certain options that users should see before others, assuming they are scanning down the list [this is actually just good practice whether they are using drop downs, check boxes, or radical buttons]? If none of these apply, then the drop down options should be in alphabetical order.</p>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <p>Alphabetize general and equal structures like country names:</p>
-                                    <select class="form-control">
-                                        <option>Adipiscing</option>
-                                        <option>Amet</option>
-                                        <option>Consectetur</option>
-                                        <option>Dolor</option>
-                                        <option>Elit</option>
-                                        <option>Ipsum</option>
-                                        <option>Lorem</option>
-                                        <option>Mauris</option>
-                                        <option>Sit</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-4">
-                                    <p>Don't alphabetize order and hierarchy</p>
-                                    <select class="form-control">
-                                        <option>Read</option>
-                                        <option>Read & Write</option>
-                                        <option selected>Administrator</option>
-                                    </select>
-                                </div>
-                                <div class="col-xs-4">
-                                    <p>Break alphabetical order in favor of common uses</p>
-                                    <select class="form-control">
-                                        <option>Select Person</option>
-                                        <option>Me</option>
-                                        <option>Ally</option>
-                                        <option>Carlos</option>
-                                        <option>Jamal</option>
-                                        <option>Kim</option>
-                                        <option>Zach</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <h4 class="m-t-xl">Non-UI form inputs</h4>
-                        <p>If the input changes are not part of a UI element, use regular form standards.</p>
-                        <ul>
-                            <li>If multiple items can be selected, use checkboxes.</li>
-                            <li>If single item can be selected, use radio button.</li>
-                            <li>If the individual items are shorter than ~10 characters, keep your checkboxes and radio buttons inline (if you have space).</li>
-                            <li>If the individual items are longer, keep each checkbox or radio button in its own line.</li>
-                            <li>Use radio buttons if you have less than 6 choices so that each one is visible.</li>
-                            <li>Use drowdown if you have 6 or more choices. </li>
-                        </ul>
-
-
-
-
-                    </div>
-                </div>
-
-                <hr />
-                <h2 id="ally"> Accessibility </h2>
-                <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
-
-
-
-
-
-
             </div>
 
         </div>
         <div id="side-menu" class="col-xs-3">
             <ul class="nav nav-pills nav-stacked m-t-xl" data-spy="affix" data-offset-top="350" data-offset-bottom="200">
-                <li  class="active"><a href="#top">Top</a></li>
-                <li >
-                    <a href="#principles">General Principles</a>
-                    <!--<ul class="nav subnav" >-->
-                        <!--<li><a href="#language">Language</a></li>-->
-                        <!--<li><a href="#app_state">Application State</a></li>-->
-                        <!--<li><a href="#errors">Errors</a></li>-->
-                        <!--<li><a href="#empty_space">Empty Space</a></li>-->
-                        <!--<li><a href="#mobile">Mobile</a></li>-->
-                        <!--<li><a href="#large">Large screens</a></li>-->
-                        <!--<li><a href="#form_inputs">Form Inputs</a></li>-->
-                        <!--<li><a href="#history">History and SEO</a></li>-->
-                    <!--</ul>-->
+                <li class="active">
+                    <a href="#layout">Layout</a>
+                    <ul class="nav subnav" >
+                        <li><a href="#container">Container</a></li>
+                        <li><a href="#grid">Grid</a></li>
+                        <li><a href="#layout-helper">Layout Helper Classes</a></li>
+                    </ul>
                 </li>
-                <li ><a href="#layout">Layout</a></li>
-                <li ><a href="#typography">Typography</a></li>
-                <li ><a href="#colors">Colors</a></li>
+
+                <li>
+                    <a href="#typography">Typography</a>
+                    <ul class="nav subnav" >
+                        <li><a href="#font-weight">Font Weight Helpers</a></li>
+                        <li><a href="#other-text">Other text options</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#colors">Colors</a>
+                    <ul class="nav subnav" >
+                        <li><a href="#bootstrap-colors">Bootstrap Colors</a></li>
+                    </ul>
+                </li>
                 <li ><a href="#icons">Icons</a></li>
                 <li >
                     <a href="#components">Components</a>
@@ -2165,10 +1610,6 @@
 
                     </ul>
                 </li>
-                <li ><a href="#ui">UI Examples</a></li>
-                <li ><a href="#ally">Accessibility</a></li>
-
-
             </ul>
         </div>
     </div>
@@ -2181,7 +1622,6 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vendor/prism/prism.js"></script>
 <script src="script.js"></script>
-
 
 </body>
 </html>
