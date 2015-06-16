@@ -123,7 +123,7 @@
                             </ul>
                             <hr>
                             <h4 id="errors" class="f-w-md"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
-                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information.</p>
+                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information (<a href="#feedback">see more UI examples</a>).</p>
                             <p>Example with space limitation:</p>
                             <div class="osf-box box-lt p-lg">
                                 Can't connect to Dropbox at the moment.  [Learn more]
@@ -1697,8 +1697,100 @@
 &lt;/div&gt;
                         </code></pre>
 
-                        <h4 class="m-t-lg">Growl Errors</h4>
-                        <div class="m-b-md p-md osf-box box-round">Coming soon...</div>
+                        <h4 class="m-t-lg">Error Reporting</h4>
+                        <p>Site related errors should use Growl style error reporting. OSF uses <a href="https://github.com/ifightcrime/bootstrap-growl/">Bootstrap Growl</a> plugin to display messages. The advantage of this library is that is builds on top of bootstrap design and utilizes alert boxes, which means it already complies with the style guide.</p>
+
+                        <div class="osf-box box-lt p-lg">
+                            <h4>Which feedback to use when? </h4>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Action examples</th>
+                                        <th>Feedback type</th>
+                                        <th>Auto vs manual dissmiss</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h5> Mundane Success Events</h5>
+                                            <p>Events that user expects to happen and occurs frequently.</p>
+                                            <ul>
+                                                <li>Page loaded succesfully</li>
+                                                <li>Login was successful</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                           Does not need feedback
+                                        </td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Expected but critical success events</h5>
+                                            <p>Events that the user expects to succeed but it's success is important</p>
+                                            <ul>
+                                                <li>File uploaded successfully</li>
+                                                <li>File deleted successfully</li>
+                                                <li>Wiki changes are saved</li>
+
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Use text with "text-success" within the vicinity of the action elements.. i.e: <span class="text-success">Files uploaded!</span>
+                                        </td>
+                                        <td>Auto dismiss</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Not critical error events</h5>
+                                            <p>Errors that are caused by events that will try to repeat action or are not breaking.</p>
+                                            <ul>
+                                                <li>Dropbox files could not be loaded</li>
+                                                <li>Collaborative editing is not available at the moment</li>
+
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Use text with "text-danger" within the vicinity of the action elements. i.e: <span class="text-danger">Dropbox files could not be loaded!</span>
+                                        </td>
+                                        <td>Auto dismiss</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Input Errors</h5>
+                                            <p>Validation or input requirement errors that need the user to correct the error before moving on.</p>
+                                            <ul>
+                                                <li>First name is required</li>
+                                                <li>Please enter DELETE to remove this item.</li>
+                                                <li>This user name already exists</li>
+
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Use text with "text-danger" using the form validation error example above. If not using a form place near input field. See example in Validation section above.
+                                        </td>
+                                        <td>Dismiss when user fixes error or cancels.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>Critical Errors</h5>
+                                            <p>Errors that break the user workflow and may result in problems, mainly due to connectivity</p>
+                                            <ul>
+                                                <li>Profile settings could not be saved!</li>
+                                                <li>File did not upload</li>
+                                                <li>Wiki changes cannot be saved at the moment</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            Use Growl box error
+                                        </td>
+                                        <td>Manual dismiss</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
 
                         <h4 class="m-t-lg">Button State Feedback</h4>
                         <div class="m-b-md p-md osf-box box-round">
