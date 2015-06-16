@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-ruby-sass'),
     livereload = require('gulp-livereload'),
-    webserver = require('gulp-webserver');
+    webserver = require('gulp-webserver'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 var paths = {
@@ -36,6 +37,7 @@ gulp.task('sass', function () {
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
+        .pipe(autoprefixer('> 1%'))
         .pipe(gulp.dest('css'))
         .pipe(livereload());
 });
