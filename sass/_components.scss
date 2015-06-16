@@ -1,7 +1,38 @@
 /*
  * Components specific to OSF
  */
- 
+
+ /* Box shadow */
+.box-shadow-xs {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.box-shadow-sm {
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+}
+
+.box-shadow-md {
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+}
+
+.box-shadow-lg {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+}
+
+.box-shadow-xl {
+    -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.4);
+}
+
 /* LOADER */
 .logo-spin {
   -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
