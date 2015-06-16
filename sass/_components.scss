@@ -1,7 +1,7 @@
 /*
  * Components specific to OSF
  */
-
+ 
 /* LOADER */
 .logo-spin {
   -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
@@ -91,14 +91,14 @@
   border-radius: 0;
   background-color: #ffffff;
 }
-.osf-box.box-round {
+.box-round {
   border-radius: 5px;
 }
-.osf-box.box-lt {
+.osf-box-lt {
   background-color: $color-hover;
   color: $color-grey;
 }
-.osf-box.box-dk {
+.osf-box-dk {
   background-color: $color-select;
   color: white;
 }

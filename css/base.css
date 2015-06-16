@@ -479,14 +479,14 @@ h1, h2, h3, h4, h1 small {
   border-radius: 0;
   background-color: #ffffff; }
 
-.osf-box.box-round {
+.box-round {
   border-radius: 5px; }
 
-.osf-box.box-lt {
+.osf-box-lt {
   background-color: #E0EBF3;
   color: #333333; }
 
-.osf-box.box-dk {
+.osf-box-dk {
   background-color: #337AB7;
   color: white; }
 
