@@ -416,6 +416,22 @@ h1, h2, h3, h4, h1 small {
 /*
  * Components specific to OSF
  */
+/* Box shadow */
+.box-shadow-xs {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
+
+.box-shadow-sm {
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3); }
+
+.box-shadow-md {
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3); }
+
+.box-shadow-lg {
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3); }
+
+.box-shadow-xl {
+  box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.4); }
+
 /* LOADER */
 .logo-spin {
   -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
@@ -437,28 +453,21 @@ h1, h2, h3, h4, h1 small {
 .logo-spin.logo-xl img {
   width: 100px; }
 
-@-moz-keyframes spin {
-  from {
-    -moz-transform: rotate(0deg); }
-  to {
-    -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin {
   from {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
 @keyframes spin {
   from {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    -webkit-transform: rotate(360deg); } }
-@-moz-keyframes opacity {
-  0% {
-    opacity: 0.1; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0.1; } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 @-webkit-keyframes opacity {
   0% {
     opacity: 0.1; }
@@ -479,14 +488,14 @@ h1, h2, h3, h4, h1 small {
   border-radius: 0;
   background-color: #ffffff; }
 
-.osf-box.box-round {
+.box-round {
   border-radius: 5px; }
 
-.osf-box.box-lt {
+.osf-box-lt {
   background-color: #E0EBF3;
   color: #333333; }
 
-.osf-box.box-dk {
+.osf-box-dk {
   background-color: #337AB7;
   color: white; }
 

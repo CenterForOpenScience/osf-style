@@ -48,9 +48,9 @@
                 <li><a href="ally.html">Accesibility </a></li>
                 <li><a href="js.html">Javascript</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
+            <div class="navbar-form navbar-right">
                 <button id="openGithub" role="button" class="btn btn-info"><i class="fa fa-github"></i> Open in Github</button>
-            </form>
+            </div>
 
 
         </div><!-- /.navbar-collapse -->
@@ -98,17 +98,17 @@
                         <div>
                             <p>These are general guidelines that developers need to keep in mind when developing user interactions. They identify our priorities and UI development needs to take into consideration these principles.</p>
                             <div id="language">
-                                <h4 class="f-w-md"><a></a>Use professional language in our interface</h4>
+                                <h4 class="f-w-md"><a></a>Use clear language in our interface</h4>
                                 <p>Where long form text is used it is best to use descriptive language.</p>
                                 <p>Include a period at the end of all directions and warnings if they are full sentences.</p>
                                 <p>Good examples:</p>
-                                    <div class="osf-box box-lt p-lg">
-                                        <div class="text-success">"Please follow the link to view this file."</div>
+                                    <div class="osf-box-lt p-lg">
+                                        <div class="text-success">"Please follow the link to view this file"</div>
                                         <div class="text-success">"The project you selected is not available at this time."</div>
                                         <div class="text-success">"You have entered an incorrect name, please try again."</div>
                                     </div>
                                 <p>Bad Examples:</p>
-                                <div class="osf-box box-lt p-lg">
+                                <div class="osf-box-lt p-lg">
                                     <div class="text-danger">"That's not right. Try again!"<span class="text-muted">//Too colloquial: </span>  </div>
                                     <div class="text-danger">"Go here." <span class="text-muted">// Too curt </span></div>
                                     <div class="text-danger">"Error: undefined" <span class="text-muted">// Not human enough</span></div>
@@ -116,18 +116,26 @@
                                 </div>
                                 <p><strong>Short form text</strong> is supposed to be much more direct and refer to as specifically as possible the action of the item, for instance in buttons, labels.</p>
                                 <p>Good examples:</p>
-                                <div class="osf-box box-lt p-lg">
-                                    <span class="text-success">"Open"</span>
+
+                                <div class="osf-box-lt p-lg">
+                                    <span class="text-success">"Open"</span>.
                                     <span class="text-success">"Delete Multiple"</span>
                                     <span class="text-success">"Keep Both"</span>
                                 </div>
                                 <p>Bad Examples:</p>
-                                <div class="osf-box box-lt p-lg">
+                                <div class="osf-box-lt p-lg">
                                     <div class="text-danger">"Open this file" <span class="text-muted">// No need to define what element the action is on </span></div>
                                     <div class="text-danger">"Delete Everything" <span class="text-muted">// Too general</span></div>
                                     <div class="text-danger">"Name:"<span class="text-muted">// Not descriptive enough, full name, first name? </span></div>
                                     <div class="text-danger">"Cancel, Dismiss, Close" <span class="text-muted">// Should use uniform name for same action</span></div>
                                 </div>
+                                <p><strong>Don't use jargon</strong> that our users will be unfamiliar with. Language that is used around the office is not necessarily the language that is most descriptive to our users. Use words and phrases that they will be most familiar with, in the context of the OSF.</p>
+                                <p>Words to avoid:</p>
+                                    <div class="osf-box-lt p-lg">
+                                        <div class="text-danger">Node</div>
+                                        <div class="text-danger">Child/parent</div>
+                                        <div class="text-danger">Pointers</div>
+                                    </div>
                             </div>
                             <hr>
                             <h4 id="app_state" class="f-w-md"><a></a>Let the user know about state where applicable</h4>
@@ -153,14 +161,14 @@
                             </ul>
                             <hr>
                             <h4 id="errors" class="f-w-md"><a ></a>Let the user know about errors and offer alternatives where possible</h4>
-                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information (<a href="#feedback">see more UI examples</a>).</p>
-                            <p>Example with space limitation:</p>
-                            <div class="osf-box box-lt p-lg">
+                            <p>Sometimes user driven or connectivity based errors halt or make certain UI actions possible. The interface should provide alternatives and information</p>
+                            <p>Example with space limitation :</p>
+                            <div class="osf-box-lt p-lg">
                                 Can't connect to Dropbox at the moment.  [Learn more]
                             </div>
                             <p>Example:</p>
-                            <div class="osf-box box-lt p-lg">
-                                We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error].
+                            <div class="osf-box-lt p-lg">
+                                We are having trouble connecting to the Dropbox server at the moment. This may be because their servers are not reachable or your internet connection may be down. Please try reloading this page or [read more about this error]
                             </div>
                             <hr>
                             <h4 id="consistency" class="f-w-md"><a ></a>Be consistent about UI components</h4>
@@ -176,7 +184,7 @@
                             <h4 id="empty_space" class="f-w-md"><a ></a>Utilize empty space with actionable suggestions</h4>
                             <p>There are many areas where users don't have content available. In these cases their pages or elements will be empty. We can use these isntances to offer actionable tasks with appropriate links.</p>
                             <p>Example:</p>
-                            <div class="osf-box box-lt p-lg">
+                            <div class="osf-box-lt p-lg">
                                 You don't have any registrations at the moment.<br>
                                 [Learn more about Registrations] [Create a Registration]
                             </div>
@@ -246,7 +254,7 @@
                         <li><a href="#mobile">Mobile</a></li>
                         <li><a href="#large">Large screens</a></li>
                         <li><a href="#form_inputs">Form Inputs</a></li>
-                        <li><a href="#history">History and SEO</a></li>
+                        <li><a href="#history">History</a></li>
                     </ul>
                 </li>
 
