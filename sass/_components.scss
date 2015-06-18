@@ -2,6 +2,27 @@
  * Components specific to OSF
  */
 
+ /* Box shadow */
+.box-shadow-xs {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.box-shadow-sm {
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+}
+
+.box-shadow-md {
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+}
+
+.box-shadow-lg {
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+}
+
+.box-shadow-xl {
+    box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.4);
+}
+
 /* LOADER */
 .logo-spin {
   -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
@@ -17,28 +38,12 @@
 
 // Set spin animation for the log
 @mixin spin-animation($startDegree, $endDegree, $animation-name){
-  @-moz-keyframes #{$animation-name} {
-    from {
-      -moz-transform: rotate($startDegree);
-    }
-    to {
-      -moz-transform: rotate($endDegree);
-    }
-  }
-  @-webkit-keyframes  #{$animation-name} {
-    from {
-      -webkit-transform: rotate($startDegree);
-    }
-    to {
-     -webkit-transform: rotate($endDegree);
-    }
-  }
   @keyframes  #{$animation-name} {
     from {
-      -webkit-transform: rotate($startDegree);
+      transform: rotate($startDegree);
     }
     to {
-     -webkit-transform: rotate($endDegree);
+      transform: rotate($endDegree);
     }
   }
 }
@@ -47,28 +52,6 @@
 
 // opacity change animation, Start, Middle, End
 @mixin opacity-animation($start, $middle, $end, $animation-name){
-  @-moz-keyframes #{$animation-name} {
-    0% {
-      opacity : $start
-    }
-    50% {
-      opacity: $middle
-    }
-    100% {
-      opacity: $end
-    }
-  }
-  @-webkit-keyframes  #{$animation-name} {
-    0% {
-      opacity : $start
-    }
-    50% {
-      opacity: $middle
-    }
-    100% {
-      opacity: $end
-    }
-  }
   @keyframes #{$animation-name} {
     0% {
       opacity : $start
@@ -91,14 +74,14 @@
   border-radius: 0;
   background-color: #ffffff;
 }
-.osf-box.box-round {
+.box-round {
   border-radius: 5px;
 }
-.osf-box.box-lt {
+.osf-box-lt {
   background-color: $color-hover;
   color: $color-grey;
 }
-.osf-box.box-dk {
+.osf-box-dk {
   background-color: $color-select;
   color: white;
 }
