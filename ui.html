@@ -229,23 +229,30 @@
                         </div>
 
 
-                        <h4 id="button-state" class="m-t-lg">Button State Feedback</h4>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <h5>Regular Button</h5>
-                                    <button class="btn btn-success">Save</button>
-                                </div>
-                                <div class="col-xs-4">
-                                    <h5>Active State Button</h5>
-                                    <button class="btn btn-default"><i class="text-muted">Saving...</i></button>
-                                </div>
-                                <div class="col-xs-4">
-                                    <h5>Disabled State Button</h5>
-                                    <button class="btn btn-default disabled"><span class="text-muted">Save</span></button>
-                                </div>
-                            </div>
+                        <div class="alert alert-danger m-t-lg"><b>Never use Javascript alerts!</b> (except for onunload events).</div>
+
+                    </div>
+
+                </div>
+
+                <h3 id="options">Buttons and Toggles </h3>
+                <h4 id="button-state" class="m-t-lg">Button State Feedback</h4>
+                <div class="m-b-md p-md osf-box box-round">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h5>Regular Button</h5>
+                            <button class="btn btn-success">Save</button>
                         </div>
+                        <div class="col-xs-4">
+                            <h5>Active State Button</h5>
+                            <button class="btn btn-default"><i class="text-muted">Saving...</i></button>
+                        </div>
+                        <div class="col-xs-4">
+                            <h5>Disabled State Button</h5>
+                            <button class="btn btn-default disabled"><span class="text-muted">Save</span></button>
+                        </div>
+                    </div>
+                </div>
 
                         <pre><code class="language-markup">
 &lt;h5&gt;Regular Button&lt;/h5&gt;
@@ -259,30 +266,28 @@
 
                         </code></pre>
 
-                        <h4 class="m-t-lg">Do not Hide Submit Button if the button is not yet available</h4>
-                        <div class="m-b-md p-md osf-box box-round">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <h5 class="text-success"> Do this: </h5>
-                                    <button class="btn btn-default">Cancel</button>
-                                    <button class="btn btn-default disabled">Save</button>
-                                </div>
-                                <div class="col-xs-6">
-                                    <h5 class="text-danger"> Don't do this: </h5>
-                                    <button class="btn btn-default">Cancel</button>
-                                    <span class="text-muted"> Submit button becomes visible magically later</span>
-                                </div>
-                            </div>
+                <h4 class="m-t-lg">Do not hide submit buttons if the button is not yet available and show save buttons if save is possible</h4>
+                <div class="m-b-md p-md osf-box box-round">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h5 class="text-success"> Do this if action item is not possible (waiting for selection): </h5>
+                            <button class="btn btn-default">Cancel</button>
+                            <button class="btn btn-default disabled">Save</button>
                         </div>
-
-
-                        <div class="alert alert-danger m-t-lg"><b>Never use Javascript alerts!</b> (except for onunload events).</div>
-
+                        <div class="col-xs-4">
+                            <h5 class="text-success"> Do this if action item is available but there are validation errors: </h5>
+                            <span class="text-danger">Please correct errors above and try saving again.</span>
+                            <button class="btn btn-default">Cancel</button>
+                            <button class="btn btn-success">Save</button>
+                        </div>
+                        <div class="col-xs-4">
+                            <h5 class="text-danger"> Don't do this: </h5>
+                            <button class="btn btn-default">Cancel</button>
+                            <span class="text-muted"> Submit button becomes visible magically later</span>
+                        </div>
                     </div>
-
                 </div>
 
-                <h3 id="options"> Saving Options </h3>
                 <p> Often you will give users the opportunity to make a selection to either immediately save an option or to save together with the rest of the form. Follow these guidelines when making your decision about which component to use:</p>
                 <div class="row">
                     <div class="col-xs-12 m-b-lg">
@@ -464,8 +469,7 @@
                         <li><a href="#auto-save">Auto Save</a></li>
                         <li><a href="#form-validation">Form Validation</a></li>
                         <li><a href="#error-reporting">Error Reporting</a></li>
-                        <li><a href="#button-state">Button State Feedback</a></li>
-                        <li><a href="#options">Saving Options</a></li>
+                        <li><a href="#button-state">Buttons and Toggles</a></li>
                         <li><a href="#alphabetize">Alphabetize</a></li>
                         <li><a href="#non-ui-input">Non UI Form Inputs</a></li>
                     </ul>
