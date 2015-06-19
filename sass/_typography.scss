@@ -32,3 +32,11 @@ h1, h2, h3, h4, h1 small {
 .text-bigger {
   font-size: 1.1em;
 }
+
+.osf-editable {
+  border-bottom: 1px dotted $color-grey;
+}
+.osf-editable:hover {
+  cursor: pointer;
+  background-color: #f8f8f8;
+}
