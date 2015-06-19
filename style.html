@@ -889,6 +889,48 @@
 &lt;/div&gt;
     </code>
                         </pre>
+
+                        <div class="osf-box-lt p-lg ">
+                            <h4> Styling modals for alert types.</h4>
+                            <p> Sometimes you may want to adjust modals to show that the message contained is a significant delete and not just information. To this effect you can use the alert colors that were discussed in the <a href="#alerts">alert section</a> of this page. To use alert colors in the header add the pertinent alert-color class i.e. "alert-danger" as shown below:</p>
+                            <p><button class="btn btn-danger" data-toggle="modal" data-target="#dangerModal">Delete Related Modal </button></p>
+                            <p>Use only <span class="text-danger"> danger</span>, <span class="text-warning"> warning</span> and <span class="text-info"> info</span> colors, do not use primary or success. Use colors as they relate to the operation. </p>
+                            <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="dangerModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header alert-danger">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h3 class="modal-title" id="myModalLabel2">Delete Item?</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p> Cras mollis viverra lorem at pretium. Praesent fringilla lacus vitae auctor porttitor. Suspendisse auctor tincidunt ipsum, eget pulvinar ipsum fringilla eget. Nam blandit faucibus augue, at tincidunt dolor condimentum ut. Mauris tempor luctus sem ac commodo. Praesent elit eros, cursus a eleifend vel, luctus et ex. Duis nec augue ligula. Quisque semper tristique ligula. </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <pre>
+    <code class="language-markup">
+&lt;div class="modal-header alert-danger"&gt;
+...
+&lt;/div&gt;
+
+&lt;div class="modal-header alert-info"&gt;
+...
+&lt;/div&gt;
+
+&lt;div class="modal-header alert-warning"&gt;
+...
+&lt;/div&gt;
+    </code>
+                        </pre>
+
+
                     </div>
                 </div>
 
