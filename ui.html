@@ -25,7 +25,7 @@
     <![endif]-->
 </head>
 
-<body role="document">
+<body role="document" class="m-b-lg">
 
 <nav class="navbar osf-navbar navbar-fixed-top">
     <div class="container">
@@ -458,6 +458,36 @@
                     </div>
                 </div>
 
+                <hr>
+                <h3 id="modals">Modals </h3>
+                <h4>When should you use modals?</h4>
+                <p class="m-t-lg"> Modals should be used in rare instances when the content needs to be in full focus of the user because</p>
+                <ul>
+                    <li> they are making an important decision.</li>
+                    <li> they are making a breaking change.</li>
+                    <li> they need to read critical information.</li>
+                </ul>
+
+                <p class="m-t-lg">When adding modals consider these questions:</p>
+                <ul>
+                    <li>Is the user going to expect a modal in this type of operation?</li>
+                    <li>Is the modal going to hide content that will still be needed</li>
+                    <li>Is this modal important enough? Can it be added within the page?</li>
+                    <li> How many modals are there in this work flow?</li>
+                    <li>Modals are easily dismissed so if the action is very important (i.e. new registration) create a multi page workflow instead. </li>
+                </ul>
+
+                <h4 class="m-t-lg">What to watch out for with modals</h4>
+                <p>When adding modals also be cognizant of these implementation practices:</p>
+                <ul>
+                    <li>Always include a dismiss icon on the right top corner</li>
+                    <li>Phrase the words in terms of the action, i.e. don't use "OK" if possible, use "I agree", or other verb.</li>
+                    <li>Modals should not include too much text. If your modal needs to scroll in regular screens, look for a different method.</li>
+                    <li>Check modal headers for narrow screen sizes by trying long names if the header is populated dynamically.</li>
+                </ul>
+
+
+
             </div>
 
         </div>
@@ -472,6 +502,7 @@
                         <li><a href="#button-state">Buttons and Toggles</a></li>
                         <li><a href="#alphabetize">Alphabetize</a></li>
                         <li><a href="#non-ui-input">Non UI Form Inputs</a></li>
+                        <li><a href="#modals">Modals</a></li>
                     </ul>
                 </li>
 
