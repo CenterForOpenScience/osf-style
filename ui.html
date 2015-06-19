@@ -444,16 +444,53 @@
                             </div>
                         </div>
 
-                        <h4 id="non-ui-inputs" class="m-t-xl">Non-UI form inputs</h4>
-                        <p>If the input changes are not part of a UI element, use regular form standards.</p>
-                        <ul>
-                            <li>If multiple items can be selected, use checkboxes.</li>
-                            <li>If single item can be selected, use radio button.</li>
-                            <li>If the individual items are shorter than ~10 characters, keep your checkboxes and radio buttons inline (if you have space).</li>
-                            <li>If the individual items are longer, keep each checkbox or radio button in its own line.</li>
-                            <li>Use radio buttons if you have less than 6 choices so that each one is visible.</li>
-                            <li>Use drowdown if you have 6 or more choices. </li>
-                        </ul>
+                        <h4 id="inputs-forms" class="m-t-xl">Input Elements in Forms</h4>
+                        <p>If the input changes are not part of a UI element, use regular form standards. Below is a general guideline about what forms to use</p>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Multiple items can be selected and there are less than 6 items per group
+                                    </td>
+                                    <td>
+                                        <a href="http://getbootstrap.com/css/#checkboxes-and-radios"> Default Stacked Checkboxes</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Single item can be selected and there are less than 6 items per group
+                                    </td>
+                                    <td>
+                                        <a href="http://getbootstrap.com/css/#checkboxes-and-radios">Default Stacked radio buttons</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Multiple items can be selected and there are more than 6 items in a group
+                                    </td>
+                                    <td>
+                                        <a href="http://getbootstrap.com/css/#selects"> Multiple Select</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Single item can be selected and there are more than 6 items in a group
+                                    </td>
+                                    <td>
+                                        <a href="http://getbootstrap.com/css/#selects">Default Select </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="osf-box-lt p-lg">
+                            <h4> More tips:</h4>
+                            <ul>
+                                <li>If the individual items are shorter than ~10 characters, keep your checkboxes and radio buttons inline (if you have space).</li>
+                                <li>If the individual items are longer, keep each checkbox or radio button in its own line.</li>
+                            </ul>
+                        </div>
+
 
                     </div>
                 </div>
@@ -501,7 +538,7 @@
                         <li><a href="#error-reporting">Error Reporting</a></li>
                         <li><a href="#button-state">Buttons and Toggles</a></li>
                         <li><a href="#alphabetize">Alphabetize</a></li>
-                        <li><a href="#non-ui-input">Non UI Form Inputs</a></li>
+                        <li><a href="#inputs-forms">Non UI Form Inputs</a></li>
                         <li><a href="#modals">Modals</a></li>
                     </ul>
                 </li>
