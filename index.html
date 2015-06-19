@@ -143,7 +143,7 @@
                             <p>Some examples:</p>
                             <ul>
                                 <li>Items that are actionable need to be visually distinct (e.g. links, buttons, draggable items).</li>
-                                <li>Pending processes should be identified if taking long.</li>
+                                <li>Pending processes should be identified if taking too long. Pending processes are events that are expected to take a little time, anything that is expected to be observable by the user. For instance uploads and most saves have pending status while the action if being completed. Most often ajax call require the consideration for pending events since they include communication with server. How long after the action starts to show the message is up to the developer and varies considerably. The important point is to match user expectation about time and make sure they know what's going on. </li>
                                 <li>When page loads if there are still asynchronous components loading, a loading indicator needs to make that clear.</li>
                                 <li>Normally actionable items that are non-actionable should be muted (greyed out).</li>
                                 <li>Tooltips should be used to explain states that do not otherwise make sense.</li>
