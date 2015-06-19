@@ -523,7 +523,54 @@
                 </ul>
 
 
+                <hr>
+                <h3 id="tooltips">Using Tooltips</h3>
+                <p>Tooltips are a method where hovering over an element provides additional information in a hovering text element. It's an addition to the default <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title">"title" html attribute </a>and default browser behavior.</p>
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+                <p>The implementation and styling of tooltip should be exactly as <a href="http://getbootstrap.com/javascript/#tooltips">standard bootstrap</a>. Hovering over items is not always intutitive so don't use tooltips unless necessary.</p>
+                <h4> USE with items that users are expected to move their mouse to</h4>
+                <div class="m-b-md p-md osf-box-lt box-round">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h5 class="text-success"> Do this: </h5>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Click to show the Side bar ">Show</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <h5 class="text-danger">Don't do this (hint: hover on "item"):</h5>
+                            Some of these <span data-toggle="tooltip" data-placement="right" title="Click on the rows to see what actions are available.">rows</span> are editable.
+                        </div>
+                    </div>
+                </div>
 
+                <h4>USE if the tooltip text is in fact longer and useful.</h4>
+                <div class="m-b-md p-md osf-box-lt box-round">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h5 class="text-success"> Do this: </h5>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Click to make your project viewable by anyone with or without an OSF account.">Make Public</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <h5 class="text-danger">Don't do this: </h5>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Click to add collaborator.">Add Collaborator</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr>
+                <h3 id="reading">Further Reading </h3>
+                <p>Resources below will give you good ideas about general UI principles. If the contents differ from guidance in this document remember that the Style Guide should be applied in OSF. </p>
+                <ul>
+                    <li>
+                        <b>Good UI </b> <a href="https://www.goodui.org/">https://www.goodui.org/</a>
+                    </li>
+                    <li>
+                        <b>IOS Design Basics</b> <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html">https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html</a>
+                    </li>
+                    <li>
+                        <b>Android Design Guides </b> <a href="https://developer.android.com/design/index.html">https://developer.android.com/design/index.html</a>
+                    </li>
+                </ul>
             </div>
 
         </div>
@@ -537,8 +584,11 @@
                         <li><a href="#error-reporting">Error Reporting</a></li>
                         <li><a href="#button-state">Buttons and Toggles</a></li>
                         <li><a href="#alphabetize">Alphabetize</a></li>
-                        <li><a href="#inputs-forms">Non UI Form Inputs</a></li>
+                        <li><a href="#inputs-forms">Input in Forms</a></li>
                         <li><a href="#modals">Modals</a></li>
+                        <li><a href="#tooltips">Tooltips</a></li>
+                        <li><a href="#reading">Further Reading</a></li>
+
                     </ul>
                 </li>
 
