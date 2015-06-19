@@ -45,7 +45,7 @@
                 <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
                 <li class="active"><a href="style.html">Style Guide</a></li>
                 <li><a href="ui.html">UI Guide </a></li>
-                <li><a href="ally.html">Accesibility </a></li>
+                <li><a href="ally.html">Accessibility </a></li>
                 <li><a href="js.html">Javascript</a></li>
             </ul>
             <div class="navbar-form navbar-right">
@@ -634,7 +634,8 @@
 
                         <div class="m-t-md m-b-md p-md osf-box-lt">
                             <h4 class="text-success"> Which buttons to use:</h4>
-                            <p> Follow the colors and text below in your use of buttons.</p>
+                            <p> Follow the colors and text below in your use of buttons.  Mouseover the buttons 
+                            for specific use cases.</p>
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -646,44 +647,56 @@
                                 <tr>
                                     <td>Non modifying changes:</td>
                                     <td>
-                                        <button type="button" class="btn btn-default">Cancel</button>
-                                        <button type="button" class="btn btn-default">Close</button>
-                                        <button type="button" class="btn btn-default">Back</button>
+                                        <button type="button" title="Cancel an Action"
+                                                class="btn btn-default">Cancel</button>
+                                        <button type="button" title="Close a Modal"
+                                                class="btn btn-default">Close</button>
+                                        <button type="button" title="Go Back to a Previous Window" 
+                                                class="btn btn-default">Back</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Saving and Adding</td>
                                     <td>
-                                        <button type="button" class="btn btn-success">Save</button>
-                                        <button type="button" class="btn btn-success">Upload</button>
-                                        <button type="button" class="btn btn-success">New Registration</button>
-                                        <button type="button" class="btn btn-success">Add User</button>
+                                        <button type="button" title="Save Something - Don't Use Submit"
+                                                class="btn btn-success">Save</button>
+                                        <button type="button" title="Upload Something Sciency"
+                                                class="btn btn-success">Upload</button>
+                                        <button type="button" title="Register Something Sciency"
+                                                class="btn btn-success">New Registration</button>
+                                        <button type="button" title="Add a User" 
+                                                class="btn btn-success">Add User</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Removal</td>
                                     <td>
-                                        <button type="button" class="btn btn-danger">Delete</button>
-                                        <button type="button" class="btn btn-danger">Delete All</button>
-                                        <button type="button" class="btn btn-danger">Remove</button>
+                                        <button type="button" title="Delete An Item - Don't use Remove"
+                                                class="btn btn-danger">Delete</button>
+                                        <button type="button" title="Delete Multiple Items"
+                                                class="btn btn-danger">Delete All</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Information and Settings</td>
                                     <td>
-                                        <button type="button" class="btn btn-info">Learn More</button>
-                                        <button type="button" class="btn btn-info">Settings</button>
-                                        <button type="button" class="btn btn-info">Options</button>
-                                        <button type="button" class="btn btn-info"><i class="fa fa-info"></i> </button>
+                                        <button type="button" title="Access Settings" 
+                                                class="btn btn-info">Settings</button>
+                                        <button type="button" title="Give Additional Information"
+                                                class="btn btn-info"><i class="fa fa-info"></i> </button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Other Call to Action</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary">Create an Account</button>
-                                        <button type="button" class="btn btn-primary">Download</button>
-                                        <button type="button" class="btn btn-primary">Open</button>
-                                        <button type="button" class="btn btn-primary">Auto Fill</button>
+                                        <button type="button" title="Create an Account"
+                                                class="btn btn-primary">Create an Account</button>
+                                        <button type="button" title="Download Some Science"
+                                                class="btn btn-primary">Download</button>
+                                        <button type="button" title="Open Something"
+                                                class="btn btn-primary">Open</button>
+                                        <button type="button" title="Auto Fill"
+                                                class="btn btn-primary">Auto Fill</button>
 
                                     </td>
                                 </tr>
@@ -697,7 +710,8 @@
                             <li>Buttons should have verbs and should start with verbs, e.g. "Make Public" instead of "Public" alone or "Visibility Setting".</li>
                             <li> The button does not need to repeat the header, e.g. "Add" is enough for the submit button for a modal that says "Add Contributors".</li>
                             <li> Be deliberate in your use of Cancel vs Close. Cancel is supposed to undo any potential visual or data change or to denote change of intention by the user (e.g. Don't Save). Close simply removes an element from view. Modals need a Close button and forms need a Cancel button. If the form has brought the user to a different page Cancel should bring them back to where they were. </li>
-                            <li> Don't abandon Cancel or Close buttons next to Save in favor of Dismiss buttons (x at the top right of content). Cancel is easier to find and click and the X button is conventional, both are useful. </li>
+                            <li>Back should be used in an OSF guided activity, where the user has to do a series of steps, and wants to return to a previous step.  For example, signing up for the Preregister Prize.  If the path is user driven, for example, creating a project, use the Cancel button.</li>
+                            <li> Don't abandon Cancel or Close buttons next to Save in favor of Dismiss buttons (x at the top right of content). Cancel is easier to find and click and the X button is more appropriate for deleting portions of content (e.g. deleting a single employment institution in the profile).</li>
                         </ul>
 
                         <h4>Form buttons</h4>
@@ -716,7 +730,7 @@
                                 <td>Create</td>
                             </tr>
                             <tr>
-                                <td>Editing the information of an exiting item</td>
+                                <td>Editing the information of an existing item</td>
                                 <td>Save</td>
                             </tr>
                             <tr>
@@ -1427,7 +1441,7 @@
                 <h3 id="containers"> Containers </h3>
                 <div class="row">
                     <div class="col-xs-12 m-b-lg">
-                        <p> Containers are simpe boxes used for different purposes. We use the default Bootstrap "Well" with a few additions of our own using the color palette. Notice that padding and margins are added using helper classes.</p>
+                        <p> Containers are simple boxes used for different purposes. We use the default Bootstrap "Well" with a few additions of our own using the color palette. Notice that padding and margins are added using helper classes.</p>
                         <h4> Default Well</h4>
                         <div class="well well-sm">Small well... Wells have sizes too like well-sm</div>
                         <h4> OSF Containers </h4>
@@ -1476,7 +1490,7 @@
                 <h3 id="box-shadow"> Box Shadow </h3>
                 <div class="row">
                     <div class="col-xs-12 m-b-lg">
-                        <p> Box shadow is used to create shadow for osf box. It will make the box more obvious to the users. We offer five kinds of shadows to meet the needs on different settings</p>
+                        <p> Box shadow is used to create shadow for osf box. It will make the box more obvious to the users. We offer five kinds of shadows to meet the needs of different settings</p>
                         <h4> OSF Box Shadow demo for white color box </h4>
                         <div class="m-b-lg p-md osf-box box-shadow-xs">Flat box, neutral background with box-shadow-xs </div>
                         <div class="m-b-lg p-md osf-box box-shadow-sm">Flat box, neutral background with box-shadow-sm </div>
