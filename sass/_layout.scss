@@ -23,6 +23,14 @@
   .m-#{nth($sizes, $i)} {
     margin: unquote(nth($margins, $i) + 'px');
   }
+  .m-v-#{nth($sizes, $i)} {
+    margin-top: unquote(nth($margins, $i) + 'px');
+    margin-bottom: unquote(nth($margins, $i) + 'px');
+  }
+  .m-h-#{nth($sizes, $i)} {
+    margin-left: unquote(nth($margins, $i) + 'px');
+    margin-right: unquote(nth($margins, $i) + 'px');
+  }
 }
 
 /* Build paddings */
@@ -41,6 +49,14 @@
   }
   .p-#{nth($sizes, $i)} {
     padding: unquote(nth($margins, $i) + 'px');
+  }
+  .p-v-#{nth($sizes, $i)} {
+    padding-top: unquote(nth($margins, $i) + 'px');
+    padding-bottom: unquote(nth($margins, $i) + 'px');
+  }
+  .p-h-#{nth($sizes, $i)} {
+    padding-left: unquote(nth($margins, $i) + 'px');
+    padding-right: unquote(nth($margins, $i) + 'px');
   }
 }
 
