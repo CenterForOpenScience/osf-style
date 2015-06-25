@@ -447,6 +447,10 @@ h1, h2, h3, h4, h1 small {
 .navbar-inverse {
   background-color: #214762; }
 
+.osf-navbar-logo {
+  float: left;
+  margin-right: 8px; }
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
