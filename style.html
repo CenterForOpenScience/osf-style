@@ -27,7 +27,7 @@
 
 <body role="document">
 
-<nav class="navbar osf-navbar navbar-fixed-top">
+<nav class="navbar navbar-inverse osf-navbar navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -1037,63 +1037,64 @@
                     <div class="col-xs-12">
                         <p> The navigation bar is one of the most edited styles borrowed from Bootstrap. If you need to add components to the OSF navigation bar follow the style shown in the example bar below.  </p>
                         <div>
-                            <nav class="navbar osf-navbar">
-                                <div class="container-fluid">
-                                    <!-- Brand and toggle get grouped for better mobile display -->
+                            <nav class="navbar navbar-inverse" id="navbarScope" role="navigation">
+                                <div class="container">
                                     <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                             <span class="sr-only">Toggle navigation</span>
-                                            <span class="fa fa-bars fa-lg fa-inverse"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
                                         </button>
-
-                                        <a class="navbar-brand" href="/"><img src="https://staging.osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"> OSF <span class="brand-version"> BETA</span></a>
+                                        <a class="navbar-brand" href="/"><img src="img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"/> OSF</a>
                                     </div>
-
-                                    <!-- Collect the nav links, forms, and other content for toggling -->
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <div id="navbar" class="navbar-collapse collapse navbar-right">
                                         <ul class="nav navbar-nav">
-                                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                                            <li><a href="/dashboard/">My Dashboard</a></li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret hidden-xs"></span></a>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Action</a></li>
-                                                    <li><a href="#">Another action</a></li>
-                                                    <li><a href="#">Something else here</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="#">Separated link</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="#">One more separated link</a></li>
+                                                    <li><a href="/search/?q=*&amp;filter=registration">Registry</a></li>
+                                                    <li><a href="/meetings/">Meetings</a></li>
                                                 </ul>
                                             </li>
-                                        </ul>
-                                        <form class="navbar-form navbar-left" role="search">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Search">
-                                            </div>
-                                            <button type="submit" class="btn btn-default">Submit</button>
-                                        </form>
-
-                                        <ul class="nav navbar-nav navbar-right">
-                                            <li>
-                                                <a href="#">
-                                                    <span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"><span class="osf-gravatar"> <img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"> </span></span>
-                                                </a>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help <span class="caret hidden-xs"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="/4znZP/wiki/home">About</a></li>
+                                                    <li><a href="/faq/">FAQ</a></li>
+                                                    <li><a href="/getting-started">Getting Started</a></li>
+                                                </ul>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="${web_url_for('user_profile')}">
                                                     <span rel="tooltip" data-placement="bottom" title="Settings" class="fa fa-cog hidden-xs fa-lg"></span>
                                                     <span class="visible-xs">Settings</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="${web_url_for('auth_logout')}">
                                                     <span rel="tooltip" data-placement="bottom" title="Log&nbsp;out" class="fa fa-sign-out hidden-xs fa-lg"></span>
                                                     <span class="visible-xs">Log out</span>
                                                 </a>
                                             </li>
-                                        </ul>
-                                    </div><!-- /.navbar-collapse -->
-                                </div><!-- /.container-fluid -->
+                                            <li class="dropdown sign-in" data-bind="with: $root.signIn">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info btn-top-login dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        Sign in <span class="caret hidden-xs"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" id="menuLogin" role="menu">
+                                                        <form class="form" id="signInForm" data-bind="submit: submit" action="${login_url}" method="POST">
+                                                            <div class="form-group"><input id="email" class="form-control" type="email" data-bind="value: username" name="username" placeholder="Email" aria-label="Username"></div>
+                                                            <div class="form-group"><input name="password" id="password" class="form-control" type="password" placeholder="Password" data-bind="value: password" aria-label="Password"></div>
+                                                            <div class="form-group"><button type="submit" id="btnLogin" class="btn btn-block btn-primary">Login</button></div>
+                                                            <div class="text-center m-b-sm"> <a href="/forgotpassword/">Forgot Password?</a></div>
+                                                        </form>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                    </div><!--/.navbar-collapse -->
+                                </div>
                             </nav>
                         </div>
 
@@ -1105,64 +1106,66 @@
                     <div class="col-sm-12">
                         <pre>
     <code class="language-markup">
-&lt;nav class="navbar osf-navbar"&gt;
-    &lt;div class="container-fluid"&gt;
-        &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
-        &lt;div class="navbar-header"&gt;
-            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
-                &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-                &lt;span class="fa fa-bars fa-lg fa-inverse"&gt; &lt;/span&gt;
-            &lt;/button&gt;
-            &lt;a class="navbar-brand " href="/"&gt;&lt;img src="https://staging.osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"&gt; OSF &lt;span class="brand-version"&gt; BETA&lt;/span&gt;&lt;/a&gt;
-        &lt;/div&gt;
 
-        &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
-        &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+&lt;nav class="navbar navbar-inverse" id="navbarScope" role="navigation"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="navbar-header"&gt;
+            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+                &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a class="navbar-brand" href="/"&gt;&lt;img src="img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"/&gt; OSF&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id="navbar" class="navbar-collapse collapse navbar-right"&gt;
             &lt;ul class="nav navbar-nav"&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="/dashboard/"&gt;My Dashboard&lt;/a&gt;&lt;/li&gt;
                 &lt;li class="dropdown"&gt;
-                    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Explore &lt;span class="caret hidden-xs"&gt;&lt;/span&gt;&lt;/a&gt;
                     &lt;ul class="dropdown-menu" role="menu"&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class="divider"&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class="divider"&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/search/?q=*&amp;filter=registration"&gt;Registry&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/meetings/"&gt;Meetings&lt;/a&gt;&lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;form class="navbar-form navbar-left" role="search"&gt;
-                &lt;div class="form-group"&gt;
-                &lt;input type="text" class="form-control" placeholder="Search"&gt;
-                &lt;/div&gt;
-                &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
-            &lt;/form&gt;
-
-            &lt;ul class="nav navbar-nav navbar-right"&gt;
-                &lt;li&gt;
-                    &lt;a href="#"&gt;
-                    &lt;span rel="tooltip" data-placement="bottom" title="caneruguz@gmail.com"&gt;&lt;span class="osf-gravatar"&gt; &lt;img src="https://secure.gravatar.com/avatar/8c85acae17475be990f1318fc013d4b3?d=identicon&amp;size=25" alt="User gravatar"&gt; &lt;/span&gt;&lt;/span&gt;
-                    &lt;/a&gt;
+                &lt;li class="dropdown"&gt;
+                    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Help &lt;span class="caret hidden-xs"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;ul class="dropdown-menu" role="menu"&gt;
+                        &lt;li&gt;&lt;a href="/4znZP/wiki/home"&gt;About&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/faq/"&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/getting-started"&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a href="#"&gt;
+                    &lt;a href="${web_url_for('user_profile')}"&gt;
                         &lt;span rel="tooltip" data-placement="bottom" title="Settings" class="fa fa-cog hidden-xs fa-lg"&gt;&lt;/span&gt;
                         &lt;span class="visible-xs"&gt;Settings&lt;/span&gt;
                     &lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a href="#"&gt;
+                    &lt;a href="${web_url_for('auth_logout')}"&gt;
                         &lt;span rel="tooltip" data-placement="bottom" title="Log&nbsp;out" class="fa fa-sign-out hidden-xs fa-lg"&gt;&lt;/span&gt;
                         &lt;span class="visible-xs"&gt;Log out&lt;/span&gt;
                     &lt;/a&gt;
                 &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
-    &lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+                &lt;li class="dropdown sign-in" data-bind="with: $root.signIn"&gt;
+                    &lt;div class="btn-group"&gt;
+                        &lt;button type="button" class="btn btn-info btn-top-login dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;
+                            Sign in &lt;span class="caret hidden-xs"&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;ul class="dropdown-menu" id="menuLogin" role="menu"&gt;
+                            &lt;form class="form" id="signInForm" data-bind="submit: submit" action="${login_url}" method="POST"&gt;
+                                &lt;div class="form-group"&gt;&lt;input id="email" class="form-control" type="email" data-bind="value: username" name="username" placeholder="Email" aria-label="Username"&gt;&lt;/div&gt;
+                                &lt;div class="form-group"&gt;&lt;input name="password" id="password" class="form-control" type="password" placeholder="Password" data-bind="value: password" aria-label="Password"&gt;&lt;/div&gt;
+                                &lt;div class="form-group"&gt;&lt;button type="submit" id="btnLogin" class="btn btn-block btn-primary"&gt;Login&lt;/button&gt;&lt;/div&gt;
+                                &lt;div class="text-center m-b-sm"&gt; &lt;a href="/forgotpassword/"&gt;Forgot Password?&lt;/a&gt;&lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+        &lt;/div&gt;&lt;!--/.navbar-collapse --&gt;
+    &lt;/div&gt;
 &lt;/nav&gt;
-
     </code>
                         </pre>
                     </div>
