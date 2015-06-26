@@ -92,13 +92,13 @@
   position: fixed;
   width: 100%;
   left: 0;
-  top: 43px;
+  top: 50px;
   background-color: #EEE;
   z-index: 99;
   box-shadow: 0 0 9px -1px #838383;
   border-radius: 0;
   border: none;
-  min-height: 40px;
+  min-height: 40px !important;
 }
 .osf-project-navbar li>a {
   padding-top: 12px;
@@ -128,6 +128,18 @@
   overflow: hidden;
 }
 
+.osf-project-navbar li>a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .osf-project-navbar li > a {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
 
 /* Form Inputs */
 .noresize {

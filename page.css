@@ -68,3 +68,117 @@ p {
     margin-top: 44px;
     border-bottom: 1px solid #eee;
 }
+
+/* Navbar */
+/*.navbar {*/
+    /*background: $color-blue;*/
+    /*border-bottom: $border-light;*/
+/*}*/
+
+/*.navbar-nav>li>a.btn {*/
+    /*padding-top: 4px;*/
+    /*padding-bottom: 3px;*/
+    /*margin-top: 4px;*/
+    /*margin-left: 8px;*/
+/*}*/
+
+/*.navbar-nav>li>a {*/
+    /*padding-top: 8px;*/
+    /*padding-bottom: 7px;*/
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+    /*line-height: 27px;*/
+/*}*/
+
+/*.navbar-form {*/
+    /*margin: 5px 0 2px;*/
+/*}*/
+/*.navbar-nav>li>a, .navbar-brand {*/
+    /*color: #FFF;*/
+/*}*/
+
+/*a {*/
+    /*color: #FFF;*/
+/*}*/
+
+/*.navbar-nav>.active>a,*/
+/*.navbar-nav>.active>a:hover,*/
+/*.navbar-nav>li>a:hover,*/
+/*.navbar-nav>.active>a:focus,*/
+/*.navbar-brand:hover,*/
+/*.navbar-brand:focus {*/
+    /*color: #FFF;*/
+    /*background: rgba(187, 187, 187, 0.2);*/
+/*}*/
+
+/*.nav .open>a,*/
+/*.nav .open>a:hover,*/
+/*.nav .open>a:focus,*/
+/*a:hover,*/
+/*li > a:hover,*/
+/*li.active,*/
+/*li.a:focus,*/
+/*.navbar-nav>li>a:focus {*/
+    /*background: rgba(187, 187, 187, 0.2);*/
+/*}*/
+
+
+
+/*.navbar-brand {*/
+    /*margin-left: 0!important;*/
+    /*height: 42px!important;*/
+    /*line-height: 27px;*/
+    /*padding: 8px 15px 7px;*/
+/*}*/
+/*.brand-version {*/
+    /*font-size: 8px;*/
+/*}*/
+
+
+
+/*.osf-gravatar > img {*/
+    /*border: 1px solid #CDCDCD;*/
+    /*border-radius: 13px;*/
+    /*margin-right: 5px;*/
+/*}*/
+
+/*@media (max-width: 767px) {*/
+    /*.navbar-nav .open .dropdown-menu>li>a {*/
+        /*color: #FFF;*/
+    /*}*/
+
+    /*.navbar-brand {*/
+        /*margin-left: 0 !important;*/
+        /*height: 48px !important;*/
+        /*line-height: 27px !important;*/
+        /*padding: 11px 15px 10px 15px !important;*/
+    /*}*/
+    /*.osf-navbar-logo {*/
+        /*margin-top: 0px !important;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 768px) {*/
+    /*.osf-navbar .navbar-nav>li>a {*/
+        /*padding-left: 7px;*/
+        /*padding-right: 7px;*/
+    /*}*/
+
+    /*.navbar-brand {*/
+        /*margin-left: 0 !important;*/
+        /*padding-left: 0;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 992px) {*/
+    /*.osf-navbar .navbar-nav>li>a {*/
+        /*padding-left: 10px;*/
+        /*padding-right: 10px;*/
+    /*}*/
+/*}*/
+/*@media (min-width: 1200px) {*/
+    /*.osf-navbar .navbar-nav>li>a {*/
+        /*padding-left: 15px;*/
+        /*padding-right: 15px;*/
+    /*}*/
+/*}*/
