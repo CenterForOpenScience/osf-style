@@ -307,6 +307,12 @@ h1, h2, h3, h4, h1 small {
   cursor: pointer;
   background-color: #f8f8f8; }
 
+.break-word {
+  word-wrap: break-word; }
+
+p, a, span {
+  word-wrap: break-word; }
+
 /*
  * Bootstrap Overrides
  */
