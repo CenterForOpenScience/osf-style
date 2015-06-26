@@ -771,6 +771,10 @@ p, a, span {
   .osf-project-navbar li > a {
     padding-left: 30px;
     padding-right: 30px; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .osf-project-navbar li > a {
+    padding-left: 5px;
+    padding-right: 5px; } }
 /* Form Inputs */
 .noresize {
   resize: none; }
