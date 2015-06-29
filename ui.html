@@ -556,6 +556,43 @@
                     </div>
                 </div>
 
+                <hr>
+                <h3 id="label">Using Label</h3>
+                <h4>Why we need use label ?</h4>
+                Label is used with input element. It provides a usability improvement for mouse users. Because if the user click on the text within label element, it will toggles the control. See the example below.Click on one of the text labels to toggle the related control.
+               
+                <div class="m-md p-md osf-box box-round">
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <!-- With label, it will toggle the checkbox if clicking text -->
+                          <label for="male">Male</label>
+                          <input type="radio" name="sex" id="male" value="male"><br>
+
+                          <!-- Without label, no action will happen if clicking text -->
+                          <span>Female</span>
+                          <input type="radio" name="sex" id="female" value="female"><br>
+                        </div>
+                    </div>
+                </div>
+                <pre class="language-markup"><code class="language-markup">&lt;!-- With label, it will toggle the checkbox if clicking text --&gt;
+&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;&lt;br&gt;
+ 
+&lt;!-- Without label, no action will happen if clicking text --&gt;
+&lt;span&gt;Female&lt;/span&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;female&quot; value=&quot;female&quot;&gt;&lt;br&gt;</code></pre>
+
+                <h4>How to use label</h4>
+                Following the <a href="http://www.w3.org/WAI/tutorials/forms/labels/">accessibility rules</a>, whenever possible, use the label element to explicitly associate text with form elements. The for attribute of the label must exactly match the id of the form control.
+                <pre class="language-markup"><code class="language-markup">&lt;!-- Recommended --&gt;
+&lt;label for=&quot;Dataverse&quot;&gt;Dataverse&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;dataverse&quot; id=&quot;Dataverse&quot; class=&quot;addon-select&quot;&gt; 
+ 
+&lt;!-- Not Recommended --&gt;
+&lt;label&gt;Dataverse&lt;input type=&quot;checkbox&quot; name=&quot;dataverse&quot; class=&quot;addon-select&quot;&gt;&lt;/label&gt;</code></pre>
+
+
+
 
                 <hr>
                 <h3 id="reading">Further Reading </h3>
@@ -587,6 +624,7 @@
                         <li><a href="#inputs-forms">Input in Forms</a></li>
                         <li><a href="#modals">Modals</a></li>
                         <li><a href="#tooltips">Tooltips</a></li>
+                        <li><a href="#label">Label</a></li>
                         <li><a href="#reading">Further Reading</a></li>
 
                     </ul>
