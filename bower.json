@@ -6,7 +6,7 @@
     "Caner Uguz <caneruguz@gmail.com>"
   ],
   "description": "Styles and guidelines for the OSF",
-  "main": "index.html",
+  "main": "css/base.css",
   "keywords": [
     "stylesheet",
     "bootstrap",
