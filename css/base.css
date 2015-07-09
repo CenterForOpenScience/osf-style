@@ -666,20 +666,35 @@ p, a, span {
   animation: spin 3s infinite linear, opacity 3s infinite linear;
   display: inline-block; }
 
-.logo-spin.logo-xs img {
-  width: 10px; }
+/* Spinner used for osf */
+.osf-spin-img {
+  background: url("/static/img/logo_spin.png") center no-repeat;
+  background-size: 100% 100%; }
 
-.logo-spin.logo-sm img {
-  width: 20px; }
+/*Spinner used for style guide html */
+.style-spin-img {
+  background: url("/img/logo_spin.png") center no-repeat;
+  background-size: 100% 100%; }
 
-.logo-spin.logo-md img {
-  width: 30px; }
+.logo-spin.logo-xs {
+  width: 10px;
+  height: 10px; }
 
-.logo-spin.logo-lg img {
-  width: 50px; }
+.logo-spin.logo-sm {
+  width: 20px;
+  height: 20px; }
 
-.logo-spin.logo-xl img {
-  width: 100px; }
+.logo-spin.logo-md {
+  width: 30px;
+  height: 30px; }
+
+.logo-spin.logo-lg {
+  width: 50px;
+  height: 50px; }
+
+.logo-spin.logo-xl {
+  width: 100px;
+  height: 100px; }
 
 @-webkit-keyframes spin {
   from {

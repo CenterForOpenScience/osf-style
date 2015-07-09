@@ -30,9 +30,22 @@
   display: inline-block;
 }
 
+/* Spinner used for osf */
+.osf-spin-img {
+  background: url('/static/img/logo_spin.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*Spinner used for style guide html */
+.style-spin-img {
+  background: url('/img/logo_spin.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
 @for $i from 1 to 6 {
-  .logo-spin.logo-#{nth($sizes, $i) img} {
+  .logo-spin.logo-#{nth($sizes, $i)} {
     width: unquote(nth($margins, $i)*2 + 'px');
+    height: unquote(nth($margins, $i)*2 + 'px');
   }
 }
 
