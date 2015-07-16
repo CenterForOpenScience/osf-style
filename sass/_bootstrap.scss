@@ -330,7 +330,7 @@
 .editable {
   cursor: pointer !important;
 }
-.editable, 
+.editable,
 .editable-click {
   border-bottom: none !important;
 }
@@ -345,4 +345,9 @@
   .progress-bar-#{nth($sizes, $i)} {
     height: unquote(nth($margins, $i) + 'px');
   }
+}
+
+/* Rounding corners of nav-pills in panels. */
+.panel .nav-pills>li>a {
+  border-radius: 0px;
 }
