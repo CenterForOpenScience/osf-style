@@ -747,6 +747,10 @@ p, a, span {
 
 .osf-project-navbar .navbar-nav li > a:hover {
   background-color: #DADADA; }
+.osf-project-navbar .navbar-nav li > a:focus {
+  background-color: #EEE; }
+.osf-project-navbar .navbar-nav .active > a:focus {
+  background-color: #337AB7; }
 
 .osf-project-navbar li.active,
 .osf-project-navbar li.active a:hover,

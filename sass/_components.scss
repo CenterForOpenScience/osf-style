@@ -106,8 +106,16 @@
   font-size: 15px;
 }
 
-.osf-project-navbar .navbar-nav li>a:hover {
-  background-color: #DADADA;
+.osf-project-navbar .navbar-nav {
+  li>a:hover {
+    background-color: #DADADA;
+  }
+  li>a:focus {
+    background-color: #EEE;
+  } 
+  .active > a:focus {
+    background-color: #337AB7;
+  }
 }
 
 .osf-project-navbar li.active,
