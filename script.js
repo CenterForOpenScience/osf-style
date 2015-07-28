@@ -11,3 +11,4 @@ $('#openGithub').click(function(e){
     e.preventDefault();
     window.location = "https://github.com/caneruguz/osf-style";
 });
+$('[data-toggle="tooltip"]').tooltip();
