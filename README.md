@@ -12,17 +12,20 @@ This project aims to bring together resources to build Design and Layout of OSF 
 
         $ npm install
 
-* Besides those dependencies, SASS should also be installed to compile the SASS code in this repo. 
-
-        $ sudo gem install sass
-[Click here](http://sass-lang.com/install) for more details about installation of SASS.     
-    
 * Then run gulp script and the project dashboard could be found in `http://localhost:8000/`
 
         $ npm run gulp
 After that, click `index.html` in the list directory and now the guideline page will show in your browser.
 
 With the help of gulp, every change in repo code will automatically be complied and changed after saving.  
+
+### Possible Issues
+* If npm is not installed (`-bash : npm: command not found`), please install [node.js](https://nodejs.org/download/) in which it contains `npm`.
+
+* If SASS is not installed (`bash: sass: command not found`), you should run the following command: 
+
+        $ sudo gem install sass
+[Click here](http://sass-lang.com/install) for more details about installation of SASS. 
 
 ### Libraries Used Here
 This Project relies on these technologies for its workflow so it's important to familiarize yourself before starting.
@@ -35,3 +38,6 @@ Builds the distribution by running important tasks including concatenation, mini
 
 3. [Bootstrap](http://getbootstrap.com/)  
 Forms the basic design with flat colors taken from elsewhere. If you are working with html you need to use the Bootstrap syntax. 
+
+4. [SASS](http://sass-lang.com/)
+Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
