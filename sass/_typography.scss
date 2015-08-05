@@ -42,9 +42,11 @@ h1, h2, h3, h4, h1 small {
 }
 
 .break-word {
-  word-wrap: break-word;
+  word-break: break-word; /* Only WebKit/Blink browsers Support */
+  word-wrap: break-word ;
 }
 
-p, a, span {
-  word-wrap: break-word;
+p, a, span, em, td {
+  word-break: break-word; /* Only WebKit/Blink browsers Support */
+  word-wrap: break-word ;
 }
