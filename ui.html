@@ -136,9 +136,9 @@
                         <h4 id="error-reporting" class="m-t-lg">Error reporting</h4>
                         <p>Site related errors should use Growl style error reporting. OSF uses <a href="https://github.com/ifightcrime/bootstrap-growl/">Bootstrap Growl</a> plugin to display messages. The advantage of this library is that is builds on top of bootstrap design and utilizes alert boxes, which means it already complies with the style guide.</p>
 
-                        <div class="osf-box-lt p-lg">
+                        <div class="osf-box p-lg">
                             <h4>Which feedback to use when? </h4>
-                            <table class="table">
+                            <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>Action examples</th>
@@ -234,8 +234,41 @@
 
                 </div>
 
-                <h3 id="options">Buttons and toggles </h3>
-                <h4 id="button-state" class="m-t-lg">Button state feedback</h4>
+                <h3 id="confirmations">Confirmations</h3>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Sometimes it's pertinent to stop the user to confirm the action they are taking. Often this is done as a Modal or onunload dialog boxes. This should be used in very rare instances. </p>
+                        <h4 class="text-success">USE confirmation when:</h4>
+                        <ul>
+                            <li>The action will override an existing content  AND the content can't be easily reverted.(e.g. Deleting files, wiki pages)</li>
+                            <li>The action will take effect for other users as well or have consequences for other users. (e.g. Make project public) </li>
+                            <li>The action will have lasting consequences even if it is reverted (for instance making a project public may make it difficult to make it private again due to caching online) </li>
+                            <li>There is unsaved content or settings </li>
+                        </ul>
+                        <h4 class="text-danger"> DON'T USE confirmation when </h4>
+                        <ul>
+                            <li>The action can easily be reverted (e.g instance settings changes that can be changed back)</li>
+                            <li>The content can easily be reverted (e.g. editing wiki pages, since we save revisions) </li>
+                            <li>Commonplace actions like navigating between pages.</li>
+                            <li>Creating content that is expected and not affecting others (e.g. Creating a project)</li>
+                        </ul>
+                        <div class="osf-box-lt p-lg m-t-lg">
+                            <h4>Two-step Confirmation</h4>
+                            <p>This involves not just asking users if they want to apply the action but to add another step to make accidental actions impossible. In this case:</p>
+                            <ul>
+                                <li>Add a process which requires additional conscious step, entering text to match a pre selected text is ideal. Avoid steps that can be completed with mouse clicks or pressing enter.</li>
+                                <li>Show the button to apply the event as disabled and do not bind Enter key to it until the second step is done.</li>
+                                <li>Make sure to test that the second step works, accesibility is especially important here </li>
+
+                            </ul>
+                            <p> Use two step confirmation when the action is highly dangerous and should be done carefully. For intance deleting a project has repurcussions that can be serious and it is very difficult to reproduce aspects of it such as the unique ID that many links independent of the OSF uses. </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 id="options" class="m-t-xl">Buttons and Toggles </h3>
+                <h4 id="button-state" class="m-t-lg">Button State Feedback</h4>
                 <div class="m-b-md p-md osf-box box-round">
                     <div class="row">
                         <div class="col-xs-4">
@@ -265,7 +298,7 @@
 
                         </code></pre>
 
-                <h4 class="m-t-lg">Do not hide submit buttons if the button is not yet available and show save buttons if save is possible</h4>
+                <h4 class="m-t-lg">Do not hide action buttons if the button is not yet available and show action buttons if action is possible but not yet available</h4>
                 <div class="m-b-md p-md osf-box box-round">
                     <div class="row">
                         <div class="col-xs-4">
@@ -282,7 +315,7 @@
                         <div class="col-xs-4">
                             <h5 class="text-danger"> Don't do this: </h5>
                             <button class="btn btn-default">Cancel</button>
-                            <span class="text-muted"> Submit button becomes visible magically later</span>
+                            <span class="text-muted"> Save button becomes visible magically later</span>
                         </div>
                     </div>
                 </div>
@@ -535,7 +568,7 @@
                             <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Click to show the Side bar ">Show</button>
                         </div>
                         <div class="col-xs-6">
-                            <h5 class="text-danger">Don't do this (hint: hover on "item"):</h5>
+                            <h5 class="text-danger">Don't do this (hint: hover on "rows"):</h5>
                             Some of these <span data-toggle="tooltip" data-placement="right" title="Click on the rows to see what actions are available.">rows</span> are editable.
                         </div>
                     </div>
@@ -618,10 +651,11 @@
                 <li >
                     <a href="#ui">UI examples</a>
                     <ul class="nav subnav" >
-                        <li><a href="#auto-save">Auto save</a></li>
-                        <li><a href="#form-validation">Form validation</a></li>
-                        <li><a href="#error-reporting">Error reporting</a></li>
-                        <li><a href="#button-state">Buttons and toggles</a></li>
+                        <li><a href="#auto-save">Auto Save</a></li>
+                        <li><a href="#form-validation">Form Validation</a></li>
+                        <li><a href="#error-reporting">Error Reporting</a></li>
+                        <li><a href="#confirmations">Confirmations</a></li>
+                        <li><a href="#button-state">Buttons and Toggles</a></li>
                         <li><a href="#alphabetize">Alphabetize</a></li>
                         <li><a href="#inputs-forms">Input in frorms</a></li>
                         <li><a href="#modals">Modals</a></li>

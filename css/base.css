@@ -308,9 +308,13 @@ h1, h2, h3, h4, h1 small {
   background-color: #f8f8f8; }
 
 .break-word {
+  word-break: break-word;
+  /* Only WebKit/Blink browsers Support */
   word-wrap: break-word; }
 
-p, a, span {
+p, a, span, em, td {
+  word-break: break-word;
+  /* Only WebKit/Blink browsers Support */
   word-wrap: break-word; }
 
 /*
