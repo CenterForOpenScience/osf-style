@@ -234,7 +234,40 @@
 
                 </div>
 
-                <h3 id="options">Buttons and Toggles </h3>
+                <h3 id="confirmations">Confirmations</h3>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Sometimes it's pertinent to stop the user to confirm the action they are taking. Often this is done as a Modal or onunload dialog boxes. This should be used in very rare instances. </p>
+                        <h4 class="text-success">USE confirmation when:</h4>
+                        <ul>
+                            <li>The action will override an existing content  AND the content can't be easily reverted.(e.g. Deleting files, wiki pages)</li>
+                            <li>The action will take effect for other users as well or have consequences for other users. (e.g. Make project public) </li>
+                            <li>The action will have lasting consequences even if it is reverted (for instance making a project public may make it difficult to make it private again due to caching online) </li>
+                            <li>There is unsaved content or settings </li>
+                        </ul>
+                        <h4 class="text-danger"> DON'T USE confirmation when </h4>
+                        <ul>
+                            <li>The action can easily be reverted (e.g instance settings changes that can be changed back)</li>
+                            <li>The content can easily be reverted (e.g. editing wiki pages, since we save revisions) </li>
+                            <li>Commonplace actions like navigating between pages.</li>
+                            <li>Creating content that is expected and not affecting others (e.g. Creating a project)</li>
+                        </ul>
+                        <div class="osf-box-lt p-lg m-t-lg">
+                            <h4>Two-step Confirmation</h4>
+                            <p>This involves not just asking users if they want to apply the action but to add another step to make accidental actions impossible. In this case:</p>
+                            <ul>
+                                <li>Add a process which requires additional conscious step, entering text to match a pre selected text is ideal. Avoid steps that can be completed with mouse clicks or pressing enter.</li>
+                                <li>Show the button to apply the event as disabled and do not bind Enter key to it until the second step is done.</li>
+                                <li>Make sure to test that the second step works, accesibility is especially important here </li>
+
+                            </ul>
+                            <p> Use two step confirmation when the action is highly dangerous and should be done carefully. For intance deleting a project has repurcussions that can be serious and it is very difficult to reproduce aspects of it such as the unique ID that many links independent of the OSF uses. </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 id="options" class="m-t-xl">Buttons and Toggles </h3>
                 <h4 id="button-state" class="m-t-lg">Button State Feedback</h4>
                 <div class="m-b-md p-md osf-box box-round">
                     <div class="row">
@@ -621,6 +654,7 @@
                         <li><a href="#auto-save">Auto Save</a></li>
                         <li><a href="#form-validation">Form Validation</a></li>
                         <li><a href="#error-reporting">Error Reporting</a></li>
+                        <li><a href="#confirmations">Confirmations</a></li>
                         <li><a href="#button-state">Buttons and Toggles</a></li>
                         <li><a href="#alphabetize">Alphabetize</a></li>
                         <li><a href="#inputs-forms">Input in Forms</a></li>
