@@ -27,12 +27,15 @@
 .logo-spin {
   -webkit-animation: spin 3s infinite linear, opacity 3s infinite linear;
   animation: spin 3s infinite linear, opacity 3s infinite linear;
-  display: inline-block;
+  display: inline-block; vertical-align: middle;
+  background: url(../img/logo_spin.png);
+  background-size: 100%;
 }
 
 @for $i from 1 to 6 {
-  .logo-spin.logo-#{nth($sizes, $i) img} {
+  .logo-spin.logo-#{nth($sizes, $i) } {
     width: unquote(nth($margins, $i)*2 + 'px');
+    height: unquote(nth($margins, $i)*2 + 'px');
   }
 }
 
