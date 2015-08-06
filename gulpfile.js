@@ -7,8 +7,6 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     webserver = require('gulp-webserver'),
     autoprefixer = require('gulp-autoprefixer');
-    // data_uri = require('gulp-data-uri');
-    // data_uri = require('gulp-image-data-uri');
     data_uri = require('gulp-base64');
 
 
