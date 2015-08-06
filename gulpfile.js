@@ -7,6 +7,9 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     webserver = require('gulp-webserver'),
     autoprefixer = require('gulp-autoprefixer');
+    // data_uri = require('gulp-data-uri');
+    // data_uri = require('gulp-image-data-uri');
+    data_uri = require('gulp-base64');
 
 
 var paths = {
@@ -38,6 +41,7 @@ gulp.task('sass', function () {
             console.error('Error!', err.message);
         })
         .pipe(autoprefixer('> 1%'))
+        .pipe(data_uri())
         .pipe(gulp.dest('css'))
         .pipe(livereload());
 });
