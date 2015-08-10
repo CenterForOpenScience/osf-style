@@ -50,3 +50,8 @@ p, a, span, em, td {
   word-break: break-word; /* Only WebKit/Blink browsers Support */
   word-wrap: break-word ;
 }
+
+/* Correct an issue where input elements under the above word break elements break their content too */
+input {
+  word-break: normal !important;
+}
