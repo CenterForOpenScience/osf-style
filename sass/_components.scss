@@ -34,8 +34,8 @@
 
 @for $i from 1 to 6 {
   .logo-spin.logo-#{nth($sizes, $i) } {
-    width: unquote(nth($margins, $i)*2 + 'px');
-    height: unquote(nth($margins, $i)*2 + 'px');
+    width: unquote(nth($spinnerSize, $i) + 'px');
+    height: unquote(nth($spinnerSize, $i) + 'px');
   }
 }
 

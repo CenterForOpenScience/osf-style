@@ -698,8 +698,8 @@ p, a, span, em, td {
   height: 50px; }
 
 .logo-spin.logo-xl {
-  width: 100px;
-  height: 100px; }
+  width: 75px;
+  height: 75px; }
 
 @-webkit-keyframes spin {
   from {
