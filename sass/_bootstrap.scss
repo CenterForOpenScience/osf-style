@@ -321,8 +321,6 @@
 }
 #menuLogin {
   margin-top: 6px;
-}
-#menuLogin {
   padding: 20px 20px 0 20px;
   width: 300px;
 }
@@ -354,4 +352,10 @@
 /* Rounding corners of nav-pills in panels. */
 .panel .nav-pills>li>a {
   border-radius: 0px;
+}
+
+/* Fix menu login width at narrow screens */
+@media (max-width: 767px)
+#menuLogin {
+    width: auto;
 }
