@@ -355,7 +355,8 @@
 }
 
 /* Fix menu login width at narrow screens */
-@media (max-width: 767px)
-#menuLogin {
-    width: auto;
+@media (max-width: 767px) {
+  #menuLogin {
+      width: auto;
+  }
 }
