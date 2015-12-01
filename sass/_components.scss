@@ -4,23 +4,23 @@
 
  /* Box shadow */
 .box-shadow-xs {
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 3px 0px #eee;
 }
 
 .box-shadow-sm {
-    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 6px 0px #eee;
 }
 
 .box-shadow-md {
-    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 9px -1px #ccc;
 }
 
 .box-shadow-lg {
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 15px -2px #aaa;
 }
 
 .box-shadow-xl {
-    box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 18px 0px #666;
 }
 
 /* LOADER */
@@ -33,7 +33,7 @@
 }
 
 @for $i from 1 to 6 {
-  .logo-spin.logo-#{nth($sizes, $i) } {
+  .logo-spin.logo-#{nth($sizes, $i)} {
     width: unquote(nth($spinnerSize, $i) + 'px');
     height: unquote(nth($spinnerSize, $i) + 'px');
   }
