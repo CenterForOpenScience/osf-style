@@ -330,6 +330,9 @@ input {
 .btn {
   border-radius: 2px; }
 
+.form-control {
+  border-radius: 2px; }
+
 /* FLAT PANELS */
 .panel {
   border-radius: 0; }
