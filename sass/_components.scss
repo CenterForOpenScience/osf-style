@@ -139,6 +139,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  line-height: 22px;
 }
 
 .osf-project-navbar li>a {
@@ -166,7 +167,6 @@
   .osf-project-navbar a.project-title {
     max-width: 220px;
     font-size: 17px;
-    line-height: 22px;
   }
   .osf-project-navbar a.project-title.component {
     max-width: 203px!important;

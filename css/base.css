@@ -796,7 +796,8 @@ input {
   padding-bottom: 11px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; }
+  overflow: hidden;
+  line-height: 22px; }
 
 .osf-project-navbar li > a {
   padding-left: 15px;
@@ -817,9 +818,7 @@ input {
 
   .osf-project-navbar a.project-title {
     max-width: 220px;
-    font-size: 17px;
-    line-height: 22px; }
-
+    font-size: 17px; }
   .osf-project-navbar a.project-title.component {
     max-width: 203px !important; } }
 @media (min-width: 992px) {
