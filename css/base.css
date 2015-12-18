@@ -819,7 +819,6 @@ input {
   .osf-project-navbar a.project-title {
     max-width: 220px;
     font-size: 17px; }
-
   .osf-project-navbar a.project-title.component {
     max-width: 203px !important; } }
 @media (min-width: 992px) {
