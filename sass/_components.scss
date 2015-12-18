@@ -147,6 +147,10 @@
   padding-right: 15px;
 }
 
+.osf-project-navbar a span.project-title {
+  line-height: 22px;
+}
+
 @media (max-width: 767px) {
   .osf-project-navbar li > a {
     padding-left: 30px;
