@@ -115,7 +115,7 @@
   }
   li>a:focus {
     background-color: #EEE;
-  } 
+  }
   .active > a:focus {
     background-color: #337AB7;
   }
@@ -134,9 +134,12 @@
 .osf-project-navbar a.project-title {
   font-weight: 300;
   font-size: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  line-height: 22px;
 }
 
 .osf-project-navbar li>a {
@@ -155,9 +158,14 @@
   .osf-project-navbar li > a {
     padding-left: 5px;
     padding-right: 5px;
+    font-size: 14px;
   }
   .osf-project-navbar a.project-title {
-    max-width: 190px;
+    max-width: 220px;
+    font-size: 17px;
+  }
+  .osf-project-navbar a.project-title.component {
+    max-width: 203px!important;
   }
 }
 
@@ -171,7 +179,10 @@
     max-width: 400px;
   }
 }
-
+.project-title>.badge {
+  position: relative;
+  bottom: 2px;
+}
 
 /* Form Inputs */
 .noresize {
