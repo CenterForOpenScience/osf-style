@@ -19,9 +19,9 @@
     width: 200px;
     top: 10px;
 }
-li, p {
-    font-size: 15px;
-}
+/*li, p {*/
+/*    font-size: 15px;*/
+/*}*/
 
 #side-menu .nav-pills>li.active>a,
 #side-menu .nav-pills>li.active>a:hover,
