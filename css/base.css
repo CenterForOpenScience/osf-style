@@ -1089,6 +1089,9 @@ body {
  *  END of loaders
  */
 
+/**
+ *  New OSF navbar styling
+ */
 .osf-nav-wrapper .navbar-inverse {
   background-color: #263947;
 }
@@ -1201,3 +1204,6 @@ button.nav-user-dropdown {
 .logoutLink {
   cursor: pointer;
 }
+/**
+ *  End of new OSF Navbar
+ */
