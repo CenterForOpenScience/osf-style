@@ -392,7 +392,6 @@ input {
 
 #navbarScope {
   top: 0px;
-  -webkit-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out; }
 
 #navbarScope.off {
@@ -410,7 +409,6 @@ input {
   line-height: 1.7; }
 
 .navbar-default {
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
   background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
@@ -420,7 +418,6 @@ input {
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
-  background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
   background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
@@ -431,7 +428,6 @@ input {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
 
 .navbar-inverse {
-  background-image: -webkit-linear-gradient(top, rgba(60, 60, 60, 0.5) 0%, rgba(34, 34, 34, 0.5) 100%);
   background-image: linear-gradient(to bottom, rgba(60, 60, 60, 0.5) 0%, rgba(34, 34, 34, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#803c3c3c', endColorstr='#80222222', GradientType=0);
@@ -440,7 +436,6 @@ input {
 
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .active > a {
-  background-image: -webkit-linear-gradient(top, rgba(8, 8, 8, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%);
   background-image: linear-gradient(to bottom, rgba(8, 8, 8, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80080808', endColorstr='#800f0f0f', GradientType=0);
@@ -594,7 +589,6 @@ input {
     right: auto; } }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  background-image: -webkit-linear-gradient(top, #222222 0%, #151515 100%);
   background-image: linear-gradient(to bottom, #222222 0%, #151515 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff151515', GradientType=0);
@@ -603,7 +597,6 @@ input {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
   background-image: linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
@@ -1005,3 +998,123 @@ input {
 body {
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", 'Helvetica Neue', sans-serif !important; }
+
+/**
+ *  Replaces the loaders.css/src/loaders.scss
+ *
+ */
+/**
+ * Styles shared by multiple animations
+ */
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  45% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0.7; }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  45% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0.7; }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+.ball-pulse > div:nth-child(0) {
+  -webkit-animation: scale 0.75s -0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+          animation: scale 0.75s -0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+.ball-pulse > div:nth-child(1) {
+  -webkit-animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+          animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+.ball-pulse > div:nth-child(2) {
+  -webkit-animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+          animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+.ball-pulse > div:nth-child(3) {
+  -webkit-animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+          animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+.ball-pulse > div {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: inline-block; }
+
+@-webkit-keyframes ball-scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes ball-scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+.ball-scale > div {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+          animation: ball-scale 1s 0s ease-in-out infinite; }
+
+@-webkit-keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+.ball-beat > div {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: inline-block;
+  -webkit-animation: ball-beat 0.7s 0s infinite linear;
+          animation: ball-beat 0.7s 0s infinite linear; }
+  .ball-beat > div:nth-child(2n-1) {
+    -webkit-animation-delay: -0.35s !important;
+            animation-delay: -0.35s !important; }
