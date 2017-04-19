@@ -5,7 +5,7 @@ This project aims to bring together resources to build Design and Layout of OSF 
 ### Quick Start
 * Clone the remote repo to your local
 
-        $ git clone https://github.com/caneruguz/osf-style.git
+        $ git clone https://github.com/CenterForOpenScience/osf-style.git
         $ cd osf-style
     
 * Install the dependent libraries (listed in [package.json](https://github.com/haoyuchen1992/osf-style/blob/Edit-Readme/package.json)) with npm
