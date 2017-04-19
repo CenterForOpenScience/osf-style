@@ -1118,3 +1118,6 @@ body {
   .ball-beat > div:nth-child(2n-1) {
     -webkit-animation-delay: -0.35s !important;
             animation-delay: -0.35s !important; }
+
+.ball-dark > div {
+  background-color: #337AB7; }
