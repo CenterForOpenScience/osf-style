@@ -21,7 +21,9 @@ var paths = {
         "./bower_components/bootstrap/dist/js/*.min.js",
         "./js/script.js"
     ],
-    sass : "sass/*.scss"
+    sass : [
+        "sass/*.scss"
+    ]
 };
 
 gulp.task('webserver', function() {

@@ -1,0 +1,16 @@
+/**
+ *  Replaces the loaders.css/src/loaders.scss which imports animations
+ *  The reason is to import only the animations osf-style needs
+ */
+@import '../bower_components/loaders.css/src/_variables.scss';
+@import '../bower_components/loaders.css/src/mixins';
+
+@import '../bower_components/loaders.css/src/animations/ball-pulse';
+@import '../bower_components/loaders.css/src/animations/ball-scale';
+
+.ball-dark > div{
+    background-color: $color-select;
+}
+/**
+ *  END of loaders
+ */
