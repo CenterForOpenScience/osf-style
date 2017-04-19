@@ -1,5 +1,11 @@
 # Releasing osf-style
 
+* Make sure stylesheet is built.
+
+```
+npm run gulp sass
+```
+
 * On `master`, update `package.json` and `bower.json` with new version number. Follow [semver](http://semver.org/).
 
 ```json
