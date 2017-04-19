@@ -1,13 +1,13 @@
-var gulp = require('gulp'),
-    concat = require("gulp-concat"),
-    minifyCSS = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    uglify = require('gulp-uglify'),
-    sass = require('gulp-ruby-sass'),
-    livereload = require('gulp-livereload'),
-    webserver = require('gulp-webserver'),
-    autoprefixer = require('gulp-autoprefixer');
-    data_uri = require('gulp-base64');
+var gulp = require('gulp');
+var concat = require("gulp-concat");  
+var minifyCSS = require('gulp-minify-css'); 
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify'); 
+var sass = require('gulp-ruby-sass');
+var livereload = require('gulp-livereload');
+var webserver = require('gulp-webserver');
+var autoprefixer = require('gulp-autoprefixer'); // Automatically adds browser prefixes to css
+var data_uri = require('gulp-base64'); //Gulp task for converting all files found within a stylesheet (those within a url( ... ) declaration) into base64-encoded data URI strings.
 
 
 var paths = {
