@@ -1,34 +1,20 @@
-var gulp = require('gulp'),
-    concat = require("gulp-concat"),
-    minifyCSS = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    uglify = require('gulp-uglify'),
-    sass = require('gulp-ruby-sass'),
-    livereload = require('gulp-livereload'),
-    webserver = require('gulp-webserver'),
-    autoprefixer = require('gulp-autoprefixer');
-    data_uri = require('gulp-base64');
+var gulp = require('gulp');
+var concat = require("gulp-concat");
+var cleanCSS = require('gulp-clean-css');
+var sourcemaps = require('gulp-sourcemaps');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var sass = require('gulp-ruby-sass');
+var livereload = require('gulp-livereload');
+var webserver = require('gulp-webserver');
+var autoprefixer = require('gulp-autoprefixer'); // Automatically adds browser prefixes to css
+var data_uri = require('gulp-base64'); //Gulp task for converting all files found within a stylesheet (those within a url( ... ) declaration) into base64-encoded data URI strings.
 
-
-var paths = {
-    cssfiles : [
-        "./css/*.css"
-    ],
-    jsfiles : [
-        "./bower_components/jquery/dist/*.min.js",
-        "./bower_components/jquery-ui/*.min.js",
-        "./bower_components/jquery-mockjax/*.js",
-        "./bower_components/bootstrap/dist/js/*.min.js",
-        "./js/script.js"
-    ],
-    sass : "sass/*.scss"
-};
 
 gulp.task('webserver', function() {
     gulp.src('./')
         .pipe(webserver({
             livereload: true,
-            directoryListing: true,
             open: true
         }));
 });
@@ -41,13 +27,17 @@ gulp.task('sass', function () {
         .pipe(autoprefixer('> 1%'))
         .pipe(data_uri())
         .pipe(gulp.dest('css'))
+        .pipe(sourcemaps.init())
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.write())
+        .pipe(rename('base.min.css'))
+        .pipe(gulp.dest('css'))
         .pipe(livereload());
 });
 
-gulp.task('default', ['webserver', 'sass', 'watch']);
-
-
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(paths.sass, ['sass']);
+    gulp.watch('sass', ['sass']);
 });
+
+gulp.task('default', ['webserver', 'sass', 'watch']);

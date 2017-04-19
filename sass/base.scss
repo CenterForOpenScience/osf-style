@@ -1,10 +1,10 @@
-@import '_variables';
-@import '_colors';
-@import '_layout';
-@import '_typography';
-@import '_bootstrap';
-@import '_bootstrap_xl';
-@import '_components';
+@import 'variables';
+@import 'colors';
+@import 'layout';
+@import 'typography';
+@import 'bootstrap';
+@import 'bootstrap_xl';
+@import 'components';
 
 .theme-dropdown .dropdown-menu {
   position: static;
@@ -29,3 +29,5 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", 'Helvetica Neue', sans-serif !important;
 }
+
+@import 'loader'; // Custom sass loader for loaders.css library
