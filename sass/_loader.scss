@@ -2,10 +2,6 @@
  *  Replaces the loaders.css/src/loaders.scss
  *
  */
-
-/**
- * Styles shared by multiple animations
- */
 @import '../bower_components/loaders.css/src/_variables.scss';
 @import '../bower_components/loaders.css/src/mixins';
 
@@ -16,3 +12,6 @@
 .ball-dark > div{
     background-color: $color-select;
 }
+/**
+ *  END of loaders
+ */

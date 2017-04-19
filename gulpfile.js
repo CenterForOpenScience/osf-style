@@ -22,10 +22,7 @@ var paths = {
         "./js/script.js"
     ],
     sass : [
-        "sass/*.scss",
-        // "./bower_components/loaders.css/src/*.scss",
-        // "./bower_components/loaders.css/src/animations/*.scss",
-
+        "sass/*.scss"
     ]
 };
 

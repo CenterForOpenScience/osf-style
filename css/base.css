@@ -1003,9 +1003,6 @@ body {
  *  Replaces the loaders.css/src/loaders.scss
  *
  */
-/**
- * Styles shared by multiple animations
- */
 @-webkit-keyframes scale {
   0% {
     -webkit-transform: scale(1);
@@ -1121,3 +1118,7 @@ body {
 
 .ball-dark > div {
   background-color: #337AB7; }
+
+/**
+ *  END of loaders
+ */
