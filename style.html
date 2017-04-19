@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
 
     <link href="vendor/prism/prism.css" rel="stylesheet" />
     <!-- OSF style -->
@@ -1372,36 +1373,90 @@
                 </div>
 
                 <hr />
-                <h3 id="loader"> OSF loader </h3>
+                <h3 id="loader"> Loading indicators </h3>
+                <div class="alert alert-warning">Use of OSF logo loader is deprecated but available in this version for backwards compatibility. Please refrain from using osf logo loaders and use one of the options provided below.</div>
+                <p class="p-v-md">The recommended loading indicators are provided by an external library (<a href="https://connoratherton.com/loaders" target="_blank"> https://connoratherton.com/loaders</a>) but bundled in the base.css file for osf-style. Currently these options are supported, each for either light or dark backgrounds. Developers who need more types of loading indicators can add more through a feature Pull Request.<p>
+
+                <!-- Ball Scale -->
+                <h4>Ball-scale</h4>
+                <p class="p-md">Use for large content and center it horizontally (and vertically depending on container height) <p>
                 <div class="row">
-                    <div class="col-xs-12 m-b-md">
-                        <p> OSF Uses COS logo as a loader gif as shown below in different sizes.   </p>
-                        <div class="logo-spin logo-xs m-r-lg"></div>
-                        <div class="logo-spin logo-sm m-r-lg"></div>
-                        <div class="logo-spin logo-md m-r-lg"></div>
-                        <div class="logo-spin logo-lg m-r-lg"></div>
-                        <div class="logo-spin logo-xl m-r-lg"></div>
+                    <div class="col-xs-6">
+                        <b> Light </b>
+                        <div class="loader bg-color-blue p-lg text-center">
+                            <div class="ball-scale">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <b> Dark </b>
+                        <div class="loader p-lg">
+                            <div class="ball-scale ball-dark text-center">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-12">
-<pre><code class="language-markup">&lt;div class=&quot;logo-spin logo-xs m-r-lg&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;logo-spin logo-sm m-r-lg&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;logo-spin logo-md m-r-lg&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;logo-spin logo-lg m-r-lg&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;logo-spin logo-xl m-r-lg&quot;&gt;&lt;/div&gt;
+<pre><code class="language-markup">
+    // dark backgrounds
+    &lt;div class=&quot;ball-scale&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    // light backgrounds
+    &lt;div class=&quot;ball-scale ball-dark&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
 </code></pre>
 
-                        <div class="m-t-md m-b-md p-md osf-box-lt">
-                            <h4 class="text-success"> Tips:</h4>
-                            <ul>
-                                <li> Do not manually change the image sizes, pick an appropriate size.</li>
-                                <li> Do not alter css of the spinners such as speed and animation.</li>
-                                <li> Spinners need to clear when the loading is done or error is received.</li>
-                                <li> The size of the spinner is related to how much space the embedded content holds. I.e. for full page use a large spinner. </li>
-                            </ul>
+                    </div>
+                </div>
+
+
+                <!-- Ball pulse -->
+                <h4 class="m-t-lg">Ball-pulse</h4>
+                <p class="p-md">Use for inline content in place of the element loading. <p>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <b> Light </b>
+                        <div class="loader bg-color-blue p-lg text-center">
+                            <div class="ball-pulse">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <b> Dark </b>
+                        <div class="loader p-lg">
+                            <div class="ball-pulse ball-dark text-center">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+<pre><code class="language-markup">
+    // dark backgrounds
+    &lt;div class=&quot;ball-pulse&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    // light backgrounds
+    &lt;div class=&quot;ball-pulse ball-dark&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+
                     </div>
                 </div>
 
@@ -1761,7 +1816,7 @@
                         <li><a href="#alerts">Alerts</a></li>
                         <li><a href="#navbar">Navigation</a></li>
                         <li><a href="#tabs">Tabs</a></li>
-                        <li><a href="#loader">OSF loader</a></li>
+                        <li><a href="#loader">Loading Indicators</a></li>
                         <li><a href="#progress">Progress bars</a></li>
                         <li><a href="#containers">Containers</a></li>
                         <li><a href="#inputs">Inputs</a></li>
