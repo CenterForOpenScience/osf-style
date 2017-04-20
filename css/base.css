@@ -1092,6 +1092,7 @@ body {
 /**
  *  New OSF navbar styling
  */
+
 .osf-nav-wrapper .navbar-inverse {
   background-color: #263947;
 }
@@ -1121,7 +1122,6 @@ body {
 .osf-nav-wrapper .navbar-header .navbar-brand {
   font-size: 28px;
 }
-
 .osf-nav-wrapper .navbar-header .navbar-brand .osf-navbar-logo {
   width: 35px;
   height: 35px;
@@ -1164,9 +1164,9 @@ body {
 .osf-nav-wrapper .dropdown-menu.service-dropdown :after {
   position: absolute;
   display: inline-block;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #2E6A74;
-  border-left: 8px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #2E6A74;
+  border-left: 9px solid transparent;
   content: '';
   top: -8px;
   left: 22px;
@@ -1194,7 +1194,6 @@ body {
   }
 }
 
-/* Overrides font-size and position of user name / gravatar */
 button.nav-user-dropdown {
   padding-right: 0;
   font-size: 16px;
@@ -1204,6 +1203,7 @@ button.nav-user-dropdown {
 .logoutLink {
   cursor: pointer;
 }
+
 /**
  *  End of new OSF Navbar
  */
