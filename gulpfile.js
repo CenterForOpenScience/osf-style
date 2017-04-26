@@ -20,7 +20,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('sass', function () {
-    return sass('sass')
+    return sass('sass', {style:'expanded'})
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
