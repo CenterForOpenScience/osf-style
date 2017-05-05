@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var runSequence = require('run-sequence');
 var concat = require("gulp-concat");
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
@@ -19,7 +20,25 @@ gulp.task('webserver', function() {
         }));
 });
 
-gulp.task('sass', function () {
+// move loader.css required files into sass/loader
+gulp.task('moveLoaders',  function() {
+    gulp.src("bower_components/loaders.css/src/_variables.scss")
+        .pipe(gulp.dest('sass/loaders/'));
+    gulp.src("bower_components/loaders.css/src/_mixins.scss")
+        .pipe(gulp.dest('sass/loaders/'));
+    gulp.src("bower_components/loaders.css/src/_functions.scss")
+        .pipe(gulp.dest('sass/loaders/'));
+    gulp.src("bower_components/loaders.css/src/animations/ball-pulse.scss")
+        .pipe(rename('_ball-pulse.scss'))
+        .pipe(gulp.dest('sass/loaders/animations/'));
+
+    gulp.src("bower_components/loaders.css/src/animations/ball-scale.scss")
+        .pipe(rename('_ball-scale.scss'))
+        .pipe(gulp.dest('sass/loaders/animations/'));
+});
+
+
+gulp.task('buildCSS', function () {
     return sass('sass', {style:'expanded'})
         .on('error', function (err) {
             console.error('Error!', err.message);
@@ -35,9 +54,14 @@ gulp.task('sass', function () {
         .pipe(livereload());
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('sass', ['sass']);
+    gulp.watch('sass/*.scss', ['buildCSS']);
 });
 
-gulp.task('default', ['webserver', 'sass', 'watch']);
+
+gulp.task('build', function() {
+    runSequence('moveLoaders', 'buildCSS');
+});
+
+gulp.task('default', ['webserver', 'build', 'watch']);
