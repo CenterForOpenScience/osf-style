@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
+    "loaders.css": "^0.1.2"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.1",
-    "loaders.css": "^0.1.2"
+    "bootstrap": "~3.3.1"
   }
 }
