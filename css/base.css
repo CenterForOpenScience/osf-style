@@ -852,46 +852,48 @@ input {
 }
 .osf-nav-wrapper .navbar-header {
   /* Enlarges OSF Font */
-  /* Defines position of dropdown toggle (caret) for primary navigation*/
-  /* Defines location and styling of current service name. PREPRINTS, for example. */
-}
-.osf-nav-wrapper .navbar-header .navbar-brand {
-  font-size: 28px;
   /* Enlarges OSF logo and modifies placement */
+  /* Defines position of dropdown toggle (caret) for primary navigation*/
+  /* Defines location and styling of current service name. OSFPREPRINTS, for example. */
+  /* Decreases distance between "OSF" and current service "PREPRINTS", for example */
 }
-.osf-nav-wrapper .navbar-header .navbar-brand .osf-navbar-logo {
+.osf-nav-wrapper .navbar-header .osf-navbar-logo {
   width: 35px;
   height: 35px;
   margin-top: -4px;
-  margin-left: -4px;
+  margin-left: -11px;
 }
 .osf-nav-wrapper .navbar-header .primary-nav {
   float: left;
-  margin-top: 7px;
-  margin-left: -9px;
+  margin-top: 9px;
+  padding-left: 0px;
 }
 .osf-nav-wrapper .navbar-header .service-name {
   float: left;
-  margin-top: 13px;
-  margin-left: 5px;
+  margin-top: 8.5px;
+  margin-left: -13px;
   text-decoration: none;
 }
 .osf-nav-wrapper .navbar-header .service-name a {
-  font-size: 18px;
+  font-size: 24px;
+}
+.osf-nav-wrapper .navbar-header .current-service-margin {
+  margin-left: -4px;
 }
 .osf-nav-wrapper .dropdown-menu {
   background-color: #2E6A74;
 }
 .osf-nav-wrapper .dropdown-menu.service-dropdown {
   top: 54px;
-  left: -14.5px;
+  left: -24px;
 }
 .osf-nav-wrapper .dropdown-menu.service-dropdown li > a {
   font-size: 18px;
 }
 .osf-nav-wrapper .dropdown-menu.auth-dropdown {
   top: 60px;
-  left: 22.5px;
+  right: -19px;
+  width: 160px;
 }
 .osf-nav-wrapper .dropdown-menu > li > a:hover,
 .osf-nav-wrapper .dropdown-menu > li > a:focus {
@@ -906,16 +908,16 @@ input {
   border-left: 9px solid transparent;
   content: '';
   top: -8px;
-  left: 22px;
+  left: 30px;
 }
 .osf-nav-wrapper #navbarScope .btn-top-signup {
-  padding: 4px 12px;
-  margin-top: 5px;
+  padding: 4px 13px;
+  margin-top: 3px;
   font-size: 15px;
 }
 .osf-nav-wrapper #navbarScope .btn-top-login {
-  padding: 2px 15px;
-  margin-top: 5px;
+  padding: 4px 17px;
+  margin-top: 3px;
   font-size: 15px;
 }
 @media screen and (min-width: 768px) {
