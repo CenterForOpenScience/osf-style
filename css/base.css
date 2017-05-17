@@ -861,7 +861,7 @@ input {
   width: 35px;
   height: 35px;
   margin-top: -4px;
-  margin-left: -11px;
+  margin-left: -4px;
 }
 .osf-nav-wrapper .navbar-header .primary-nav {
   float: left;
@@ -885,7 +885,8 @@ input {
 }
 .osf-nav-wrapper .dropdown-menu.service-dropdown {
   top: 54px;
-  left: -24px;
+  left: -120px;
+  width: 170px;
 }
 .osf-nav-wrapper .dropdown-menu.service-dropdown li > a {
   font-size: 18px;
@@ -908,7 +909,7 @@ input {
   border-left: 9px solid transparent;
   content: '';
   top: -8px;
-  left: 30px;
+  left: 126px;
 }
 .osf-nav-wrapper #navbarScope .btn-top-signup {
   padding: 4px 13px;
