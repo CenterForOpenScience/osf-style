@@ -409,12 +409,12 @@
         .primary-nav {
             float: left;
             margin-top: 9px;
-            padding-left: 0px;
+            padding-left: 0;
         }
         /* Defines location and styling of current service name. OSFPREPRINTS, for example. */
         .service-name {
             float: left;
-            margin-top: 8.5px;
+            margin-top: 8px;
             margin-left: -13px;
             text-decoration: none;
             a {
@@ -422,7 +422,7 @@
             }
         }
         /* Decreases distance between "OSF" and current service "PREPRINTS", for example */
-        .current-service-margin {
+        .current-service {
             margin-left: -4px;
         }
     }

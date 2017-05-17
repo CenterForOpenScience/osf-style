@@ -866,18 +866,18 @@ input {
 .osf-nav-wrapper .navbar-header .primary-nav {
   float: left;
   margin-top: 9px;
-  padding-left: 0px;
+  padding-left: 0;
 }
 .osf-nav-wrapper .navbar-header .service-name {
   float: left;
-  margin-top: 8.5px;
+  margin-top: 8px;
   margin-left: -13px;
   text-decoration: none;
 }
 .osf-nav-wrapper .navbar-header .service-name a {
   font-size: 24px;
 }
-.osf-nav-wrapper .navbar-header .current-service-margin {
+.osf-nav-wrapper .navbar-header .current-service {
   margin-left: -4px;
 }
 .osf-nav-wrapper .dropdown-menu {
