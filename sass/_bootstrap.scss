@@ -397,31 +397,33 @@
 
     .navbar-header {
          /* Enlarges OSF Font */
-        .navbar-brand {
-            font-size: 28px;
              /* Enlarges OSF logo and modifies placement */
-            .osf-navbar-logo {
-                width: 35px;
-                height: 35px;
-                margin-top: -4px;
-                margin-left: -4px;
-            }
+        .osf-navbar-logo {
+            width: 35px;
+            height: 35px;
+            margin-top: -4px;
+            margin-left: -4px;
         }
+
          /* Defines position of dropdown toggle (caret) for primary navigation*/
         .primary-nav {
             float: left;
-            margin-top: 7px;
-            margin-left: -9px;
+            margin-top: 9px;
+            padding-left: 0;
         }
-        /* Defines location and styling of current service name. PREPRINTS, for example. */
+        /* Defines location and styling of current service name. OSFPREPRINTS, for example. */
         .service-name {
             float: left;
-            margin-top: 13px;
-            margin-left: 5px;
+            margin-top: 8px;
+            margin-left: -13px;
             text-decoration: none;
             a {
-                font-size: 18px;
+                font-size: 24px;
             }
+        }
+        /* Decreases distance between "OSF" and current service "PREPRINTS", for example */
+        .current-service {
+            margin-left: -4px;
         }
     }
 
@@ -433,11 +435,13 @@
                font-size: 18px;
             }
             top: 54px;
-            left: -14.5px;
+            left: -120px;
+            width: 170px;
         }
         &.auth-dropdown {
             top: 60px;
-            left: 22.5px;
+            right: -19px;
+            width: 160px;
         }
     }
 
@@ -458,21 +462,21 @@
             border-left: 9px solid transparent;
             content: '';
             top: -8px;
-            left: 22px;
+            left: 126px;
         }
     }
 
     /* Overrides for signup button */
     #navbarScope .btn-top-signup {
-        padding: 4px 12px;
-        margin-top:5px;
+        padding: 4px 13px;
+        margin-top:3px;
         font-size: 15px;
     }
 
     /* Overrides for Sign in button */
     #navbarScope .btn-top-login {
-        padding: 2px 15px;
-        margin-top: 5px;
+        padding: 4px 17px;
+        margin-top: 3px;
         font-size: 15px;
     }
 
