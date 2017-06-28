@@ -35,5 +35,5 @@ git push --tags
 * Publish to npm.
 
 ```
-npm publish
+npm publish --access=public
 ```
