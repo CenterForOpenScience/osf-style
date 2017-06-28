@@ -3,7 +3,7 @@
 * Make sure stylesheet is built.
 
 ```
-npm run gulp sass
+npm run build
 ```
 
 * On `master`, update `package.json` with new version number. Follow [semver](http://semver.org/).
