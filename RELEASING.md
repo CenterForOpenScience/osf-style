@@ -6,7 +6,7 @@
 npm run gulp sass
 ```
 
-* On `master`, update `package.json` and `bower.json` with new version number. Follow [semver](http://semver.org/).
+* On `master`, update `package.json` with new version number. Follow [semver](http://semver.org/).
 
 ```json
   "version": "63.12.0",
