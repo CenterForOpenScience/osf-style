@@ -31,3 +31,9 @@ git tag 63.12.0
 git push
 git push --tags
 ```
+
+* Publish to npm.
+
+```
+npm publish
+```
