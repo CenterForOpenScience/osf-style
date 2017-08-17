@@ -1,6 +1,6 @@
 {
   "name": "@centerforopenscience/osf-style",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "OSF Style Guide",
   "main": "css/base.css",
   "style": "css/base.css",
