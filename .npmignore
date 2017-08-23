@@ -3,3 +3,5 @@
 !css/base.min.css
 !README.md
 !package.json
+!img/*
+!sass/*
