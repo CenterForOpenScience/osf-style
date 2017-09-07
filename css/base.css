@@ -521,10 +521,6 @@ input {
   line-height: 1.7;
 }
 
-.navbar-donate-button a{
-  color: #9cd59c !important;
-}
-
 .navbar-default {
   background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
   background-repeat: repeat-x;
@@ -1427,6 +1423,10 @@ button.nav-user-dropdown {
 /* Form Inputs */
 .noresize {
   resize: none;
+}
+
+.navbar-donate-button a {
+  color: #9cd59c !important;
 }
 
 .theme-dropdown .dropdown-menu {
