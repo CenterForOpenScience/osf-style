@@ -477,7 +477,7 @@ input {
 
 /* TABS */
 .nav-tabs > li > a {
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 0;
 }
 
@@ -1363,6 +1363,12 @@ button.nav-user-dropdown {
 @media (min-width: 992px) {
   .osf-project-navbar a.project-title {
     max-width: 300px;
+  }
+
+  .navbar-nav > li > a {
+    line-height: 27px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }
 @media (min-width: 1200px) {

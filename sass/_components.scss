@@ -165,6 +165,11 @@
   .osf-project-navbar a.project-title {
     max-width: 300px;
   }
+  .navbar-nav > li > a {
+    line-height: 27px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
 }
 @media (min-width: 1200px) {
   .osf-project-navbar a.project-title {
