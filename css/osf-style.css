@@ -1376,7 +1376,7 @@ button.nav-user-dropdown {
     max-width: 400px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   #navbarScope div.container {
     width: 100%;
   }
@@ -1433,6 +1433,20 @@ button.nav-user-dropdown {
 
 .navbar-donate-button a {
   color: #9cd59c !important;
+}
+
+.nav-profile-name {
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 28px;
+  float: left;
+}
+
+@media (max-width: 1200px) {
+  .nav-profile-name {
+    max-width: 300px
+  }
 }
 
 .theme-dropdown .dropdown-menu {
