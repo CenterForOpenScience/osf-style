@@ -1441,6 +1441,7 @@ button.nav-user-dropdown {
   text-overflow: ellipsis;
   height: 28px;
   float: left;
+  white-space: nowrap;
 }
 
 @media (max-width: 1200px) {
