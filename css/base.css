@@ -1438,6 +1438,24 @@ button.nav-user-dropdown {
   color: #9cd59c !important;
 }
 
+.nav-profile-name {
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 28px;
+  float: left;
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .nav-profile-name {
+    max-width: 300px;
+  }
+}
+.osf-profile-image {
+  float: left;
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
