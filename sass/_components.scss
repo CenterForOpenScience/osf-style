@@ -166,9 +166,11 @@
     max-width: 300px;
   }
   .navbar-nav > li > a {
-    line-height: 27px;
     padding-top: 11px;
     padding-bottom: 11px;
+  }
+  #secondary-navigation .navbar-nav > li > a {
+    line-height: 27px;
   }
 }
 @media (min-width: 1200px) {
