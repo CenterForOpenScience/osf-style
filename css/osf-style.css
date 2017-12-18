@@ -1441,12 +1441,16 @@ button.nav-user-dropdown {
   text-overflow: ellipsis;
   height: 28px;
   float: left;
+  white-space: nowrap;
 }
 
 @media (max-width: 1200px) {
   .nav-profile-name {
-    max-width: 300px
+    max-width: 300px;
   }
+}
+.osf-profile-image {
+  float: left;
 }
 
 .theme-dropdown .dropdown-menu {
