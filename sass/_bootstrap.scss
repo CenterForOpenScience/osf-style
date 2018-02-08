@@ -357,6 +357,17 @@
   border-radius: 0px;
 }
 
+/* Add flexbox on full screens */
+@media (min-width: 993px) {
+  .navbar > .container {
+    display: flex;
+  }
+  .navbar-header {
+      display: flex;
+      white-space: nowrap;
+  }
+}
+
 /* Fix menu login width at narrow screens */
 @media (max-width: 767px) {
   #menuLogin {
