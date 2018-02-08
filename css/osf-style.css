@@ -1506,6 +1506,12 @@ button.nav-user-dropdown {
   float: left;
 }
 
+.osf-profile-image > img {
+  border: 1px solid #CDCDCD;
+  border-radius: 13px;
+  margin-right: 5px;
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
