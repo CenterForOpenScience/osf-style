@@ -963,6 +963,18 @@ button.nav-user-dropdown {
   cursor: pointer;
 }
 
+.btn-success {
+  color: #fff;
+  background-color: #357935;
+  border-color: #2d672d;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #1b6d85;
+  border-color: #175c70;
+}
+
 @media (min-width: 1600px) {
   .container {
     width: 1570px;

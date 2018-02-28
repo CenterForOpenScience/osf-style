@@ -519,3 +519,15 @@ button.nav-user-dropdown {
 .logoutLink {
     cursor: pointer;
 }
+
+.btn-success {
+  color: $btn-success-high-contrast-color;
+  background-color: $brand-success;
+  border-color: darken($brand-success, 5%);
+}
+
+.btn-info {
+  color: $btn-info-high-contrast-color;
+  background-color: $brand-info;
+  border-color: darken($brand-info, 5%);
+}
