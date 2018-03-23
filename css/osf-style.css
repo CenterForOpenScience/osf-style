@@ -515,7 +515,8 @@ input {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#navbarScope .btn-top-login {
+#navbarScope .btn-top-login,
+#navbarScope .btn-top-signup {
   padding: 2px 30px;
   margin-top: 5px;
   line-height: 1.7;
