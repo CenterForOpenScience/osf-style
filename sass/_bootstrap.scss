@@ -91,7 +91,8 @@
 #navbarScope a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
-#navbarScope .btn-top-login {
+#navbarScope .btn-top-login,
+#navbarScope .btn-top-signup {
   padding: 2px 30px;
   margin-top: 5px;
   line-height: 1.7;
@@ -357,6 +358,17 @@
   border-radius: 0px;
 }
 
+/* Add flexbox on full screens */
+@media (min-width: 993px) {
+  .navbar > .container {
+    display: flex;
+  }
+  .navbar-header {
+      display: flex;
+      white-space: nowrap;
+  }
+}
+
 /* Fix menu login width at narrow screens */
 @media (max-width: 767px) {
   #menuLogin {
@@ -507,4 +519,16 @@ button.nav-user-dropdown {
 
 .logoutLink {
     cursor: pointer;
+}
+
+.btn-success {
+  color: $btn-success-high-contrast-color;
+  background-color: $brand-success;
+  border-color: darken($brand-success, 5%);
+}
+
+.btn-info {
+  color: $btn-info-high-contrast-color;
+  background-color: $brand-info;
+  border-color: darken($brand-info, 5%);
 }
