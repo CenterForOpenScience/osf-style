@@ -521,14 +521,20 @@ button.nav-user-dropdown {
     cursor: pointer;
 }
 
+/* Button color overrides */
+
 .btn-success {
-  color: $btn-success-high-contrast-color;
-  background-color: $brand-success;
-  border-color: darken($brand-success, 5%);
+    @include a11y-button-variant($brand-success);
 }
 
 .btn-info {
-  color: $btn-info-high-contrast-color;
-  background-color: $brand-info;
-  border-color: darken($brand-info, 5%);
+    @include a11y-button-variant($brand-info);
+}
+
+.btn-warning {
+    @include a11y-button-variant($brand-warning, #333);
+}
+
+.btn-danger {
+    @include a11y-button-variant($brand-danger);
 }
