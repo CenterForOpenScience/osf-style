@@ -70,6 +70,13 @@
 
 @include opacity-animation(0.1, 1, 0.1,"opacity");
 
+/* Preprints/Registries navbar styling */
+nav.preprint-navbar {
+  .navbar-title {
+    padding-right: 10px;
+  }
+}
+
 /* OSF BOX */
 
 .osf-box {
@@ -158,6 +165,12 @@
   }
   .osf-project-navbar a.project-title {
     max-width: 190px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-branded-header {
+    margin-right: 20px !important;
   }
 }
 
