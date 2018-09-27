@@ -74,6 +74,14 @@
 nav.preprint-navbar {
   .navbar-title {
     padding-right: 10px;
+    display: flex;
+  }
+  @media (max-width: 520px) {
+    .navbar-title > .navbar-title-item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -204,6 +212,7 @@ nav.preprint-navbar {
   .navbar-header {
     float: none;
     width: 100%;
+    display: flex;
   }
   .navbar-toggle {
     display: block;
