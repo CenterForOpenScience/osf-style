@@ -17,7 +17,14 @@ $osf-teal-navbar: #2E6A74;
 $osf-highlight-navbar: #5A8288;
 $osf-dark-blue-navbar: #263947;
 
-$brand-success: #357935;
-$brand-info: #1b6d85;
-$btn-success-high-contrast-color: #fff;
-$btn-info-high-contrast-color: #fff;
+/* default bootstrap colors so osf-style can compile without bootstrap */
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+
+/* overrides with darkened colors for a11y contrast */
+$brand-success: darken($brand-success, 20%);
+$brand-info: darken($brand-info, 30%);
+// no override needed for brand-warning (will use dark text instead)
+$brand-danger: darken($brand-danger, 15%);
