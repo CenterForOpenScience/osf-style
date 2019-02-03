@@ -70,6 +70,21 @@
 
 @include opacity-animation(0.1, 1, 0.1,"opacity");
 
+/* Preprints/Registries navbar styling */
+nav.preprint-navbar {
+  .navbar-title {
+    padding-right: 10px;
+    display: flex;
+  }
+  @media (max-width: 520px) {
+    .navbar-title > .navbar-title-item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
 /* OSF BOX */
 
 .osf-box {
@@ -161,6 +176,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .navbar-branded-header {
+    margin-right: 20px !important;
+  }
+}
+
 @media (min-width: 992px) {
   .osf-project-navbar a.project-title {
     max-width: 300px;
@@ -191,6 +212,7 @@
   .navbar-header {
     float: none;
     width: 100%;
+    display: flex;
   }
   .navbar-toggle {
     display: block;
