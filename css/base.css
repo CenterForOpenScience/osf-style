@@ -1485,7 +1485,6 @@ nav.preprint-navbar .navbar-title {
 
 #secondary-navigation {
   float: right;
-  margin-right: 25px;
 }
 
 @media (max-width: 767px) {
@@ -1535,6 +1534,10 @@ nav.preprint-navbar .navbar-title {
   }
 }
 @media (max-width: 992px) {
+  #secondary-navigation {
+    margin-right: 25px;
+  }
+
   #navbarScope div.container {
     width: 100%;
   }
