@@ -159,6 +159,10 @@ nav.preprint-navbar {
   padding-right: 15px;
 }
 
+#secondary-navigation {
+  float: right;
+}
+
 @media (max-width: 767px) {
   .osf-project-navbar li > a {
     padding-left: 30px;
@@ -206,6 +210,9 @@ nav.preprint-navbar {
 }
 
 @media (max-width: 992px) {
+  #secondary-navigation {
+    margin-right: 25px;
+  }
   #navbarScope div.container {
     width: 100%;
   }
@@ -215,6 +222,7 @@ nav.preprint-navbar {
     display: flex;
   }
   .navbar-toggle {
+    margin-left: auto;
     display: block;
   }
   .navbar-toggle.collapsed {
