@@ -1394,6 +1394,21 @@ button.nav-user-dropdown {
     opacity: 0.1;
   }
 }
+/* Preprints/Registries navbar styling */
+nav.preprint-navbar .navbar-title {
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 520px) {
+  nav.preprint-navbar .navbar-title > .navbar-title-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 /* OSF BOX */
 .osf-box {
   border: 1px solid #eee;
@@ -1468,6 +1483,10 @@ button.nav-user-dropdown {
   padding-right: 15px;
 }
 
+#secondary-navigation {
+  float: right;
+}
+
 @media (max-width: 767px) {
   .osf-project-navbar li > a {
     padding-left: 30px;
@@ -1482,6 +1501,11 @@ button.nav-user-dropdown {
 
   .osf-project-navbar a.project-title {
     max-width: 190px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-branded-header {
+    margin-right: 20px !important;
   }
 }
 @media (min-width: 992px) {
@@ -1510,6 +1534,10 @@ button.nav-user-dropdown {
   }
 }
 @media (max-width: 992px) {
+  #secondary-navigation {
+    margin-right: 25px;
+  }
+
   #navbarScope div.container {
     width: 100%;
   }
@@ -1517,6 +1545,9 @@ button.nav-user-dropdown {
   .navbar-header {
     float: none;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .navbar-toggle {
